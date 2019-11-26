@@ -1,0 +1,87 @@
+﻿@model MobileFinanceErp.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>Finance App</title>
+    <!-- Icons-->
+    <link href="~/Content/coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="~/Content/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+<body class="app flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card-group">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <h1>Login</h1>
+                                <p class="text-muted">Sign In</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="icon-user"></i>
+                                        </span>
+                                    </div>
+                                    @Html.TextBoxFor(w => w.Email, new { @class = "form-control", placeholder = "Username" })
+                                </div>
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="icon-lock"></i>
+                                        </span>
+                                    </div>
+                                    @Html.PasswordFor(w => w.Password, new { @class = "form-control", placeholder = "Password" })
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button class="btn btn-primary px-4" type="submit">
+                                            Login
+                                        </button>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        @*<button class="btn btn-link px-0" type="button">Forgot password?</button>*@
+                                    </div>
+                                </div>
+
+                                @Html.ValidationSummary()
+                            }
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="~/Content/jquery/dist/jquery.min.js"></script>
+    <script src="~/Content/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/Content/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/Content/pace-progress/pace.min.js"></script>
+    <script src="~/Content/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="~/Content/coreui/coreui/dist/js/coreui.min.js"></script>
+    
+    @Scripts.Render("~/bundles/jqueryval")
+
+</body>
+</html>

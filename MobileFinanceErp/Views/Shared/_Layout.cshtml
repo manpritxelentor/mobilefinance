@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Finance ERP</title>
+    <!-- Icons-->
+    <link rel="icon" type="image/ico" href="~/favicon.ico" sizes="any" />
+    <link href="~/Content/coreui/icons/css/coreui-icons.min.css" rel="stylesheet" />
+    <link href="~/Content/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
+    <!-- Main styles for this application-->
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+    <link href="~/Content/pace.min.css" rel="stylesheet" />
+
+    <script src="~/Content/jquery/dist/jquery.min.js"></script>
+    <script src="~/Content/jquery/dist/jquery.min.js"></script>
+    <script src="~/Content/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/Content/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/Content/pace-progress/pace.min.js"></script>
+    <script src="~/Content/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="~/Content/coreui/coreui/dist/js/coreui.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="~/Content/chart.js/dist/Chart.min.js"></script>
+    <script src="~/Content/coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/jquery.blockUI.js"></script>
+
+
+    <script src="~/Content/dataTable/jquery.dataTables.js"></script>
+    <script src="~/Content/dataTable/dataTables.bootstrap4.js"></script>
+    <link href="~/Content/dataTable/dataTables.bootstrap4.css" rel="stylesheet" />
+
+    <!--Kendo UI Core-->
+    <script src="~/Content/kendo/kendo.core.min.js"></script>
+    <script src="~/Content/kendo/kendo.data.min.js"></script>
+    <script src="~/Content/kendo/kendo.ui.core.min.js"></script>
+    <link href="~/Content/kendo/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/kendo.material.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/alertify.js"></script>
+    <link href="~/Content/alertifyjs/alertify.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/themes/default.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/themes/semantic.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/themes/bootstrap.css" rel="stylesheet" />
+</head>
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+        <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+
+            Raj Mobile
+            @*<img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
+                <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">*@
+        </a>
+        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item active">@ViewBag.PageName</li>
+                <!-- Breadcrumb Menu-->
+                @*<li class="breadcrumb-menu d-md-down-none">
+                    <div class="btn-group" role="group" aria-label="Button group">
+                        <a class="btn" href="#">
+                            <i class="icon-speech"></i>
+                        </a>
+                        <a class="btn" href="./">
+                            <i class="icon-graph"></i>  Dashboard
+                        </a>
+                        <a class="btn" href="#">
+                            <i class="icon-settings"></i>  Settings
+                        </a>
+                    </div>
+                </li>*@
+            </ol>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item d-md-down-none">
+                <a class="nav-link" href="#">
+                    <i class="icon-bell"></i>
+                    <span class="badge badge-pill badge-danger">5</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-avatar" src="~/img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>Account</strong>
+                    </div>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa fa-key"></i> Change Password
+                    </a>
+                    <a class="dropdown-item" href="@Url.Action("Login","Account")">
+                        <i class="fa fa-lock"></i> Logout
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+    </header>
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">
+                            <i class="nav-icon icon-speedometer"></i> Dashboard
+                        </a>
+                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index","Brand")">
+                                <i class="nav-icon icon-basket"></i> Brands
+                            </a>
+                        </li>
+
+                    }
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="nav-icon icon-bubble"></i> Models
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Customer")">
+                            <i class="nav-icon icon-user"></i> Customer
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="nav-icon icon-user-follow"></i> Reference
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="nav-icon icon-chart"></i> Finance
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+        </div>
+        <main class="main">
+            <!-- Breadcrumb-->
+            
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </main>
+
+    </div>
+    <footer class="app-footer">
+        <div>
+            <a href="#">Raj Mobile</a>
+            <span>&copy; 2018.</span>
+        </div>
+        <div class="ml-auto">
+            <span>Powered by</span>
+            <a href="#">Raj Mobile</a>
+        </div>
+    </footer>
+
+    @RenderSection("scripts", false)
+
+    <span id="popupNotification"></span>
+
+    <script>
+        var mainMessage = '@(TempData["PageLevelMessage"] == null ? "" : TempData["PageLevelMessage"])';
+    </script>
+</body>
+</html>

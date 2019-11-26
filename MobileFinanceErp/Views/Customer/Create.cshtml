@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.PageName = "Customer";
+}
+
+
+<div id="ui-view">
+    <div>
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Add Customer</strong>
+                            <small>Form</small>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name">Customer Identification No.</label>
+                                        <input class="form-control" id="name" readonly type="text" value="CON12345">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name">First Name</label>
+                                        <input class="form-control" id="name" type="text" placeholder="Enter First Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name">Middle Name</label>
+                                        <input class="form-control" id="name" type="text" placeholder="Enter Middle Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name">Last Name</label>
+                                        <input class="form-control" id="name" type="text" placeholder="Enter Last Name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="ccnumber">Address Line 1</label>
+                                        <input class="form-control" id="ccnumber" type="text" placeholder="Enter Address Line 1">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="ccnumber">Address Line 2</label>
+                                        <input class="form-control" id="ccnumber" type="text" placeholder="Enter Address Line 2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="ccmonth">City</label>
+                                    <select class="form-control" id="ccmonth">
+                                        <option>Ahmedabad</option>
+                                        <option>Rajkot</option>
+                                        <option>Vadodara</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="ccnumber">Pin Code</label>
+                                        <input class="form-control" id="ccnumber" type="text" placeholder="Enter Pin Code">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="ccnumber">Mobile Number</label>
+                                        <input class="form-control" id="ccnumber" type="text" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm btn-primary" type="button">
+                                <i class="fa fa-dot-circle-o"></i> Submit
+                            </button>
+                            <button class="btn btn-sm btn-danger" type="reset">
+                                <i class="fa fa-ban"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

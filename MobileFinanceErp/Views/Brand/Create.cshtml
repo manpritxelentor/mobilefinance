@@ -1,0 +1,12 @@
+﻿@model MobileFinanceErp.ViewModel.AddEditBrandViewModel
+
+@{
+    ViewBag.Title = "Create";
+    ViewBag.PageName = "Brand";
+    ViewBag.ActionName = "Create";
+}
+<script src="~/Scripts/pages/brand.addedit.js"></script>
+
+@{
+    Html.RenderPartial("_CreateEditPartial", Model);
+}
