@@ -45,6 +45,15 @@ namespace MobileFinanceErp.Service
                 cfg.CreateMap<BrandModel, BrandListViewModel>();
                 cfg.CreateMap<AddEditBrandViewModel, BrandModel>();
                 cfg.CreateMap<BrandModel, AddEditBrandViewModel>();
+
+                cfg.CreateMap<ModelsModel, ModelsListViewModel>();
+                cfg.CreateMap<AddEditModelsViewModel, ModelsModel>();
+                cfg.CreateMap<ModelsModel, AddEditModelsViewModel>()
+                ;
+
+                cfg.CreateMap<AddEditModelsViewModel, BrandModel>()
+                   .ForMember(src => src.Name, opt => opt.MapFrom(dest => dest.BrandName))
+               ;
             });
             return config.CreateMapper();
         }

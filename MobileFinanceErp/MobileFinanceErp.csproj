@@ -206,6 +206,7 @@
     <Compile Include="Controllers\DataGridExtensions.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ModelController.cs" />
     <Compile Include="Dependency\DataModule.cs" />
     <Compile Include="Dependency\RepositoryModule.cs" />
     <Compile Include="Dependency\ServiceModule.cs" />
@@ -217,9 +218,11 @@
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\BrandModel.cs" />
     <Compile Include="Models\Configuration\BrandModelMap.cs" />
+    <Compile Include="Models\Configuration\ModelsModelMap.cs" />
     <Compile Include="Models\Configuration\TenantModelMap.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ModelsModel.cs" />
     <Compile Include="Models\TenantModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -227,18 +230,23 @@
     <Compile Include="Repository\IBaseRepository.cs" />
     <Compile Include="Repository\IBaseTenantRepository.cs" />
     <Compile Include="Repository\IBrandRepository.cs" />
+    <Compile Include="Repository\IModelsRepository.cs" />
     <Compile Include="Repository\ITenantRepository.cs" />
     <Compile Include="Repository\IUnitOfWork.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
     <Compile Include="Service\IBrandService.cs" />
     <Compile Include="Service\IDataMapper.cs" />
     <Compile Include="Service\IIdentityHelper.cs" />
+    <Compile Include="Service\IModelsService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\AddEditBrandViewModel.cs" />
+    <Compile Include="ViewModel\AddEditModelsViewModel.cs" />
     <Compile Include="ViewModel\BrandListViewModel.cs" />
     <Compile Include="ViewModel\DataSourceRequest.cs" />
     <Compile Include="ViewModel\DataSourceResult.cs" />
+    <Compile Include="ViewModel\ModelsListViewModel.cs" />
     <Compile Include="ViewModel\Validators\AddEditBrandViewModelValidator.cs" />
+    <Compile Include="ViewModel\Validators\AddEditModelsViewModelValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="base\breadcrumb.html" />
@@ -2345,6 +2353,7 @@
     <Content Include="Scripts\kendo\messages\kendo.messages.zh-TW.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\pages\models.addedit.js" />
     <Content Include="Scripts\pages\brand.addedit.js" />
     <Content Include="Scripts\popovers.js" />
     <Content Include="Scripts\signin-redirect.js" />
@@ -2503,6 +2512,10 @@
     <Content Include="Scripts\kendo\messages\kendo.messages.zh-HK.min.js.map" />
     <Content Include="Scripts\kendo\messages\kendo.messages.zh-TW.min.js.map" />
     <Content Include="Views\Shared\kendo.common-bootstrap.less" />
+    <Content Include="Views\Model\Index.cshtml" />
+    <Content Include="Views\Model\Create.cshtml" />
+    <Content Include="Views\Model\Edit.cshtml" />
+    <Content Include="Views\Model\_CreateEditPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

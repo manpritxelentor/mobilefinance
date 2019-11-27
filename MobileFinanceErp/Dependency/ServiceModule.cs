@@ -22,6 +22,13 @@ namespace MobileFinanceErp.Dependency
             builder.RegisterTypes(services)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+
+            var modelsService = typeof(ModelsService).Assembly.GetTypes()
+               .Where(w => w.Name.EndsWith("Service") && !w.IsInterface).ToArray();
+
+            builder.RegisterTypes(modelsService)
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
         }
 
     }
