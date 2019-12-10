@@ -1,0 +1,123 @@
+﻿@model MobileFinanceErp.ViewModel.AddEditCustomerViewModel
+
+@{
+    string actionName = Convert.ToString(ViewBag.ActionName);
+}
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+@Scripts.Render("~/bundles/jqueryval")
+
+<div class="row">
+    <div class="col-lg-12">
+        @using (Ajax.BeginForm(actionName, "Customer", null, new AjaxOptions
+        {
+            HttpMethod = "POST",
+            OnSuccess = "customerSaveSuccess",
+            OnFailure = "customerSaveError",
+            OnComplete = "hideLoader",
+            OnBegin = "showLoader"
+        }, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(w => w.Id)
+            <div class="card">
+                <div class="card-header"><strong>Manage</strong> Customer</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.CustomerIdentificationNumber)
+                                @Html.TextBoxFor(w => w.CustomerIdentificationNumber, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.CustomerIdentificationNumber)
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.FirstName)
+                                @Html.TextBoxFor(w => w.FirstName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.FirstName)
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.FatherName)
+                                @Html.TextBoxFor(w => w.FatherName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.FatherName)
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.Surname)
+                                @Html.TextBoxFor(w => w.Surname, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.Surname)
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.Address1)
+                                @Html.TextAreaFor(w => w.Address1, 3, 3, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.Address1)
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.Address2)
+                                @Html.TextAreaFor(w => w.Address1, 3, 3, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.Address1)
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.Address3)
+                                @Html.TextAreaFor(w => w.Address3, 3, 3, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.Address3)
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4 col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.City)
+                                @Html.TextBoxFor(w => w.City, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.City)
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.Pincode)
+                                @Html.TextBoxFor(w => w.Pincode, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.Pincode)
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.Mobile1)
+                                @Html.TextBoxFor(w => w.Mobile1, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.Mobile1)
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4 col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.Mobile2)
+                                @Html.TextBoxFor(w => w.Mobile2, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.Mobile2)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn btn-sm btn-primary" type="submit"> Submit</button>
+                    <button class="btn btn-sm btn-danger" type="reset"> Reset</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    var customerListPageUrl = '@Url.Action("Index", "Customer")'
+</script>

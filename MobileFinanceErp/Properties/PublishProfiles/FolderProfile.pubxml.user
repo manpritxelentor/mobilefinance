@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>E:\Manprit\Projects\MobileFinance\MobileFinanceErp\bin\Release\Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\Manprit\Projects\mobilefinance_git\mobilefinance\MobileFinanceErp\bin\Release\Publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="base/breadcrumb.html">
@@ -58,238 +58,265 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2019 00:24:47</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>09/11/2013 04:59:20</publishTime>
+      <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>09/11/2013 04:59:20</publishTime>
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>08/18/2016 15:15:34</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>04/10/2017 15:40:32</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>08/12/2019 12:42:04</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.pdb">
+      <publishTime>08/12/2019 12:42:04</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>10/24/2017 01:45:18</publishTime>
+      <publishTime>10/23/2017 13:15:18</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>10/24/2017 01:45:20</publishTime>
+      <publishTime>10/23/2017 13:15:20</publishTime>
+    </File>
+    <File Include="bin/FluentValidation.dll">
+      <publishTime>11/02/2019 11:32:58</publishTime>
+    </File>
+    <File Include="bin/FluentValidation.Mvc.dll">
+      <publishTime>11/02/2019 11:33:00</publishTime>
+    </File>
+    <File Include="bin/FluentValidation.ValidatorAttribute.dll">
+      <publishTime>11/02/2019 11:33:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>04/25/2018 01:17:38</publishTime>
+      <publishTime>04/24/2018 12:47:38</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>04/25/2018 01:17:40</publishTime>
+      <publishTime>04/24/2018 12:47:40</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>04/25/2018 01:17:40</publishTime>
+      <publishTime>04/24/2018 12:47:40</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.TelemetryCorrelation.dll">
-      <publishTime>06/29/2017 03:35:26</publishTime>
+      <publishTime>06/28/2017 15:05:26</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>05/25/2018 02:08:22</publishTime>
+      <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>02/14/2018 04:58:04</publishTime>
+      <publishTime>02/13/2018 16:28:04</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
-      <publishTime>02/14/2018 04:58:12</publishTime>
+      <publishTime>02/13/2018 16:28:12</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
-      <publishTime>02/14/2018 04:58:20</publishTime>
+      <publishTime>02/13/2018 16:28:20</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.dll">
-      <publishTime>02/14/2018 04:58:16</publishTime>
+      <publishTime>02/13/2018 16:28:16</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
-      <publishTime>02/14/2018 04:58:22</publishTime>
+      <publishTime>02/13/2018 16:28:22</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Google.dll">
-      <publishTime>02/14/2018 04:58:22</publishTime>
+      <publishTime>02/13/2018 16:28:22</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
-      <publishTime>02/14/2018 04:58:26</publishTime>
+      <publishTime>02/13/2018 16:28:26</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
-      <publishTime>02/14/2018 04:58:28</publishTime>
+      <publishTime>02/13/2018 16:28:28</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
-      <publishTime>02/14/2018 04:58:30</publishTime>
+      <publishTime>02/13/2018 16:28:30</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>07/26/2012 00:18:56</publishTime>
+      <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/MobileFinanceErp.dll">
-      <publishTime>11/05/2019 02:18:06</publishTime>
+      <publishTime>12/08/2019 04:16:14</publishTime>
     </File>
     <File Include="bin/MobileFinanceErp.pdb">
-      <publishTime>11/05/2019 02:18:06</publishTime>
+      <publishTime>12/08/2019 04:16:14</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>02/18/2018 22:14:54</publishTime>
+      <publishTime>02/18/2018 09:44:54</publishTime>
     </File>
     <File Include="bin/Owin.dll">
-      <publishTime>11/28/2012 01:30:52</publishTime>
+      <publishTime>11/13/2012 12:19:34</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
-      <publishTime>05/25/2018 02:08:22</publishTime>
+      <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe.config">
-      <publishTime>05/25/2018 02:08:22</publishTime>
+      <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/roslyn/csc.rsp">
-      <publishTime>05/25/2018 02:08:22</publishTime>
+      <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/roslyn/csi.exe">
-      <publishTime>05/25/2018 02:08:22</publishTime>
+      <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/roslyn/csi.exe.config">
-      <publishTime>05/25/2018 02:08:22</publishTime>
+      <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/roslyn/csi.rsp">
-      <publishTime>05/25/2018 02:08:22</publishTime>
+      <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>05/25/2018 02:08:22</publishTime>
+      <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Console.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Compression.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Pipes.AccessControl.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Pipes.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.AccessControl.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Claims.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.ValueTuple.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XPath.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe.config">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.rsp">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>05/25/2018 02:08:24</publishTime>
+      <publishTime>05/24/2018 13:38:24</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.Annotations.dll">
+      <publishTime>11/20/2017 18:09:04</publishTime>
     </File>
     <File Include="bin/System.Diagnostics.DiagnosticSource.dll">
-      <publishTime>07/19/2017 22:31:30</publishTime>
+      <publishTime>07/19/2017 10:01:30</publishTime>
+    </File>
+    <File Include="bin/System.Linq.Dynamic.dll">
+      <publishTime>10/15/2016 20:49:24</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>02/02/2018 00:50:56</publishTime>
+      <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>02/02/2018 00:46:32</publishTime>
+      <publishTime>02/01/2018 12:16:32</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>02/12/2014 03:56:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>02/02/2018 00:46:56</publishTime>
+      <publishTime>02/01/2018 12:16:56</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>02/02/2018 00:50:56</publishTime>
+      <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>02/02/2018 00:50:56</publishTime>
+      <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>02/02/2018 00:50:56</publishTime>
+      <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>01/24/2014 02:27:34</publishTime>
+      <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="buttons/brand-buttons.html">
       <publishTime>11/05/2019 00:24:47</publishTime>
@@ -302,6 +329,54 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="buttons/dropdowns.html">
       <publishTime>11/05/2019 00:24:47</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/alertify.css">
+      <publishTime>11/19/2019 15:52:12</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/alertify.min.css">
+      <publishTime>11/19/2019 15:52:12</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/alertify.rtl.css">
+      <publishTime>11/19/2019 15:52:12</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/alertify.rtl.min.css">
+      <publishTime>11/19/2019 15:52:12</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/bootstrap.css">
+      <publishTime>11/19/2019 15:52:12</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/bootstrap.min.css">
+      <publishTime>11/19/2019 15:52:12</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/bootstrap.rtl.css">
+      <publishTime>11/19/2019 15:52:12</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/bootstrap.rtl.min.css">
+      <publishTime>11/19/2019 15:52:12</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/default.css">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/default.min.css">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/default.rtl.css">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/default.rtl.min.css">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/semantic.css">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/semantic.min.css">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/semantic.rtl.css">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
+    <File Include="Content/alertifyjs/themes/semantic.rtl.min.css">
+      <publishTime>11/19/2019 15:52:11</publishTime>
     </File>
     <File Include="Content/bootstrap-multiselect/dist/css/bootstrap-multiselect.css">
       <publishTime>11/05/2019 00:41:45</publishTime>
@@ -2486,6 +2561,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/dataTable/dataTables.material.min.js">
       <publishTime>11/05/2019 00:41:52</publishTime>
+    </File>
+    <File Include="Content/dataTable/dataTables.responsive.css">
+      <publishTime>11/16/2019 02:05:07</publishTime>
+    </File>
+    <File Include="Content/dataTable/dataTables.responsive.js">
+      <publishTime>11/16/2019 01:08:49</publishTime>
+    </File>
+    <File Include="Content/dataTable/dataTables.responsive.min.js">
+      <publishTime>11/16/2019 01:08:49</publishTime>
+    </File>
+    <File Include="Content/dataTable/dataTables.responsive.scss">
+      <publishTime>11/16/2019 02:05:07</publishTime>
     </File>
     <File Include="Content/dataTable/dataTables.select.min.js">
       <publishTime>11/05/2019 00:41:52</publishTime>
@@ -4707,578 +4794,626 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/jquery/src/wrap.js">
       <publishTime>11/05/2019 00:41:59</publishTime>
     </File>
+    <File Include="Content/kendo/Bootstrap/editor.png">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/imagebrowser.png">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/indeterminate.gif">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/loading-image.gif">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/loading.gif">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/loading_2x.gif">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/markers.png">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/markers_2x.png">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/slider-h.gif">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/slider-v.gif">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/sprite.png">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/sprite_2x.png">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/sprite_kpi.png">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/sprite_kpi_2x.png">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
+    <File Include="Content/kendo/Bootstrap/_variables.less">
+      <publishTime>11/19/2019 15:36:52</publishTime>
+    </File>
     <File Include="Content/kendo/cultures/kendo.culture.en.min.js">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:55</publishTime>
     </File>
     <File Include="Content/kendo/cultures/kendo.culture.en.min.js.map">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:55</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSans-Bold.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:55</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSans-BoldOblique.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:55</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSans-ExtraLight.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:55</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSans-Oblique.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSans.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSansMono-Bold.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSansMono-BoldOblique.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSansMono-Oblique.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSansMono.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSerif-Bold.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSerif-BoldItalic.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSerif-Italic.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/DejaVuSerif.ttf">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/DejaVu/LICENSE.txt">
-      <publishTime>11/05/2019 00:41:59</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/glyphs/KendoUIGlyphs.eot">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/glyphs/KendoUIGlyphs.svg">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/glyphs/KendoUIGlyphs.ttf">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/glyphs/KendoUIGlyphs.woff">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/glyphs/WebComponentsIcons.eot">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/glyphs/WebComponentsIcons.svg">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/glyphs/WebComponentsIcons.ttf">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/fonts/glyphs/WebComponentsIcons.woff">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
+    </File>
+    <File Include="Content/kendo/kendo.common-bootstrap.min.css">
+      <publishTime>11/19/2019 15:42:17</publishTime>
     </File>
     <File Include="Content/kendo/kendo.common-material.min.css">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.common-material.min.css.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.core.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.core.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.custom.material.css">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.data.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.data.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.listview.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.listview.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.material.min.css">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.material.min.css.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:56</publishTime>
     </File>
     <File Include="Content/kendo/kendo.ui.core.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/kendo.ui.core.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/editor.png">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/imagebrowser.png">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/indeterminate.gif">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/loading-image.gif">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/loading.gif">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/loading_2x.gif">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/markers.png">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/markers_2x.png">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/slider-h.gif">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/slider-v.gif">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/sprite.png">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/sprite_2x.png">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/sprite_kpi.png">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/Material/sprite_kpi_2x.png">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.bg-BG.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.bg-BG.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.cs-CZ.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.cs-CZ.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.da-DK.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.da-DK.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.de-AT.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.de-AT.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.de-CH.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.de-CH.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.de-DE.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:57</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.de-DE.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.de-LI.min.js">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.de-LI.min.js.map">
-      <publishTime>11/05/2019 00:42:00</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.el-GR.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.el-GR.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.en-AU.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.en-AU.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.en-CA.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.en-CA.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.en-GB.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.en-GB.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.en-US.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.en-US.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-AR.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-AR.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-BO.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-BO.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-CL.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-CL.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-CO.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-CO.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-CR.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-CR.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-DO.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-DO.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-EC.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-EC.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-ES.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-ES.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-GT.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-GT.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-HN.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-HN.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-MX.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-MX.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-NI.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-NI.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-PA.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-PA.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-PE.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-PE.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-PR.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-PR.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-PY.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-PY.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-US.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-US.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-UY.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-UY.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-VE.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.es-VE.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fa-IR.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fa-IR.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fi-FI.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fi-FI.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-BE.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-BE.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CA.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CA.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:58</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CD.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CD.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CH.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CH.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CI.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CI.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CM.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-CM.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-FR.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-FR.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-HT.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-HT.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-LU.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-LU.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-MA.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-MA.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-MC.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-MC.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-ML.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-ML.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-SN.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.fr-SN.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.he-IL.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.he-IL.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.hu-HU.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.hu-HU.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.hy-AM.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.hy-AM.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.it-CH.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.it-CH.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.it-IT.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.it-IT.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.ja-JP.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.ja-JP.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.mk-MK.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.mk-MK.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.nb-NO.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.nb-NO.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.nl-BE.min.js">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.nl-BE.min.js.map">
-      <publishTime>11/05/2019 00:42:01</publishTime>
+      <publishTime>11/11/2019 16:38:59</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.nl-NL.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.nl-NL.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.pl-PL.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.pl-PL.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.pt-BR.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.pt-BR.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.pt-PT.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.pt-PT.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.ro-RO.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.ro-RO.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.ru-RU.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.ru-RU.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.sk-SK.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.sk-SK.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.sq-AL.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.sq-AL.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.sr-Latn-RS.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.sr-Latn-RS.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.sv-SE.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.sv-SE.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.tr-TR.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.tr-TR.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.uk-UA.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.uk-UA.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.zh-CN.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.zh-CN.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.zh-HK.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:00</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.zh-HK.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:01</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.zh-TW.min.js">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:01</publishTime>
     </File>
     <File Include="Content/kendo/messages/kendo.messages.zh-TW.min.js.map">
-      <publishTime>11/05/2019 00:42:02</publishTime>
+      <publishTime>11/11/2019 16:39:01</publishTime>
     </File>
     <File Include="Content/lodash/core.js">
       <publishTime>11/05/2019 00:42:02</publishTime>
@@ -6034,7 +6169,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2019 00:22:29</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>11/05/2019 00:24:09</publishTime>
+      <publishTime>11/19/2019 16:18:41</publishTime>
     </File>
     <File Include="Content/style.css.map">
       <publishTime>11/05/2019 00:24:09</publishTime>
@@ -6111,6 +6246,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="img/favicon.ico">
       <publishTime>11/05/2019 00:24:34</publishTime>
     </File>
+    <File Include="Scripts/alertify.js">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
+    <File Include="Scripts/alertify.min.js">
+      <publishTime>11/19/2019 15:52:11</publishTime>
+    </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/05/2019 00:22:51</publishTime>
     </File>
@@ -6147,8 +6288,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/jquery-3.3.1.slim.min.map">
       <publishTime>11/05/2019 00:22:52</publishTime>
     </File>
+    <File Include="Scripts/jquery.blockUI.js">
+      <publishTime>11/16/2019 02:36:28</publishTime>
+    </File>
     <File Include="Scripts/jquery.dataTables.min.js">
       <publishTime>11/05/2019 00:46:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>11/16/2019 02:36:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>11/16/2019 02:36:57</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>11/05/2019 00:23:05</publishTime>
@@ -6162,14 +6312,596 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
       <publishTime>11/05/2019 00:23:05</publishTime>
     </File>
+    <File Include="Scripts/kendo/cultures/kendo.culture.en.min.js">
+      <publishTime>11/18/2019 11:12:34</publishTime>
+    </File>
+    <File Include="Scripts/kendo/cultures/kendo.culture.en.min.js.map">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSans-Bold.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSans-BoldOblique.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSans-ExtraLight.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSans-Oblique.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSans.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSansMono-Bold.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSansMono-BoldOblique.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSansMono-Oblique.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSansMono.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSerif-Bold.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSerif-BoldItalic.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSerif-Italic.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/DejaVuSerif.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/DejaVu/LICENSE.txt">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/glyphs/KendoUIGlyphs.eot">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/glyphs/KendoUIGlyphs.svg">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/glyphs/KendoUIGlyphs.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/glyphs/KendoUIGlyphs.woff">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/glyphs/WebComponentsIcons.eot">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/glyphs/WebComponentsIcons.svg">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/glyphs/WebComponentsIcons.ttf">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/fonts/glyphs/WebComponentsIcons.woff">
+      <publishTime>11/18/2019 11:12:35</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.common-material.min.css">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.common-material.min.css.map">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.core.min.js">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.core.min.js.map">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.custom.material.css">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.data.min.js">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.data.min.js.map">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.listview.min.js">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.listview.min.js.map">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.material.min.css">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.material.min.css.map">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.ui.core.min.js">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/kendo.ui.core.min.js.map">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/editor.png">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/imagebrowser.png">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/indeterminate.gif">
+      <publishTime>11/18/2019 11:12:36</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/loading-image.gif">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/loading.gif">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/loading_2x.gif">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/markers.png">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/markers_2x.png">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/slider-h.gif">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/slider-v.gif">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/sprite.png">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/sprite_2x.png">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/sprite_kpi.png">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/Material/sprite_kpi_2x.png">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.bg-BG.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.bg-BG.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.cs-CZ.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.cs-CZ.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.da-DK.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.da-DK.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.de-AT.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.de-AT.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.de-CH.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.de-CH.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.de-DE.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.de-DE.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.de-LI.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.de-LI.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.el-GR.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.el-GR.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.en-AU.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.en-AU.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.en-CA.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.en-CA.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.en-GB.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.en-GB.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.en-US.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.en-US.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-AR.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-AR.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-BO.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-BO.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-CL.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-CL.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-CO.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-CO.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-CR.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-CR.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-DO.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-DO.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-EC.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-EC.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-ES.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-ES.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-GT.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-GT.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-HN.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-HN.min.js.map">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-MX.min.js">
+      <publishTime>11/18/2019 11:12:37</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-MX.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-NI.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-NI.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-PA.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-PA.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-PE.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-PE.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-PR.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-PR.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-PY.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-PY.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-US.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-US.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-UY.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-UY.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-VE.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.es-VE.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fa-IR.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fa-IR.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fi-FI.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fi-FI.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-BE.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-BE.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CA.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CA.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CD.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CD.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CH.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CH.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CI.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CI.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CM.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-CM.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-FR.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-FR.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-HT.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-HT.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-LU.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-LU.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-MA.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-MA.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-MC.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-MC.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-ML.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-ML.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-SN.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.fr-SN.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.he-IL.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.he-IL.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.hu-HU.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.hu-HU.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.hy-AM.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.hy-AM.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.it-CH.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.it-CH.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.it-IT.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.it-IT.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.ja-JP.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.ja-JP.min.js.map">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.mk-MK.min.js">
+      <publishTime>11/18/2019 11:12:38</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.mk-MK.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.nb-NO.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.nb-NO.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.nl-BE.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.nl-BE.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.nl-NL.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.nl-NL.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.pl-PL.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.pl-PL.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.pt-BR.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.pt-BR.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.pt-PT.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.pt-PT.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.ro-RO.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.ro-RO.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.ru-RU.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.ru-RU.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.sk-SK.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.sk-SK.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.sq-AL.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.sq-AL.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.sr-Latn-RS.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.sr-Latn-RS.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.sv-SE.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.sv-SE.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.tr-TR.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.tr-TR.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.uk-UA.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.uk-UA.min.js.map">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.zh-CN.min.js">
+      <publishTime>11/18/2019 11:12:39</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.zh-CN.min.js.map">
+      <publishTime>11/18/2019 11:12:40</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.zh-HK.min.js">
+      <publishTime>11/18/2019 11:12:40</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.zh-HK.min.js.map">
+      <publishTime>11/18/2019 11:12:40</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.zh-TW.min.js">
+      <publishTime>11/18/2019 11:12:40</publishTime>
+    </File>
+    <File Include="Scripts/kendo/messages/kendo.messages.zh-TW.min.js.map">
+      <publishTime>11/18/2019 11:12:40</publishTime>
+    </File>
     <File Include="Scripts/main.js">
-      <publishTime>11/05/2019 00:46:58</publishTime>
+      <publishTime>11/19/2019 15:58:52</publishTime>
     </File>
     <File Include="Scripts/main.js.map">
       <publishTime>11/05/2019 00:46:58</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>11/05/2019 00:23:04</publishTime>
+    </File>
+    <File Include="Scripts/pages/brand.addedit.js">
+      <publishTime>11/19/2019 15:01:55</publishTime>
+    </File>
+    <File Include="Scripts/pages/customer.addedit.js">
+      <publishTime>12/08/2019 03:58:50</publishTime>
+    </File>
+    <File Include="Scripts/pages/models.addedit.js">
+      <publishTime>11/28/2019 02:37:55</publishTime>
     </File>
     <File Include="Scripts/popovers.js">
       <publishTime>11/05/2019 00:46:58</publishTime>
@@ -6244,7 +6976,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2019 00:23:06</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>11/05/2019 02:03:33</publishTime>
+      <publishTime>11/10/2019 17:53:52</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
       <publishTime>11/05/2019 00:23:06</publishTime>
@@ -6264,11 +6996,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
       <publishTime>11/05/2019 00:23:06</publishTime>
     </File>
+    <File Include="Views/Brand/Create.cshtml">
+      <publishTime>11/18/2019 11:13:01</publishTime>
+    </File>
+    <File Include="Views/Brand/Edit.cshtml">
+      <publishTime>11/18/2019 11:13:12</publishTime>
+    </File>
+    <File Include="Views/Brand/Index.cshtml">
+      <publishTime>11/19/2019 16:17:03</publishTime>
+    </File>
+    <File Include="Views/Brand/_CreateEditPartial.cshtml">
+      <publishTime>11/19/2019 15:03:22</publishTime>
+    </File>
     <File Include="Views/Customer/Create.cshtml">
-      <publishTime>11/05/2019 02:14:13</publishTime>
+      <publishTime>12/08/2019 03:59:34</publishTime>
+    </File>
+    <File Include="Views/Customer/Edit.cshtml">
+      <publishTime>12/08/2019 03:59:36</publishTime>
     </File>
     <File Include="Views/Customer/Index.cshtml">
-      <publishTime>11/05/2019 02:16:49</publishTime>
+      <publishTime>12/08/2019 03:50:20</publishTime>
+    </File>
+    <File Include="Views/Customer/_CreateEditPartial.cshtml">
+      <publishTime>12/08/2019 04:04:52</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>11/05/2019 00:22:29</publishTime>
@@ -6297,26 +7047,41 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
       <publishTime>11/05/2019 00:23:06</publishTime>
     </File>
+    <File Include="Views/Model/Create.cshtml">
+      <publishTime>11/28/2019 02:37:55</publishTime>
+    </File>
+    <File Include="Views/Model/Edit.cshtml">
+      <publishTime>11/28/2019 02:37:55</publishTime>
+    </File>
+    <File Include="Views/Model/Index.cshtml">
+      <publishTime>11/28/2019 02:37:55</publishTime>
+    </File>
+    <File Include="Views/Model/_CreateEditPartial.cshtml">
+      <publishTime>11/28/2019 02:37:55</publishTime>
+    </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/05/2019 00:23:06</publishTime>
+    </File>
+    <File Include="Views/Shared/kendo.common-bootstrap.less">
+      <publishTime>11/19/2019 15:37:33</publishTime>
     </File>
     <File Include="Views/Shared/Lockout.cshtml">
       <publishTime>11/05/2019 00:23:06</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/05/2019 02:14:58</publishTime>
+      <publishTime>12/08/2019 04:08:23</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/05/2019 00:23:06</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>11/05/2019 00:22:29</publishTime>
+      <publishTime>11/11/2019 01:22:19</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>11/05/2019 00:22:29</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/05/2019 02:18:08</publishTime>
+      <publishTime>12/08/2019 04:16:16</publishTime>
     </File>
   </ItemGroup>
 </Project>

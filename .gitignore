@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/MobileFinanceErp/config/applicationhost.config
+/MobileFinanceErp/bin
+/.vs
+/MobileFinanceErp/obj
+/packages

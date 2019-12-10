@@ -218,8 +218,10 @@
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\BrandModel.cs" />
     <Compile Include="Models\Configuration\BrandModelMap.cs" />
+    <Compile Include="Models\Configuration\CustomerModelMap.cs" />
     <Compile Include="Models\Configuration\ModelsModelMap.cs" />
     <Compile Include="Models\Configuration\TenantModelMap.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModelsModel.cs" />
@@ -229,23 +231,28 @@
     <Compile Include="Repository\BaseTenantRepository.cs" />
     <Compile Include="Repository\IBaseRepository.cs" />
     <Compile Include="Repository\IBaseTenantRepository.cs" />
+    <Compile Include="Repository\ICustomerRepository.cs" />
     <Compile Include="Repository\IBrandRepository.cs" />
     <Compile Include="Repository\IModelsRepository.cs" />
     <Compile Include="Repository\ITenantRepository.cs" />
     <Compile Include="Repository\IUnitOfWork.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
+    <Compile Include="Service\ICustomerService.cs" />
     <Compile Include="Service\IBrandService.cs" />
     <Compile Include="Service\IDataMapper.cs" />
     <Compile Include="Service\IIdentityHelper.cs" />
     <Compile Include="Service\IModelsService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\AddEditCustomerViewModel.cs" />
     <Compile Include="ViewModel\AddEditBrandViewModel.cs" />
     <Compile Include="ViewModel\AddEditModelsViewModel.cs" />
+    <Compile Include="ViewModel\CustomerListViewModel.cs" />
     <Compile Include="ViewModel\BrandListViewModel.cs" />
     <Compile Include="ViewModel\DataSourceRequest.cs" />
     <Compile Include="ViewModel\DataSourceResult.cs" />
     <Compile Include="ViewModel\ModelsListViewModel.cs" />
     <Compile Include="ViewModel\Validators\AddEditBrandViewModelValidator.cs" />
+    <Compile Include="ViewModel\Validators\AddEditCustomerViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditModelsViewModelValidator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2353,6 +2360,7 @@
     <Content Include="Scripts\kendo\messages\kendo.messages.zh-TW.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\pages\customer.addedit.js" />
     <Content Include="Scripts\pages\models.addedit.js" />
     <Content Include="Scripts\pages\brand.addedit.js" />
     <Content Include="Scripts\popovers.js" />
@@ -2366,7 +2374,9 @@
     <Content Include="Scripts\src\widgets.js" />
     <Content Include="Scripts\tooltips.js" />
     <Content Include="Scripts\widgets.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -2409,8 +2419,6 @@
     <Content Include="scss\vendors\_variables.scss" />
     <Content Include="scss\_custom.scss" />
     <Content Include="scss\_variables.scss" />
-    <Content Include="Views\Customer\Index.cshtml" />
-    <Content Include="Views\Customer\Create.cshtml" />
     <Content Include="Views\Brand\Index.cshtml" />
     <Content Include="Views\Brand\Create.cshtml" />
     <Content Include="Views\Brand\_CreateEditPartial.cshtml" />
@@ -2516,6 +2524,10 @@
     <Content Include="Views\Model\Create.cshtml" />
     <Content Include="Views\Model\Edit.cshtml" />
     <Content Include="Views\Model\_CreateEditPartial.cshtml" />
+    <Content Include="Views\Customer\_CreateEditPartial.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2582,4 +2594,11 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
+  <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'">
+    <ItemGroup>
+      <RoslynFiles Include="$(CscToolPath)\*" />
+    </ItemGroup>
+    <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
+    <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
+  </Target>
 </Project>
