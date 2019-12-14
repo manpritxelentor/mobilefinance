@@ -201,9 +201,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\FinanceController.cs" />
     <Compile Include="Controllers\BrandController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DataGridExtensions.cs" />
+    <Compile Include="Controllers\GroupCodeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ModelController.cs" />
@@ -214,9 +216,20 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DataTableGrid.cs" />
+    <Compile Include="HtmlHelpers\KendoNumericTextBoxHelper.cs" />
+    <Compile Include="HtmlHelpers\KendoDatePickerHelper.cs" />
     <Compile Include="HtmlHelpers\KendoDropdownHelper.cs" />
+    <Compile Include="HtmlHelpers\RequiredLabelHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Configuration\FinanceDetailsModelMap.cs" />
+    <Compile Include="Models\Configuration\FinanceModelMap.cs" />
+    <Compile Include="Models\FinanceDetailsModel.cs" />
+    <Compile Include="Models\FinanceModel.cs" />
+    <Compile Include="Models\Configuration\GroupCodeModelMap.cs" />
+    <Compile Include="Models\Configuration\CodeMaintainModelMap.cs" />
+    <Compile Include="Models\GroupCodeModel.cs" />
+    <Compile Include="Models\CodeMaintainModel.cs" />
     <Compile Include="Models\BrandModel.cs" />
     <Compile Include="Models\Configuration\BrandModelMap.cs" />
     <Compile Include="Models\Configuration\CustomerModelMap.cs" />
@@ -232,26 +245,36 @@
     <Compile Include="Repository\BaseTenantRepository.cs" />
     <Compile Include="Repository\IBaseRepository.cs" />
     <Compile Include="Repository\IBaseTenantRepository.cs" />
+    <Compile Include="Repository\IFinanceRepository.cs" />
+    <Compile Include="Repository\IGroupCodesRepository.cs" />
+    <Compile Include="Repository\ICodeMaintainRepository.cs" />
     <Compile Include="Repository\ICustomerRepository.cs" />
     <Compile Include="Repository\IBrandRepository.cs" />
     <Compile Include="Repository\IModelsRepository.cs" />
     <Compile Include="Repository\ITenantRepository.cs" />
     <Compile Include="Repository\IUnitOfWork.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
+    <Compile Include="Service\DataConstants.cs" />
+    <Compile Include="Service\IGroupCodeService.cs" />
+    <Compile Include="Service\IFinanceService.cs" />
     <Compile Include="Service\ICustomerService.cs" />
     <Compile Include="Service\IBrandService.cs" />
     <Compile Include="Service\IDataMapper.cs" />
     <Compile Include="Service\IIdentityHelper.cs" />
     <Compile Include="Service\IModelsService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\AddEditFinanceViewModel.cs" />
     <Compile Include="ViewModel\AddEditCustomerViewModel.cs" />
     <Compile Include="ViewModel\AddEditBrandViewModel.cs" />
     <Compile Include="ViewModel\AddEditModelsViewModel.cs" />
+    <Compile Include="ViewModel\FinanceListViewModel.cs" />
     <Compile Include="ViewModel\CustomerListViewModel.cs" />
     <Compile Include="ViewModel\BrandListViewModel.cs" />
     <Compile Include="ViewModel\DataSourceRequest.cs" />
     <Compile Include="ViewModel\DataSourceResult.cs" />
+    <Compile Include="ViewModel\GroupCodeSelectListModel.cs" />
     <Compile Include="ViewModel\ModelsListViewModel.cs" />
+    <Compile Include="ViewModel\Validators\AddEditFinanceViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditBrandViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditCustomerViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditModelsViewModelValidator.cs" />
@@ -2361,6 +2384,7 @@
     <Content Include="Scripts\kendo\messages\kendo.messages.zh-TW.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\pages\finance.addedit.js" />
     <Content Include="Scripts\pages\customer.addedit.js" />
     <Content Include="Scripts\pages\models.addedit.js" />
     <Content Include="Scripts\pages\brand.addedit.js" />
@@ -2529,10 +2553,15 @@
     <Content Include="Views\Customer\Create.cshtml" />
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Finance\_CreateEditPartial.cshtml" />
+    <Content Include="Views\Finance\Create.cshtml" />
+    <Content Include="Views\Finance\Edit.cshtml" />
+    <Content Include="Views\Finance\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\GroupCode\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

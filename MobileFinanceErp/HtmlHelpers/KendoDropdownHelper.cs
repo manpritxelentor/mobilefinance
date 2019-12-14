@@ -30,6 +30,9 @@ namespace MobileFinanceErp.Helpers
         private string _readUrl;
         private string _readType;
         private bool _filterable = true;
+        private string _optionLabel;
+        private string _cascadeFrom;
+        private string _changeEventHandler;
 
         public KendoDropdownBuilder(string name, string createdHtml, string value)
         {
@@ -50,6 +53,18 @@ namespace MobileFinanceErp.Helpers
             return this;
         }
 
+        public KendoDropdownBuilder OptionLabel(string optionLabel)
+        {
+            _optionLabel = optionLabel;
+            return this;
+        }
+
+        public KendoDropdownBuilder CascadeFrom(string cascadeFrom)
+        {
+            _cascadeFrom = cascadeFrom;
+            return this;
+        }
+
         public KendoDropdownBuilder Read(string url)
         {
             _readUrl = url;
@@ -67,6 +82,12 @@ namespace MobileFinanceErp.Helpers
         public KendoDropdownBuilder Filterable(bool isEnabled)
         {
             _filterable = true;
+            return this;
+        }
+
+        public KendoDropdownBuilder OnChange(string changeEventHandler)
+        {
+            _changeEventHandler = changeEventHandler;
             return this;
         }
 
@@ -91,9 +112,24 @@ namespace MobileFinanceErp.Helpers
                 controlBuilder.AppendLine($"value: '{_controlValue}',");
             }
 
+            if (!string.IsNullOrEmpty(_cascadeFrom))
+            {
+                controlBuilder.AppendLine($"cascadeFrom: '{_cascadeFrom}',");
+            }
+
             if (_filterable)
             {
                 controlBuilder.AppendLine($"filter: 'contains',");
+            }
+
+            if (!string.IsNullOrEmpty(_optionLabel))
+            {
+                controlBuilder.AppendLine($"optionLabel: '{_optionLabel}',");
+            }
+
+            if (!string.IsNullOrEmpty(_changeEventHandler))
+            {
+                controlBuilder.AppendLine($"change: {_changeEventHandler},");
             }
 
             if (!string.IsNullOrEmpty(_readUrl))

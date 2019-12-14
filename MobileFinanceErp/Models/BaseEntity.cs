@@ -5,12 +5,12 @@ using System.Web;
 
 namespace MobileFinanceErp.Models
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
 
     }
 
-    public class BaseAuditableEntity : BaseEntity
+    public abstract class BaseAuditableEntity : BaseEntity
     {
         public string CreatedBy { get; set; }
         public DateTime? CreatedOn { get; set; }

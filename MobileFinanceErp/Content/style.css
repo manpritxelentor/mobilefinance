@@ -17515,3 +17515,7 @@ body {
     font-weight: normal;
     margin-bottom: 0px;
 }
+
+.required-label {
+    color: red;
+}

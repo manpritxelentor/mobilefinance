@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.PageName = "Finance";
+}
+
+<div id="ui-view">
+    <div>
+        <div class="animated fadeIn">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-edit"></i> Manage Finances
+                    <div class="card-header-actions">
+                        <a class="btn-sm btn-info btn" href="@Url.Action("Create","Finance")">
+                            <i class="fa fa-plus"></i>
+                            Add Finance
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    @(Html.DataTable<FinanceListViewModel>()
+                                    .Name("grdFinance")
+                                    .Read(Url.Action("GetFinances", "Finance"))
+                                    .CssClass("table table-striped table-bordered no-footer")
+                                    .Searchable(true)
+                                    .PageLength(10)
+                                    .Columns(column =>
+                                    {
+                                        column.Bound(s => s.Id).Searchable(false);
+                                        column.Bound(s => s.CustomerName);
+                                        column.Bound(s => s.BookNo);
+                                        column.Bound(s => s.PageNo);
+                                        column.Bound(s => s.MobilePrice).Searchable(false);
+                                        column.Bound(s => s.LoanAmount).Searchable(false);
+                                        column.Bound(s => s.DownPayment).Searchable(false);
+                                        column.Bound(s => s.StartDate).Searchable(false);
+                                        column.Bound(s => s.EndDate).Searchable(false);
+                                        //column.Template().Title("Actions").RenderCallback("generateActionLink");
+                                    })
+                                    .Render()
+                    )
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="javascriptTemplate" type="text/x-kendo-template">
+    <a href="@Url.Action("Edit", "Finance")/#: Id #" class="text-info">
+        <i class="fa fa-pencil"></i>
+    </a>
+    <button class="btn btn-link text-danger" onclick="deleteFinance(#:Id#)">
+        <i class="fa fa-remove"></i>
+    </button>
+</script>
+
+<script>
+    function generateActionLink(data) {
+        // Get the external template definition using a jQuery selector.
+        var template = kendo.template($("#javascriptTemplate").html());
+        var result = template(data); //Execute the template
+        return result
+    }
+
+    function deleteFinance(financeId) {
+        confirmDialog("Are you sure you want to delete this finance?", function () {
+            // Delete logic
+            postAjaxData('@Url.Action("Delete","Finance")', { id: financeId }, function (data) {
+                if (data.Status == true) {
+                    showSuccess(data.Message);
+                    var financeTable = $("#grdFinance").DataTable()
+                    financeTable.ajax.reload();
+                } else {
+                    showError(data.Message);
+                }
+            }, function () { })
+        }, function () {
+
+        });
+    }
+</script>

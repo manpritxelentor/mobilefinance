@@ -72,5 +72,11 @@ namespace MobileFinanceErp.Controllers
             bool isSuccess = _customerService.Delete(id);
             return Json(new { Status = isSuccess, Message = "Customer deleted successfully" });
         }
+
+        [HttpPost]
+        public ActionResult GetAll()
+        {
+            return Json(_customerService.GetAll(), JsonRequestBehavior.AllowGet);
+        }
     }
 }

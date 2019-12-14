@@ -2,12 +2,15 @@
 using MobileFinanceErp.Models;
 using MobileFinanceErp.Repository;
 using MobileFinanceErp.ViewModel;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MobileFinanceErp.Service
 {
     public interface ICustomerService
     {
         DataSourceResult GetAll(DataSourceRequest dataSourceRequest);
+        List<CustomerListViewModel> GetAll();
         bool Insert(AddEditCustomerViewModel model);
         AddEditCustomerViewModel GetById(int id);
         bool Update(AddEditCustomerViewModel model);
@@ -40,6 +43,12 @@ namespace MobileFinanceErp.Service
         {
             return _dataMapper.Project<CustomerModel, CustomerListViewModel>
                 (_CustomerRepository.GetAllNoTracking()).ToDataSourceResult(dataSourceRequest);
+        }
+
+        public List<CustomerListViewModel> GetAll()
+        {
+            return _dataMapper.Project<CustomerModel, CustomerListViewModel>
+                (_CustomerRepository.GetAllNoTracking()).ToList();
         }
 
         public AddEditCustomerViewModel GetById(int id)

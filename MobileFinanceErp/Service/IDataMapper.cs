@@ -55,10 +55,25 @@ namespace MobileFinanceErp.Service
                    .ForMember(src => src.Name, opt => opt.MapFrom(dest => dest.BrandName))
                 ;
 
-                cfg.CreateMap<CustomerModel, CustomerListViewModel>();
+                cfg.CreateMap<CustomerModel, CustomerListViewModel>()
+                    .ForMember(src => src.Address, opt => opt.MapFrom(dest => (dest.Address1 != null ? dest.Address1 : "") + (dest.Address2 != null ? " , " + dest.Address2 : "") + (dest.Address3 != null ? " ," + dest.Address3 : "")))
+                ;
                 cfg.CreateMap<AddEditCustomerViewModel, CustomerModel>();
                 cfg.CreateMap<CustomerModel, AddEditCustomerViewModel>();
 
+                cfg.CreateMap<FinanceModel, FinanceListViewModel>()
+                    .ForMember(src => src.CustomerName, opt => opt.MapFrom(dest => dest.Customer.FirstName));
+                cfg.CreateMap<AddEditFinanceViewModel, FinanceModel>();
+                cfg.CreateMap<FinanceModel, AddEditFinanceViewModel>()
+                    .ForMember(src => src.BrandId, opt => opt.MapFrom(dest => dest.Model.BrandId))
+                    .ForMember(src => src.CustomerName, opt => opt.MapFrom(dest => dest.Customer.FirstName))
+                    .ForMember(src => src.CustomerMobile, opt => opt.MapFrom(dest => dest.Customer.Mobile1))
+                    .ForMember(src => src.CustomerAddress, opt => opt.MapFrom(dest => (dest.Customer.Address1 != null ? dest.Customer.Address1 : "") + (dest.Customer.Address2 != null ? " , " + dest.Customer.Address2 : "") + (dest.Customer.Address3 != null ? " ," + dest.Customer.Address3 : "")))
+                ;
+
+                cfg.CreateMap<GroupCodeModel, GroupCodeSelectListModel>()
+                    .ForMember(src => src.Name, opt => opt.MapFrom(dest => dest.DisplayName));
+                ;
             });
             return config.CreateMapper();
         }

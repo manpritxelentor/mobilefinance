@@ -13,6 +13,7 @@ namespace MobileFinanceErp.Service
     public interface IModelsService
     {
         DataSourceResult GetAll(DataSourceRequest dataSourceRequest);
+        List<ModelsListViewModel> GetAll();
         bool Insert(AddEditModelsViewModel model);
         AddEditModelsViewModel GetById(int id);
         bool Update(AddEditModelsViewModel model);
@@ -44,6 +45,12 @@ namespace MobileFinanceErp.Service
         {
             return _dataMapper.Project<ModelsModel, ModelsListViewModel>
                 (_modelsRepository.GetAllNoTracking()).ToDataSourceResult(dataSourceRequest);
+        }
+
+        public List<ModelsListViewModel> GetAll()
+        {
+            return _dataMapper.Project<ModelsModel, ModelsListViewModel>
+                (_modelsRepository.GetAllNoTracking()).ToList();
         }
 
         public AddEditModelsViewModel GetById(int id)
