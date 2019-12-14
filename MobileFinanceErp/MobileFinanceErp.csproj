@@ -206,6 +206,7 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DataGridExtensions.cs" />
     <Compile Include="Controllers\GroupCodeController.cs" />
+    <Compile Include="Controllers\GuarantorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ModelController.cs" />
@@ -233,9 +234,11 @@
     <Compile Include="Models\BrandModel.cs" />
     <Compile Include="Models\Configuration\BrandModelMap.cs" />
     <Compile Include="Models\Configuration\CustomerModelMap.cs" />
+    <Compile Include="Models\Configuration\GuarantorModelMap.cs" />
     <Compile Include="Models\Configuration\ModelsModelMap.cs" />
     <Compile Include="Models\Configuration\TenantModelMap.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\GuarantorModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModelsModel.cs" />
@@ -250,6 +253,7 @@
     <Compile Include="Repository\ICodeMaintainRepository.cs" />
     <Compile Include="Repository\ICustomerRepository.cs" />
     <Compile Include="Repository\IBrandRepository.cs" />
+    <Compile Include="Repository\IGuarantorRepository.cs" />
     <Compile Include="Repository\IModelsRepository.cs" />
     <Compile Include="Repository\ITenantRepository.cs" />
     <Compile Include="Repository\IUnitOfWork.cs" />
@@ -260,12 +264,14 @@
     <Compile Include="Service\ICustomerService.cs" />
     <Compile Include="Service\IBrandService.cs" />
     <Compile Include="Service\IDataMapper.cs" />
+    <Compile Include="Service\IGuarantorService.cs" />
     <Compile Include="Service\IIdentityHelper.cs" />
     <Compile Include="Service\IModelsService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\AddEditFinanceViewModel.cs" />
     <Compile Include="ViewModel\AddEditCustomerViewModel.cs" />
     <Compile Include="ViewModel\AddEditBrandViewModel.cs" />
+    <Compile Include="ViewModel\AddEditGuarantorViewModel.cs" />
     <Compile Include="ViewModel\AddEditModelsViewModel.cs" />
     <Compile Include="ViewModel\FinanceListViewModel.cs" />
     <Compile Include="ViewModel\CustomerListViewModel.cs" />
@@ -273,10 +279,12 @@
     <Compile Include="ViewModel\DataSourceRequest.cs" />
     <Compile Include="ViewModel\DataSourceResult.cs" />
     <Compile Include="ViewModel\GroupCodeSelectListModel.cs" />
+    <Compile Include="ViewModel\GuarantorListViewModel.cs" />
     <Compile Include="ViewModel\ModelsListViewModel.cs" />
     <Compile Include="ViewModel\Validators\AddEditFinanceViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditBrandViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditCustomerViewModelValidator.cs" />
+    <Compile Include="ViewModel\Validators\AddEditGuarantorViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditModelsViewModelValidator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2386,6 +2394,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\pages\finance.addedit.js" />
     <Content Include="Scripts\pages\customer.addedit.js" />
+    <Content Include="Scripts\pages\guarantor.addedit.js" />
     <Content Include="Scripts\pages\models.addedit.js" />
     <Content Include="Scripts\pages\brand.addedit.js" />
     <Content Include="Scripts\popovers.js" />
@@ -2557,6 +2566,10 @@
     <Content Include="Views\Finance\Create.cshtml" />
     <Content Include="Views\Finance\Edit.cshtml" />
     <Content Include="Views\Finance\Index.cshtml" />
+    <Content Include="Views\Guarantor\Create.cshtml" />
+    <Content Include="Views\Guarantor\Edit.cshtml" />
+    <Content Include="Views\Guarantor\Index.cshtml" />
+    <Content Include="Views\Guarantor\_CreateEditPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

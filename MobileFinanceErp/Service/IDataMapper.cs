@@ -64,6 +64,9 @@ namespace MobileFinanceErp.Service
                 cfg.CreateMap<FinanceModel, FinanceListViewModel>()
                     .ForMember(src => src.CustomerName, opt => opt.MapFrom(dest => dest.Customer.FirstName));
                 cfg.CreateMap<AddEditFinanceViewModel, FinanceModel>();
+                cfg.CreateMap<GuarantorModel, GuarantorListViewModel>();
+                cfg.CreateMap<AddEditGuarantorViewModel, GuarantorModel>();
+                cfg.CreateMap<GuarantorModel, AddEditGuarantorViewModel>();
                 cfg.CreateMap<FinanceModel, AddEditFinanceViewModel>()
                     .ForMember(src => src.BrandId, opt => opt.MapFrom(dest => dest.Model.BrandId))
                     .ForMember(src => src.CustomerName, opt => opt.MapFrom(dest => dest.Customer.FirstName))

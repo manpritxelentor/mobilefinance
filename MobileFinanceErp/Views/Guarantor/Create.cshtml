@@ -1,0 +1,12 @@
+﻿@model MobileFinanceErp.ViewModel.AddEditGuarantorViewModel
+
+@{
+    ViewBag.Title = "Create";
+    ViewBag.PageName = "Guarantor";
+    ViewBag.ActionName = "Create";
+}
+<script src="~/Scripts/pages/guarantor.addedit.js"></script>
+
+@{
+    Html.RenderPartial("_CreateEditPartial", Model);
+}
