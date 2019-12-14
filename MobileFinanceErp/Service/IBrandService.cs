@@ -2,11 +2,14 @@
 using MobileFinanceErp.Models;
 using MobileFinanceErp.Repository;
 using MobileFinanceErp.ViewModel;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MobileFinanceErp.Service
 {
     public interface IBrandService
     {
+        List<BrandListViewModel> GetAll();
         DataSourceResult GetAll(DataSourceRequest dataSourceRequest);
         bool Insert(AddEditBrandViewModel model);
         AddEditBrandViewModel GetById(int id);
@@ -40,6 +43,12 @@ namespace MobileFinanceErp.Service
         {
             return _dataMapper.Project<BrandModel, BrandListViewModel>
                 (_brandRepository.GetAllNoTracking()).ToDataSourceResult(dataSourceRequest);
+        }
+
+        public List<BrandListViewModel> GetAll()
+        {
+            return _dataMapper.Project<BrandModel, BrandListViewModel>
+                (_brandRepository.GetAllNoTracking()).ToList();
         }
 
         public AddEditBrandViewModel GetById(int id)

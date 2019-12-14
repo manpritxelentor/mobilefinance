@@ -27,7 +27,11 @@
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="form-group">
                                 @Html.LabelFor(w => w.BrandId)
-                                @Html.TextBoxFor(w => w.BrandId, new { @class = "form-control" })
+                                @(Html.KendoDropdownFor(w => w.BrandId, new { @class = "form-control", @style="width:100%" })
+                                        .DataTextField("Name")
+                                        .DataValueField("Id")
+                                        .Read(Url.Action("GetAll","Brand"))
+                                        .Render())
                                 @Html.ValidationMessageFor(w => w.BrandId)
                             </div>
                         </div>

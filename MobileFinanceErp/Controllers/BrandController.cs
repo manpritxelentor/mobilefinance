@@ -72,5 +72,11 @@ namespace MobileFinanceErp.Controllers
             bool isSuccess = _brandService.Delete(id);
             return Json(new { Status = isSuccess, Message = "Brand deleted successfully" });
         }
+
+        [HttpPost]
+        public ActionResult GetAll()
+        {
+            return Json(_brandService.GetAll(), JsonRequestBehavior.AllowGet);
+        }
     }
 }
