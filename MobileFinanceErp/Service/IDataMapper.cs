@@ -59,6 +59,9 @@ namespace MobileFinanceErp.Service
                 cfg.CreateMap<AddEditCustomerViewModel, CustomerModel>();
                 cfg.CreateMap<CustomerModel, AddEditCustomerViewModel>();
 
+                cfg.CreateMap<GuarantorModel, GuarantorListViewModel>();
+                cfg.CreateMap<AddEditGuarantorViewModel, GuarantorModel>();
+                cfg.CreateMap<GuarantorModel, AddEditGuarantorViewModel>();
             });
             return config.CreateMapper();
         }
