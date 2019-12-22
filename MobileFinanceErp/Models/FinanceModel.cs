@@ -18,21 +18,16 @@ namespace MobileFinanceErp.Models
         public decimal LoanAmount { get; set; }
         public decimal DownPayment { get; set; }
         public decimal EMI { get; set; }
-        public int InterestRateId { get; set; }
-        public int DurationId { get; set; }
+        public int Duration { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public int? Guarantor1 { get; set; }
         public int? Guarantor2 { get; set; }
         public int StatusId { get; set; }
-
+        public string IMEI { get; set; }
 
         public virtual CustomerModel Customer { get; set; }
         public virtual ModelsModel Model { get; set; }
-        public virtual GroupCodeModel Interest { get; set; }
-        public virtual GroupCodeModel Duration { get; set; }
         public virtual GroupCodeModel Status { get; set; }
-
         public virtual ICollection<FinanceDetailsModel> FinanceDetails { get; set; }
     }
 }

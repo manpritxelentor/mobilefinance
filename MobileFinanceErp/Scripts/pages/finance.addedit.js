@@ -30,46 +30,27 @@ function setCustomerMetaData() {
 }
 
 function calculateEMI() {
+    var emiElement = $("#EMI").data("kendoNumericTextBox");
     var loanAmountElement = $("#LoanAmount").data("kendoNumericTextBox");
     var loanAmount = loanAmountElement.value();
+    var durationElement = $("#Duration").data("kendoNumericTextBox");
+    var durationValue = durationElement.value();
+    var emiValue = loanAmount / durationValue;
+    if (emiValue > 0) {
+        emiValue = Math.ceil(emiValue);
+    } else {
+        emiValue = 0;
+    }
+    emiElement.value(emiValue)
+}
+
+function recalculateLoanAmount() {
+    var loanAmountElement = $("#LoanAmount").data("kendoNumericTextBox");
+    var mobilePriceElement = $("#MobilePrice").data("kendoNumericTextBox");
+    var mobilePrice = mobilePriceElement.value();
     var downPaymentElement = $("#DownPayment").data("kendoNumericTextBox");
     var downPayment = downPaymentElement.value();
-    var durationSelect = $("#DurationId").data("kendoDropDownList");
-    var durationModel = durationSelect.dataItem()
-    var interestSelect = $("#InterestRateId").data("kendoDropDownList");
-    var interestModel = interestSelect.dataItem()
-
-    var data = {
-        loanAmount: loanAmount,
-        downPayment: downPayment,
-        duration: durationModel.Id != "" ? durationModel.Code : "",
-        interest: interestModel.Id != "" ? interestModel.Code : "",
-    }
-    postAjaxData(calculateEmiUrl, data, function (response) {
-        $("#EMI").val(response.EMI)
-    }, function () {
-        showError("Failed to calculate EMI. Please try again");
-    });
-}
-
-function onDurationChange() {
-    setEndDate();
-}
-
-function onStartDateChange() {
-    setEndDate();
-}
-
-function setEndDate() {
-    var durationSelect = $("#DurationId").data("kendoDropDownList");
-    var durationModel = durationSelect.dataItem()
-    var startDate = $("#StartDate").data("kendoDatePicker");
-    var endDate = $("#EndDate").data("kendoDatePicker");
-    if (durationModel.Id != "" && startDate.value() != null) {
-        var date = new Date(startDate.value());
-        date.setMonth(date.getMonth() + parseInt(durationModel.Code));
-        endDate.value(date);
-    } else {
-        endDate.value(null);
-    }
+    var loanAmount = mobilePrice - downPayment;
+    loanAmountElement.value(loanAmount > 0 ? loanAmount : 0);
+    calculateEMI();
 }

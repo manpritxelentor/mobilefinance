@@ -35,6 +35,7 @@
                                                                 .DataValueField("Id")
                                                                 .Read(Url.Action("GetAll", "Customer"))
                                                                 .OnChange("setCustomerMetaData")
+                                                                .OnDataBound("setCustomerMetaData")
                                                                 .OptionLabel("Select Customer..")
                                                                 .Render())
                                         @Html.ValidationMessageFor(w => w.CustomerId)
@@ -80,7 +81,7 @@
                                         @Html.ValidationMessageFor(w => w.PageNo)
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.BrandId)
                                         @(Html.KendoDropdownFor(w => w.BrandId, new { @class = "form-control", @style = "width:100%" })
@@ -92,7 +93,7 @@
                                         @Html.ValidationMessageFor(w => w.BrandId)
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.ModelId)
                                         @(Html.KendoDropdownFor(w => w.ModelId, new { @class = "form-control", @style = "width:100%" })
@@ -107,48 +108,43 @@
                                 </div>
                                 <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
+                                        @Html.RequiredLabelFor(w => w.IMEI)
+                                        @Html.TextBoxFor(w => w.IMEI, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(w => w.IMEI)
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.MobilePrice)
-                                        @Html.KendoNumericTextBoxFor(w => w.MobilePrice, new { @class = "form-control", @style = "width: 100%" }).Render()
+                                        @(Html.KendoNumericTextBoxFor(w => w.MobilePrice, new { @class = "form-control", @style = "width: 100%" })
+                                            .OnChange("recalculateLoanAmount")
+                                            .Render())
                                         @Html.ValidationMessageFor(w => w.MobilePrice)
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
-                                        @Html.RequiredLabelFor(w => w.LoanAmount)
-                                        @Html.KendoNumericTextBoxFor(w => w.LoanAmount, new { @class = "form-control", @style = "width: 100%" }).Render()
-                                        @Html.ValidationMessageFor(w => w.LoanAmount)
+                                        @Html.RequiredLabelFor(w => w.DownPayment)
+                                        @(Html.KendoNumericTextBoxFor(w => w.DownPayment, new { @class = "form-control", @style = "width: 100%" })
+                                            .OnChange("recalculateLoanAmount")
+                                            .Render())
+                                        @Html.ValidationMessageFor(w => w.DownPayment)
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
-                                        @Html.RequiredLabelFor(w => w.DownPayment)
-                                        @Html.KendoNumericTextBoxFor(w => w.DownPayment, new { @class = "form-control", @style = "width: 100%" }).Render()
-                                        @Html.ValidationMessageFor(w => w.DownPayment)
+                                        @Html.RequiredLabelFor(w => w.LoanAmount)
+                                        @Html.KendoNumericTextBoxFor(w => w.LoanAmount, new { @readonly = true, @class = "form-control", @style = "width: 100%" }).Render()
+                                        @Html.ValidationMessageFor(w => w.LoanAmount)
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="form-group">
-                                        @Html.RequiredLabelFor(w => w.DurationId)
-                                        @(Html.KendoDropdownFor(w => w.DurationId, new { @class = "form-control", @style = "width:100%" })
-                                                                        .DataTextField("Name")
-                                                                        .DataValueField("Id")
-                                                                        .OnChange("onDurationChange")
-                                                                        .Read(Url.Action("GetAll", "GroupCode", new { codeName = "Duration" }))
-                                                                        .OptionLabel("Select Duration..")
-                                                                        .Render())
-                                        @Html.ValidationMessageFor(w => w.DurationId)
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="form-group">
-                                        @Html.RequiredLabelFor(w => w.InterestRateId)
-                                        @(Html.KendoDropdownFor(w => w.InterestRateId, new { @class = "form-control", @style = "width:100%" })
-                                                                                .DataTextField("Name")
-                                                                                .DataValueField("Id")
-                                                                                .Read(Url.Action("GetAll", "GroupCode", new { codeName = "Interest" }))
-                                                                                .OptionLabel("Select Interest..")
-                                                                                .Render())
-                                        @Html.ValidationMessageFor(w => w.InterestRateId)
+                                        @Html.RequiredLabelFor(w => w.Duration)
+                                        @(Html.KendoNumericTextBoxFor(w => w.Duration, new { @class = "form-control", @style = "width: 100%" })
+                                            .OnChange("calculateEMI")
+                                            .Render())
+                                        @Html.ValidationMessageFor(w => w.Duration)
                                     </div>
                                 </div>
 
@@ -157,24 +153,15 @@
                                     <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.StartDate)
                                         @(Html.KendoDatePickerFor(w => w.StartDate, new { @class = "form-control", @style = "width: 100%" })
-                                            .OnChange("onStartDateChange")
                                             .Render())
                                         @Html.ValidationMessageFor(w => w.StartDate)
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="form-group">
-                                        @Html.RequiredLabelFor(w => w.EndDate)
-                                        @(Html.KendoDatePickerFor(w => w.EndDate, new { @class = "form-control", @style = "width: 100%", @readonly = true }).Render())
-                                        @Html.ValidationMessageFor(w => w.EndDate)
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="input-group">
-                                        @Html.TextBoxFor(w => w.EMI, new { @readonly = true, @class = "form-control" })
-                                        <span class="input-group-append">
-                                            <button class="btn btn-primary" type="button" onclick="calculateEMI()">Calculate EMI</button>
-                                        </span>
+                                        @Html.RequiredLabelFor(w => w.EMI)
+                                        @Html.KendoNumericTextBoxFor(w => w.EMI, new { @readonly = true, @class = "form-control", @style = "width: 100%" }).Render()
+                                        @Html.ValidationMessageFor(w => w.EMI)
                                     </div>
                                 </div>
                             </div>

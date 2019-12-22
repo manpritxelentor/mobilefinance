@@ -49,20 +49,17 @@ namespace MobileFinanceErp.ViewModel
         [DisplayName("EMI")]
         public decimal EMI { get; set; }
 
-        [DisplayName("Interest Rate")]
-        public int InterestRateId { get; set; }
-
         [DisplayName("Duration")]
-        public int DurationId { get; set; }
+        public int Duration { get; set; }
 
         [DisplayName("Start Date")]
         public DateTime? StartDate { get; set; }
 
-        [DisplayName("End Date")]
-        public DateTime? EndDate { get; set; }
-
         [DisplayName("Guarantor 1")]
         public int? Guarantor1 { get; set; }
+
+        [DisplayName("IMEI")]
+        public string IMEI { get; set; }
 
         [DisplayName("Guarantor 2")]
         public int? Guarantor2 { get; set; }

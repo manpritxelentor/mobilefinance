@@ -2,6 +2,7 @@
 using MobileFinanceErp.Models;
 using MobileFinanceErp.Repository;
 using MobileFinanceErp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,7 +12,7 @@ namespace MobileFinanceErp.Service
     {
         DataSourceResult GetAll(DataSourceRequest dataSourceRequest);
         List<CustomerListViewModel> GetAll();
-        bool Insert(AddEditCustomerViewModel model);
+        Tuple<bool, int> Insert(AddEditCustomerViewModel model);
         AddEditCustomerViewModel GetById(int id);
         bool Update(AddEditCustomerViewModel model);
         bool Delete(int id);
@@ -57,12 +58,12 @@ namespace MobileFinanceErp.Service
             return _dataMapper.Map<CustomerModel, AddEditCustomerViewModel>(entity);
         }
 
-        public bool Insert(AddEditCustomerViewModel model)
+        public Tuple<bool, int> Insert(AddEditCustomerViewModel model)
         {
             var entity = _CustomerRepository.Create();
             _dataMapper.Map(model, entity);
             _CustomerRepository.Insert(entity);
-            return _unitOfWork.Commit() > 0;
+            return new Tuple<bool, int>(_unitOfWork.Commit() > 0, entity.Id);
         }
 
         public bool Update(AddEditCustomerViewModel model)

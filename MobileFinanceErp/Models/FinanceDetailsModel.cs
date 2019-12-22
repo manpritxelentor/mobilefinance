@@ -9,11 +9,11 @@ namespace MobileFinanceErp.Models
     {
         public int Id { get; set; }
         public int FinanceMasterId { get; set; }
-        public DateTime EmiDate { get; set; }
         public DateTime? ReceivedDate { get; set; }
-        public DateTime DueDate { get; set; }
-        public int? ReceivedBy { get; set; }
+        public string ReceivedBy { get; set; }
         public string Notes { get; set; }
+        public decimal ReceivedAmount { get; set; }
+        public DateTime CreatedOn { get; set; }
 
         public virtual FinanceModel Finance { get; set; }
     }

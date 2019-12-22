@@ -26,14 +26,14 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.CustomerIdentificationNumber)
+                                @Html.RequiredLabelFor(w => w.CustomerIdentificationNumber)
                                 @Html.TextBoxFor(w => w.CustomerIdentificationNumber, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.CustomerIdentificationNumber)
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.FirstName)
+                                @Html.RequiredLabelFor(w => w.FirstName)
                                 @Html.TextBoxFor(w => w.FirstName, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.FirstName)
                             </div>
@@ -50,6 +50,13 @@
                                 @Html.LabelFor(w => w.Surname)
                                 @Html.TextBoxFor(w => w.Surname, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.Surname)
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                @Html.RequiredLabelFor(w => w.AdhaarNumber)
+                                @Html.TextBoxFor(w => w.AdhaarNumber, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.AdhaarNumber)
                             </div>
                         </div>
 
@@ -110,7 +117,8 @@
                 </div>
 
                 <div class="card-footer">
-                    <button class="btn btn-sm btn-primary" type="submit"> Submit</button>
+                    <button class="btn btn-sm btn-primary" type="submit" name="Save"> Submit</button>
+                    <button class="btn btn-sm btn-primary" type="submit" name="SaveAndRedirect"> Submit & Add Finance</button>
                     <button class="btn btn-sm btn-danger" type="reset"> Reset</button>
                 </div>
             </div>
@@ -119,5 +127,6 @@
 </div>
 
 <script>
-    var customerListPageUrl = '@Url.Action("Index", "Customer")'
+    var customerListPageUrl = '@Url.Action("Index", "Customer")';
+    var financePageUrl = '@Url.Action("Create", "Finance")';
 </script>

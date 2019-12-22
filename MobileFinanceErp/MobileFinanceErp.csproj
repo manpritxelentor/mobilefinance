@@ -199,6 +199,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Attributes\BindCommandParameterAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\FinanceController.cs" />
@@ -210,6 +211,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ModelController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Dependency\DataModule.cs" />
     <Compile Include="Dependency\RepositoryModule.cs" />
     <Compile Include="Dependency\ServiceModule.cs" />
@@ -225,6 +227,7 @@
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Configuration\FinanceDetailsModelMap.cs" />
     <Compile Include="Models\Configuration\FinanceModelMap.cs" />
+    <Compile Include="Models\Configuration\PictureModelMap.cs" />
     <Compile Include="Models\FinanceDetailsModel.cs" />
     <Compile Include="Models\FinanceModel.cs" />
     <Compile Include="Models\Configuration\GroupCodeModelMap.cs" />
@@ -242,6 +245,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModelsModel.cs" />
+    <Compile Include="Models\PictureModel.cs" />
     <Compile Include="Models\TenantModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -255,6 +259,7 @@
     <Compile Include="Repository\IBrandRepository.cs" />
     <Compile Include="Repository\IGuarantorRepository.cs" />
     <Compile Include="Repository\IModelsRepository.cs" />
+    <Compile Include="Repository\IPictureRepository.cs" />
     <Compile Include="Repository\ITenantRepository.cs" />
     <Compile Include="Repository\IUnitOfWork.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
@@ -267,6 +272,7 @@
     <Compile Include="Service\IGuarantorService.cs" />
     <Compile Include="Service\IIdentityHelper.cs" />
     <Compile Include="Service\IModelsService.cs" />
+    <Compile Include="Service\IPictureService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\AddEditFinanceViewModel.cs" />
     <Compile Include="ViewModel\AddEditCustomerViewModel.cs" />
@@ -281,11 +287,14 @@
     <Compile Include="ViewModel\GroupCodeSelectListModel.cs" />
     <Compile Include="ViewModel\GuarantorListViewModel.cs" />
     <Compile Include="ViewModel\ModelsListViewModel.cs" />
+    <Compile Include="ViewModel\PictureViewModel.cs" />
+    <Compile Include="ViewModel\ReceiveFinanceViewModel.cs" />
     <Compile Include="ViewModel\Validators\AddEditFinanceViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditBrandViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditCustomerViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditGuarantorViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditModelsViewModelValidator.cs" />
+    <Compile Include="ViewModel\Validators\ReceiveFinanceViewModelValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="base\breadcrumb.html" />
@@ -721,6 +730,8 @@
     <Content Include="Content\dataTable\dataTables.select.min.js" />
     <Content Include="Content\dataTable\images\details_close.png" />
     <Content Include="Content\dataTable\images\details_open.png" />
+    <Content Include="Content\dataTable\images\grid-collapse.png" />
+    <Content Include="Content\dataTable\images\grid-expand.png" />
     <Content Include="Content\dataTable\images\sort_asc.png" />
     <Content Include="Content\dataTable\images\sort_asc_disabled.png" />
     <Content Include="Content\dataTable\images\sort_both.png" />
@@ -2570,11 +2581,13 @@
     <Content Include="Views\Guarantor\Edit.cshtml" />
     <Content Include="Views\Guarantor\Index.cshtml" />
     <Content Include="Views\Guarantor\_CreateEditPartial.cshtml" />
+    <Content Include="Views\Finance\ReceivePayment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\GroupCode\" />
+    <Folder Include="Views\Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -33,6 +33,7 @@ namespace MobileFinanceErp.Helpers
         private string _optionLabel;
         private string _cascadeFrom;
         private string _changeEventHandler;
+        private string _dataBoundEventHandler;
 
         public KendoDropdownBuilder(string name, string createdHtml, string value)
         {
@@ -91,6 +92,12 @@ namespace MobileFinanceErp.Helpers
             return this;
         }
 
+        public KendoDropdownBuilder OnDataBound(string dataBoundEventHandler)
+        {
+            _dataBoundEventHandler = dataBoundEventHandler;
+            return this;
+        }
+
         public MvcHtmlString Render()
         {
             StringBuilder controlBuilder = new StringBuilder(_controlHtml);
@@ -130,6 +137,11 @@ namespace MobileFinanceErp.Helpers
             if (!string.IsNullOrEmpty(_changeEventHandler))
             {
                 controlBuilder.AppendLine($"change: {_changeEventHandler},");
+            }
+
+            if (!string.IsNullOrEmpty(_changeEventHandler))
+            {
+                controlBuilder.AppendLine($"dataBound: {_dataBoundEventHandler},");
             }
 
             if (!string.IsNullOrEmpty(_readUrl))

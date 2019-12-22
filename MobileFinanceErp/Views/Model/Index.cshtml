@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    @(Html.DataTable<AddEditModelsViewModel>()
+                    @(Html.DataTable<ModelsListViewModel>()
                                     .Name("grdModels")
                                     .Read(Url.Action("GetModels", "Model"))
                                     .CssClass("table table-striped table-bordered no-footer")
@@ -25,8 +25,8 @@
                                     .PageLength(10)
                                     .Columns(column =>
                                     {
-                                        column.Bound(s => s.Id).Searchable(false);                                        
                                         column.Bound(s => s.Name);
+                                        column.Bound(s => s.BrandName);
                                         column.Template().Title("Actions").RenderCallback("generateActionLink");
                                     })
                                     .Render()

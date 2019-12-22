@@ -25,7 +25,6 @@
                                     .PageLength(10)
                                     .Columns(column =>
                                     {
-                                        column.Bound(s => s.Id).Searchable(false);
                                         column.Bound(s => s.Name);
                                         column.Template().Title("Actions").RenderCallback("generateActionLink");
                                     })

@@ -28,6 +28,7 @@ namespace MobileFinanceErp.Helpers
         private string _format = "n2";
         private int _minValue = default(int);
         private int _maxValue = int.MaxValue;
+        private string _changeEventHandler;
 
         public KendoNumericTextBoxBuilder(string name, string createdHtml, string value)
         {
@@ -54,6 +55,12 @@ namespace MobileFinanceErp.Helpers
             return this;
         }
 
+        public KendoNumericTextBoxBuilder OnChange(string changeEventHandler)
+        {
+            _changeEventHandler = changeEventHandler;
+            return this;
+        }
+
         public MvcHtmlString Render()
         {
             StringBuilder controlBuilder = new StringBuilder(_controlHtml);
@@ -67,7 +74,10 @@ namespace MobileFinanceErp.Helpers
 
             controlBuilder.AppendLine($"min: {_minValue},");
             controlBuilder.AppendLine($"max: {_maxValue},");
-
+            if (!string.IsNullOrEmpty(_changeEventHandler))
+            {
+                controlBuilder.AppendLine($"change: {_changeEventHandler},");
+            }
             controlBuilder.AppendLine("})");
             controlBuilder.AppendLine("</script>");
 

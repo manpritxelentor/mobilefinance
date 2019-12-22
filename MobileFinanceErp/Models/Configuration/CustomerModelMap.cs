@@ -10,6 +10,10 @@ namespace MobileFinanceErp.Models.Configuration
     {
         public CustomerModelMap()
         {
+            HasOptional(w => w.CustomerImage)
+                .WithMany(w => w.CustomerImages)
+                .HasForeignKey(w => w.PictureId);
+
             ToTable("tbl_Customer");
         }
     }

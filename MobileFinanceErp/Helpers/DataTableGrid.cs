@@ -25,6 +25,7 @@ namespace MobileFinanceErp.Helpers
         private string _cssClass;
         private int _pageLength = 100;
         private bool _searchable = true;
+        private string _detailGridTemplate;
         private List<DataGridColumnDetail> _columns;
 
         public DataTableGridBuilder<T> Name(string name)
@@ -65,6 +66,11 @@ namespace MobileFinanceErp.Helpers
             return this;
         }
 
+        public DataTableGridBuilder<T> DetailTemplate(string detailGridTemplate)
+        {
+            _detailGridTemplate = detailGridTemplate;
+            return this;
+        }
 
         public MvcHtmlString Render()
         {
@@ -75,6 +81,11 @@ namespace MobileFinanceErp.Helpers
 
             // Table Head
             StringBuilder headBuilder = new StringBuilder("<thead><tr>");
+
+            if (!string.IsNullOrEmpty(_detailGridTemplate))
+            {
+                headBuilder.AppendLine("<th></th>");
+            }
 
             foreach (var column in _columns)
             {
@@ -101,15 +112,29 @@ namespace MobileFinanceErp.Helpers
             scriptBuilder.Append("'pageLength': " + _pageLength + ",");
 
             scriptBuilder.Append("'columns': [");
+            if (!string.IsNullOrEmpty(_detailGridTemplate))
+            {
+                _columns.Insert(0, new DataGridColumnDetail(Guid.NewGuid())
+                {
+                    ClassName = "details-control",
+                    Orderable = false,
+                    RemoveDefaultContent = true
+                });
+            }
+
             foreach (var column in _columns)
             {
                 scriptBuilder.Append("{'data': " + (string.IsNullOrEmpty(column.ColumnName) ? "null" : "'" + column.ColumnName + "'"));
 
-                if (string.IsNullOrEmpty(column.ColumnName))
+                if (string.IsNullOrEmpty(column.ColumnName) && string.IsNullOrEmpty(column.ClassName))
                 {
                     column.Searchable = false;
                     column.Orderable = false;
                     scriptBuilder.Append(", 'className': 'center-content'");
+                }
+                if (!string.IsNullOrEmpty(column.ClassName))
+                {
+                    scriptBuilder.Append(", 'className': '" + column.ClassName + "'");
                 }
 
                 if (!column.Searchable)
@@ -118,6 +143,13 @@ namespace MobileFinanceErp.Helpers
                     scriptBuilder.Append(", 'orderable': false");
                 if (!string.IsNullOrEmpty(column.RenderCallback))
                     scriptBuilder.Append(", 'mRender': " + column.RenderCallback + "");
+                if (column.IsDateFormat)
+                {
+                    scriptBuilder.Append(", 'format': 'M/D/YYYY'");
+                    scriptBuilder.Append(", 'type': 'datetime'");
+                }
+                if(column.RemoveDefaultContent)
+                    scriptBuilder.Append(", 'defaultContent': ''");
 
                 scriptBuilder.Append("},");
             }
@@ -125,8 +157,19 @@ namespace MobileFinanceErp.Helpers
             scriptBuilder.Append("],");
             scriptBuilder.Append("'ajax':{'url': '" + _readUrl + "', 'type': 'POST'}");
 
+            if (!string.IsNullOrEmpty(_detailGridTemplate))
+                scriptBuilder.Append(", 'order': [[1, 'asc']]");
+
+            scriptBuilder.Append("});");
+
+            if (!string.IsNullOrEmpty(_detailGridTemplate))
+            {
+                scriptBuilder.Append("$('#" + _gridName + " tbody').on('click', 'td.details-control', " + _detailGridTemplate + ")");
+            }
+
             scriptBuilder.Append("})");
-            scriptBuilder.Append("})");
+
+
             scriptBuilder.AppendLine("</script>");
 
             // Insert to table
@@ -212,6 +255,13 @@ namespace MobileFinanceErp.Helpers
             return this;
         }
 
+        public DataGridColumnBuilder<T> DateFormat()
+        {
+            var columnObj = GetByUniqueId(_uniqueId);
+            columnObj.IsDateFormat = true;
+            return this;
+        }
+
         private DataGridColumnDetail GetByUniqueId(Guid id)
         {
             return Columns.Single(w => w.UniqueId == id);
@@ -227,8 +277,11 @@ namespace MobileFinanceErp.Helpers
         public Guid UniqueId { get; set; }
         public string ColumnName { get; set; }
         public string DisplayName { get; set; }
+        public bool IsDateFormat { get; set; }
         public bool Searchable { get; set; } = true;
         public bool Orderable { get; set; } = true;
         public string RenderCallback { get; set; }
+        public string ClassName { get; set; }
+        public bool RemoveDefaultContent { get; set; }
     }
 }

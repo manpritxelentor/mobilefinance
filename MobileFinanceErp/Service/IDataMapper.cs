@@ -46,7 +46,9 @@ namespace MobileFinanceErp.Service
                 cfg.CreateMap<AddEditBrandViewModel, BrandModel>();
                 cfg.CreateMap<BrandModel, AddEditBrandViewModel>();
 
-                cfg.CreateMap<ModelsModel, ModelsListViewModel>();
+                cfg.CreateMap<ModelsModel, ModelsListViewModel>()
+                .ForMember(src => src.BrandName, opt => opt.MapFrom(dest => dest.Brand.Name))
+                ;
                 cfg.CreateMap<AddEditModelsViewModel, ModelsModel>();
                 cfg.CreateMap<ModelsModel, AddEditModelsViewModel>()
                 ;
@@ -62,7 +64,8 @@ namespace MobileFinanceErp.Service
                 cfg.CreateMap<CustomerModel, AddEditCustomerViewModel>();
 
                 cfg.CreateMap<FinanceModel, FinanceListViewModel>()
-                    .ForMember(src => src.CustomerName, opt => opt.MapFrom(dest => dest.Customer.FirstName));
+                    .ForMember(src => src.CustomerName, opt => opt.MapFrom(dest => dest.Customer.FirstName))
+                    .ForMember(src => src.BookNoPageNumber, opt => opt.MapFrom(dest => dest.BookNo + " / " + dest.PageNo));
                 cfg.CreateMap<AddEditFinanceViewModel, FinanceModel>();
                 cfg.CreateMap<GuarantorModel, GuarantorListViewModel>();
                 cfg.CreateMap<AddEditGuarantorViewModel, GuarantorModel>();
@@ -76,7 +79,13 @@ namespace MobileFinanceErp.Service
 
                 cfg.CreateMap<GroupCodeModel, GroupCodeSelectListModel>()
                     .ForMember(src => src.Name, opt => opt.MapFrom(dest => dest.DisplayName));
-                ;
+
+
+                cfg.CreateMap<FinanceDetailsModel, ReceiveFinanceViewModel>()
+                    .ForMember(dest => dest.Notes, opt => opt.Ignore())
+                    .ForMember(dest => dest.RemainingAmount, opt => opt.Ignore())
+                    .ForMember(dest => dest.CarryForwardAmount, opt => opt.Ignore())
+                    .ForMember(dest => dest.EMIAmount, opt => opt.MapFrom(src=> src.ReceivedAmount));
             });
             return config.CreateMapper();
         }

@@ -2,6 +2,7 @@
 using MobileFinanceErp.Models;
 using MobileFinanceErp.Repository;
 using MobileFinanceErp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,10 +12,14 @@ namespace MobileFinanceErp.Service
     {
         List<FinanceListViewModel> GetAll();
         DataSourceResult GetAll(DataSourceRequest dataSourceRequest);
-        bool Insert(AddEditFinanceViewModel model);
+        Tuple<bool, int> Insert(AddEditFinanceViewModel model);
         AddEditFinanceViewModel GetById(int id);
         bool Update(AddEditFinanceViewModel model);
         bool Delete(int id);
+        bool IsPageNumberValid(string pageNo, string bookNo);
+        List<ReceiveFinanceViewModel> GetFinanceDetails(int financeId);
+        ReceiveFinanceViewModel GetReceiveModel(int financeId);
+        bool ReceiveAmount(ReceiveFinanceViewModel model, string userId);
     }
 
     public class FinanceService : IFinanceService
@@ -57,11 +62,54 @@ namespace MobileFinanceErp.Service
             return _dataMapper.Map<FinanceModel, AddEditFinanceViewModel>(entity);
         }
 
-        public bool Insert(AddEditFinanceViewModel model)
+        public List<ReceiveFinanceViewModel> GetFinanceDetails(int financeId)
+        {
+            IQueryable<FinanceDetailsModel> data = _FinanceRepository.GetFinanceDetails(financeId);
+            return _dataMapper.Project<FinanceDetailsModel, ReceiveFinanceViewModel>(data)
+                .ToList();
+        }
+
+        public ReceiveFinanceViewModel GetReceiveModel(int financeId)
+        {
+            var result = new ReceiveFinanceViewModel
+            {
+                FinanceMasterId = financeId,
+                ReceivedDate = DateTime.Now,
+            };
+
+            result.ActualEmiAmount = _FinanceRepository.GetActualEmiAmount(financeId);
+            result.CarryForwardAmount = 0;//TODO: Need to discuss with geet. _FinanceRepository.GetCarryForward(financeId);
+            result.RemainingAmount = _FinanceRepository.GetLoanRemainingAmount(financeId);
+            result.EMIAmount = result.RemainingAmount > result.ActualEmiAmount ? result.ActualEmiAmount - result.CarryForwardAmount : result.RemainingAmount;
+            result.RemainingAmountAfterEMI = result.RemainingAmount - result.EMIAmount;
+            result.LoanAmount = _FinanceRepository.GetLoanAmount(financeId);
+            return result;
+        }
+
+        public Tuple<bool, int> Insert(AddEditFinanceViewModel model)
         {
             var entity = _FinanceRepository.Create();
             _dataMapper.Map(model, entity);
             _FinanceRepository.Insert(entity);
+            return new Tuple<bool, int>(_unitOfWork.Commit() > 0, entity.Id);
+        }
+
+        public bool IsPageNumberValid(string pageNo, string bookNo)
+        {
+            return _FinanceRepository.IsPageNumberValid(pageNo, bookNo);
+        }
+
+        public bool ReceiveAmount(ReceiveFinanceViewModel model, string userId)
+        {
+            FinanceDetailsModel entity = _FinanceRepository.GetFinanceDetailCreate();
+            entity.CreatedOn = DateTime.Now;
+            entity.FinanceMasterId = model.FinanceMasterId;
+            entity.Notes = model.Notes;
+            entity.ReceivedAmount = model.EMIAmount;
+            entity.ReceivedBy = userId;
+            entity.ReceivedDate = model.ReceivedDate;
+
+            _FinanceRepository.AddReceivedAmount(entity);
             return _unitOfWork.Commit() > 0;
         }
 

@@ -1,6 +1,8 @@
-﻿using MobileFinanceErp.Service;
+﻿using MobileFinanceErp.Attributes;
+using MobileFinanceErp.Service;
 using MobileFinanceErp.ViewModel;
 using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace MobileFinanceErp.Controllers
@@ -9,12 +11,15 @@ namespace MobileFinanceErp.Controllers
     {
         private readonly IFinanceService _FinanceService;
         private readonly IGroupCodeService _groupCodeService;
+        private readonly IIdentityHelper _identityHelper;
 
         public FinanceController(IFinanceService FinanceService
-            , IGroupCodeService groupCodeService)
+            , IGroupCodeService groupCodeService
+            , IIdentityHelper identityHelper)
         {
             _FinanceService = FinanceService;
             _groupCodeService = groupCodeService;
+            _identityHelper = identityHelper;
         }
 
         // GET: Finance
@@ -30,9 +35,12 @@ namespace MobileFinanceErp.Controllers
             return Json(data, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult Create()
+        public ActionResult Create(int customerId = 0)
         {
-            AddEditFinanceViewModel model = new AddEditFinanceViewModel();
+            AddEditFinanceViewModel model = new AddEditFinanceViewModel()
+            {
+                CustomerId = customerId
+            };
             return View(model);
         }
 
@@ -42,31 +50,20 @@ namespace MobileFinanceErp.Controllers
             if (!ModelState.IsValid)
                 return Json(new { Status = false, Error = ModelState });
 
-            model.EMI = GetEmiCalculation(model.LoanAmount, model.DownPayment, Convert.ToInt32(_groupCodeService.GetCode(model.DurationId)), Convert.ToInt32(_groupCodeService.GetCode(model.InterestRateId)));
+            bool isPageNumberValid = _FinanceService.IsPageNumberValid(model.PageNo, model.BookNo);
+            if (!isPageNumberValid)
+            {
+                ModelState.AddModelError("PageNo", "Page number is not valid. Please enter another page number");
+                return Json(new { Status = false, Error = ModelState });
+            }
 
-            bool isSuccess = _FinanceService.Insert(model);
-            if (isSuccess)
+            model.EMI = GetEmiCalculation(model.LoanAmount, model.Duration);
+
+            var insertResult = _FinanceService.Insert(model);
+            if (insertResult.Item1)
                 AddMessage("Finance added successfully");
-            return Json(new { Status = isSuccess });
+            return Json(new { Status = insertResult.Item1, Id = insertResult.Item2 });
         }
-
-        //public ActionResult Edit(int id)
-        //{
-        //    AddEditFinanceViewModel model = _FinanceService.GetById(id);
-        //    return View(model);
-        //}
-
-        //[HttpPost]
-        //public ActionResult Edit(AddEditFinanceViewModel model)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return Json(new { Status = false, Error = ModelState });
-
-        //    bool isSuccess = _FinanceService.Update(model);
-        //    if (isSuccess)
-        //        AddMessage("Finance updated successfully");
-        //    return Json(new { Status = isSuccess });
-        //}
 
         [HttpPost]
         public ActionResult Delete(int id)
@@ -82,25 +79,37 @@ namespace MobileFinanceErp.Controllers
         }
 
         [HttpPost]
-        public ActionResult CalculateEMI(decimal? loanAmount, decimal? downPayment, int? duration, int? interest)
+        public ActionResult ReceivePayment(int financeId)
         {
-            decimal result = 0;
-            result = GetEmiCalculation(loanAmount, downPayment, duration, interest);
-            return Json(new { EMI = result }, JsonRequestBehavior.AllowGet);
+            ReceiveFinanceViewModel model = _FinanceService.GetReceiveModel(financeId);
+            return View(model);
         }
 
-        private decimal GetEmiCalculation(decimal? loanAmount, decimal? downPayment, int? duration, int? interest)
+        [HttpPost]
+        public ActionResult SaveReceiveAmount(ReceiveFinanceViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return Json(new { Status = false, Error = ModelState });
+
+            bool isReceived = _FinanceService.ReceiveAmount(model, _identityHelper.UserId);
+            return Json(new { Status = isReceived });
+        }
+
+        [HttpPost]
+        public ActionResult FinanceDetails(int financeId)
+        {
+            List<ReceiveFinanceViewModel> data = _FinanceService.GetFinanceDetails(financeId);
+            return Json(data);
+        }
+
+        private decimal GetEmiCalculation(decimal? loanAmount, int? duration)
         {
             decimal result = 0;
-            if (loanAmount.HasValue && duration.HasValue && interest.HasValue)
+            if (loanAmount.HasValue && duration.HasValue)
             {
-                decimal remainingLoanAmount = loanAmount.Value - downPayment.GetValueOrDefault();
-                decimal interestAmount = (remainingLoanAmount * interest.Value) / 100;
-                decimal totalLoanAmount = remainingLoanAmount + interestAmount;
-
-                result = totalLoanAmount / duration.Value;
+                result = loanAmount.Value / duration.Value;
             }
-            return result;
+            return Math.Ceiling(result);
         }
     }
 }

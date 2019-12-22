@@ -1,4 +1,5 @@
-﻿using MobileFinanceErp.Service;
+﻿using MobileFinanceErp.Attributes;
+using MobileFinanceErp.Service;
 using MobileFinanceErp.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -37,15 +38,16 @@ namespace MobileFinanceErp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(AddEditCustomerViewModel model)
+        [BindCommandParameter("SaveAndRedirect", "isSaveContinue")]
+        public ActionResult Create(bool isSaveContinue, AddEditCustomerViewModel model)
         {
             if (!ModelState.IsValid)
                 return Json(new { Status = false, Error = ModelState });
 
-            bool isSuccess = _customerService.Insert(model);
-            if (isSuccess)
+            var insertResult = _customerService.Insert(model);
+            if (insertResult.Item1)
                 AddMessage("Customer added successfully");
-            return Json(new { Status = isSuccess });
+            return Json(new { Status = insertResult.Item1, IsSaveContinue = isSaveContinue, Id = insertResult.Item2 });
         }
 
         public ActionResult Edit(int id)
@@ -55,7 +57,8 @@ namespace MobileFinanceErp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(AddEditCustomerViewModel model)
+        [BindCommandParameter("SaveAndRedirect", "isSaveContinue")]
+        public ActionResult Edit(bool isSaveContinue, AddEditCustomerViewModel model)
         {
             if (!ModelState.IsValid)
                 return Json(new { Status = false, Error = ModelState });
@@ -63,7 +66,7 @@ namespace MobileFinanceErp.Controllers
             bool isSuccess = _customerService.Update(model);
             if (isSuccess)
                 AddMessage("Customer updated successfully");
-            return Json(new { Status = isSuccess });
+            return Json(new { Status = isSuccess, IsSaveContinue = isSaveContinue, Id = model.Id });
         }
 
         [HttpPost]

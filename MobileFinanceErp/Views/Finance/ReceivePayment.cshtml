@@ -1,0 +1,90 @@
+﻿@model MobileFinanceErp.ViewModel.ReceiveFinanceViewModel
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        @using (Ajax.BeginForm("SaveReceiveAmount", "Finance", null, new AjaxOptions
+        {
+            HttpMethod = "POST",
+            OnSuccess = "receivePaymentSaveSuccess",
+            OnFailure = "receivePaymentSaveError",
+            OnComplete = "hideLoader",
+            OnBegin = "showLoader"
+        }, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(w => w.FinanceMasterId)
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    @Html.LabelFor(w => w.LoanAmount)
+                    @(Html.KendoNumericTextBoxFor(w => w.LoanAmount, new { @readonly = true, @class = "form-control", @style = "width: 100%" })
+                                                                                                                               .Render())
+                    @Html.ValidationMessageFor(w => w.LoanAmount)
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    @Html.LabelFor(w => w.ActualEmiAmount)
+                    @(Html.KendoNumericTextBoxFor(w => w.ActualEmiAmount, new { @readonly = true, @class = "form-control", @style = "width: 100%" })
+                                                                                                                               .Render())
+                    @Html.ValidationMessageFor(w => w.ActualEmiAmount)
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    @Html.RequiredLabelFor(w => w.ReceivedDate)
+                    @(Html.KendoDatePickerFor(w => w.ReceivedDate, new { @class = "form-control", @style = "width: 100%" })
+                                                                                                                               .Render())
+                    @Html.ValidationMessageFor(w => w.ReceivedDate)
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    @Html.RequiredLabelFor(w => w.EMIAmount)
+                    @(Html.KendoNumericTextBoxFor(w => w.EMIAmount, new { @class = "form-control", @style = "width: 100%" })
+                                                                                                                               .Render())
+                    @Html.ValidationMessageFor(w => w.EMIAmount)
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    @Html.LabelFor(w => w.RemainingAmount)
+                    @(Html.KendoNumericTextBoxFor(w => w.RemainingAmount, new { @readonly = true, @class = "form-control", @style = "width: 100%" })
+                                                                                                                               .Render())
+                    @Html.ValidationMessageFor(w => w.RemainingAmount)
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    @Html.LabelFor(w => w.RemainingAmountAfterEMI)
+                    @(Html.KendoNumericTextBoxFor(w => w.RemainingAmountAfterEMI, new { @class = "form-control", @style = "width: 100%" })
+                                                                                                                               .Render())
+                    @Html.ValidationMessageFor(w => w.RemainingAmountAfterEMI)
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="form-group">
+                    @Html.LabelFor(w => w.Notes)
+                    @Html.TextAreaFor(w => w.Notes, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(w => w.Notes)
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <button class="btn btn-sm btn-primary" type="submit" name="Save"> Submit</button>
+                <button class="btn btn-sm btn-danger" type="reset"> Reset</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>

@@ -18,5 +18,6 @@ namespace MobileFinanceErp.ViewModel
         public string Mobile1 { get; set; }
         public string Mobile2 { get; set; }
         public string Address { get; set; }
+        public string AdhaarNumber { get; set; }
     }
 }

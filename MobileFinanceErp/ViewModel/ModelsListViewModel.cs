@@ -12,7 +12,7 @@ namespace MobileFinanceErp.ViewModel
         public int Id { get; set; }
 
         [DisplayName("Brand Name")]
-        public int BrandId { get; set; }
+        public string BrandName { get; set; }
 
         [DisplayName("Model Name")]
         public string Name { get; set; }

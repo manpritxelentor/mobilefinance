@@ -11,6 +11,10 @@ namespace MobileFinanceErp.Models.Configuration
     {
         public ModelsModelMap()
         {
+            HasRequired(w => w.Brand)
+                .WithMany(w => w.Models)
+                .HasForeignKey(w => w.BrandId);
+
             ToTable("tbl_Model");
         }
     }

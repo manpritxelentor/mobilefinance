@@ -6,13 +6,14 @@ function getDropdownListById(elementId) {
     return $(document.getElementById(elementId)).data("kendoDropDownList");
 }
 
-function postAjaxData(url, data, successFunction, errorFunction) {
+function postAjaxData(url, data, successFunction, errorFunction, async) {
     showLoader();
     $.ajax({
         url: url,
         type: 'POST',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(data),
+        async: async == undefined ? true : false,
         success: function (data) { hideLoader(); successFunction(data) },
         error: function (data) { hideLoader(); errorFunction(data) }
     })
@@ -75,6 +76,19 @@ function openKendoWindow(elementId, url, title, data, closeCallback) {
     var kendoWindow = $(window).data('kendoWindow');
     kendoWindow.center().open();
     return kendoWindow;
+}
+
+function openModal(title, url, data) {
+    $("#modalLabel").html(title);
+    postAjaxData(url, data, function (resp) {
+        $("#globalModal .modal-body").html(resp);
+        $("#globalModal").modal('show');
+    }, function () {
+    })
+}
+
+function closeModal() {
+    $("#globalModal").modal('hide');
 }
 
 function getFormData(formId) {
@@ -141,3 +155,8 @@ $(function () {
         showSuccess(mainMessage);
     }
 });
+
+function convertToDateTime(data) {
+    var date = new Date(parseInt(data.replace('/Date(', '')));
+    return kendo.toString(date, "dd-MMM-yyyy")
+}

@@ -42,26 +42,17 @@ namespace MobileFinanceErp.ViewModel.Validators
                 .NotEmpty()
                 .WithMessage("EMI is required");
 
-            RuleFor(w => w.InterestRateId)
+            RuleFor(w => w.Duration)
                 .NotEmpty()
-                .WithMessage("Plese select interest rate");
-
-            RuleFor(w => w.DurationId)
-                .NotEmpty()
-                .WithMessage("Plese select loan duration");
+                .WithMessage("Loan duration is required");
 
             RuleFor(w => w.StartDate)
                 .NotEmpty()
                 .WithMessage("Loan start date is required");
 
-            RuleFor(w => w.EndDate)
+            RuleFor(w => w.IMEI)
                 .NotEmpty()
-                .WithMessage("Loan end date is required");
-
-            //RuleFor(w => w.Guarantor1)
-            //    .NotEmpty()
-            //    .When(w => !w.Guarantor2.HasValue)
-            //    .WithMessage("Please select guarantor");
+                .WithMessage("IMEI number is required");
         }
     }
 }
