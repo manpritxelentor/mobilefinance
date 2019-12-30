@@ -32,6 +32,7 @@ namespace MobileFinanceErp.Helpers
         private bool _filterable = true;
         private string _optionLabel;
         private string _cascadeFrom;
+        private string _cascadeFromField;
         private string _changeEventHandler;
         private string _dataBoundEventHandler;
 
@@ -63,6 +64,12 @@ namespace MobileFinanceErp.Helpers
         public KendoDropdownBuilder CascadeFrom(string cascadeFrom)
         {
             _cascadeFrom = cascadeFrom;
+            return this;
+        }
+
+        public KendoDropdownBuilder CascadeFromField(string cascadeFromField)
+        {
+            _cascadeFromField = cascadeFromField;
             return this;
         }
 
@@ -122,6 +129,11 @@ namespace MobileFinanceErp.Helpers
             if (!string.IsNullOrEmpty(_cascadeFrom))
             {
                 controlBuilder.AppendLine($"cascadeFrom: '{_cascadeFrom}',");
+            }
+
+            if (!string.IsNullOrEmpty(_cascadeFromField))
+            {
+                controlBuilder.AppendLine($"cascadeFromField: '{_cascadeFromField}',");
             }
 
             if (_filterable)

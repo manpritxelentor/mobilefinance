@@ -53,6 +53,10 @@ namespace MobileFinanceErp.ViewModel.Validators
             RuleFor(w => w.IMEI)
                 .NotEmpty()
                 .WithMessage("IMEI number is required");
+
+            RuleFor(w => w.Guarantor1)
+               .NotEmpty()
+               .WithMessage("Guarantor-1 is required");
         }
     }
 }

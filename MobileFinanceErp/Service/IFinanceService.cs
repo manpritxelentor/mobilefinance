@@ -20,6 +20,8 @@ namespace MobileFinanceErp.Service
         List<ReceiveFinanceViewModel> GetFinanceDetails(int financeId);
         ReceiveFinanceViewModel GetReceiveModel(int financeId);
         bool ReceiveAmount(ReceiveFinanceViewModel model, string userId);
+        decimal GetMonthCollectedAmount(int month, int year);
+        decimal GetMonthTotalAmount(int month, int year);
     }
 
     public class FinanceService : IFinanceService
@@ -67,6 +69,16 @@ namespace MobileFinanceErp.Service
             IQueryable<FinanceDetailsModel> data = _FinanceRepository.GetFinanceDetails(financeId);
             return _dataMapper.Project<FinanceDetailsModel, ReceiveFinanceViewModel>(data)
                 .ToList();
+        }
+
+        public decimal GetMonthCollectedAmount(int month, int year)
+        {
+            return _FinanceRepository.GetMonthCollectedAmount(month, year);
+        }
+
+        public decimal GetMonthTotalAmount(int month, int year)
+        {
+            return _FinanceRepository.GetTotalLoanAmount();
         }
 
         public ReceiveFinanceViewModel GetReceiveModel(int financeId)

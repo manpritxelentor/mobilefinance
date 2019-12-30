@@ -33,7 +33,6 @@ namespace MobileFinanceErp.ViewModel.Validators
             RuleFor(w => w.Mobile1)
                 .NotEmpty()
                 .WithMessage("Mobile-1 is required");
-
         }
     }
 }

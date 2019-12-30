@@ -52,7 +52,7 @@ namespace MobileFinanceErp.Controllers
             {
                 string whereClause = string.Empty;
                 bool isFirstClause = true;
-                foreach (var column in request.Columns.Where(w => w.Searchable))
+                foreach (var column in request.Columns.Where(w => !string.IsNullOrEmpty(w.Data) && w.Searchable))
                 {
                     if (isFirstClause)
                     {

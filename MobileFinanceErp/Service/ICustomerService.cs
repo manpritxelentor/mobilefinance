@@ -16,6 +16,7 @@ namespace MobileFinanceErp.Service
         AddEditCustomerViewModel GetById(int id);
         bool Update(AddEditCustomerViewModel model);
         bool Delete(int id);
+        int GetCustomerCount();
     }
 
     public class CustomerService : ICustomerService
@@ -56,6 +57,11 @@ namespace MobileFinanceErp.Service
         {
             var entity = _CustomerRepository.GetById(id);
             return _dataMapper.Map<CustomerModel, AddEditCustomerViewModel>(entity);
+        }
+
+        public int GetCustomerCount()
+        {
+            return _CustomerRepository.GetAllNoTracking().Count();
         }
 
         public Tuple<bool, int> Insert(AddEditCustomerViewModel model)

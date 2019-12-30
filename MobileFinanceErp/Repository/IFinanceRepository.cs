@@ -2,6 +2,7 @@
 using MobileFinanceErp.Service;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -17,6 +18,8 @@ namespace MobileFinanceErp.Repository
         FinanceDetailsModel GetFinanceDetailCreate();
         void AddReceivedAmount(FinanceDetailsModel entity);
         decimal GetLoanAmount(int financeId);
+        decimal GetMonthCollectedAmount(int month, int year);
+        decimal GetTotalLoanAmount();
     }
 
     public class FinanceRepository : BaseTenantRepository<FinanceModel>, IFinanceRepository
@@ -68,6 +71,22 @@ namespace MobileFinanceErp.Repository
             decimal loanAmount = GetLoanAmount(financeId);
             decimal recievedAmount = _applicationDbContext.Set<FinanceDetailsModel>().Where(w => w.FinanceMasterId == financeId).Select(w => w.ReceivedAmount).DefaultIfEmpty().Sum(w => w);
             return loanAmount - recievedAmount;
+        }
+
+        public decimal GetMonthCollectedAmount(int month, int year)
+        {
+            //var startDate = new DateTime(year, month, 1);
+            //var endDate = startDate.AddMonths(1).AddDays(-1);
+
+            return _applicationDbContext.Set<FinanceDetailsModel>()
+                //.Where(w => DbFunctions.TruncateTime(w.ReceivedDate) >= DbFunctions.TruncateTime(startDate) &&
+                //DbFunctions.TruncateTime(w.ReceivedDate) <= DbFunctions.TruncateTime(endDate))
+                .Select(w => w.ReceivedAmount).DefaultIfEmpty().Sum();
+        }
+
+        public decimal GetTotalLoanAmount()
+        {
+            return GetAllNoTracking().Select(w => w.LoanAmount).DefaultIfEmpty().Sum();
         }
 
         public bool IsPageNumberValid(string pageNo, string bookNo)

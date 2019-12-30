@@ -100,6 +100,7 @@
                                                                             .DataTextField("Name")
                                                                             .DataValueField("Id")
                                                                             .CascadeFrom("BrandId")
+                                                                            .CascadeFromField("BrandId")
                                                                             .Read(Url.Action("GetAll", "Model"))
                                                                             .OptionLabel("Select Model..")
                                                                             .Render())
@@ -162,6 +163,29 @@
                                         @Html.RequiredLabelFor(w => w.EMI)
                                         @Html.KendoNumericTextBoxFor(w => w.EMI, new { @readonly = true, @class = "form-control", @style = "width: 100%" }).Render()
                                         @Html.ValidationMessageFor(w => w.EMI)
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        @Html.RequiredLabelFor(w => w.Guarantor1)
+                                        @(Html.KendoDropdownFor(w => w.Guarantor1, new { @class = "form-control", @style = "width:100%" })
+                                                                .DataTextField("FirstName")
+                                                                .DataValueField("Id")
+                                                                .Read(Url.Action("GetAll", "Guarantor"))
+                                                                .OptionLabel("Select Guarantor 1..")
+                                                                .Render())
+                                        @Html.ValidationMessageFor(w => w.Guarantor1)
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        @Html.LabelFor(w => w.Guarantor2)
+                                        @(Html.KendoDropdownFor(w => w.Guarantor2, new { @class = "form-control", @style = "width:100%" })
+                                                                .DataTextField("FirstName")
+                                                                .DataValueField("Id")
+                                                                .Read(Url.Action("GetAll", "Guarantor"))
+                                                                .OptionLabel("Select Guarantor 2..")
+                                                                .Render())
                                     </div>
                                 </div>
                             </div>

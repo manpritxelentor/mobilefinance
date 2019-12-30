@@ -11,6 +11,8 @@ namespace MobileFinanceErp.ViewModel
     {
         public int Id { get; set; }
 
+        public int BrandId { get; set; }
+
         [DisplayName("Brand Name")]
         public string BrandName { get; set; }
 
