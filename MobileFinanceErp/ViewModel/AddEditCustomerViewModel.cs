@@ -26,5 +26,6 @@ namespace MobileFinanceErp.ViewModel
         public bool IsMobile1Whatsapp { get; set; }
         public bool IsMobile2Whatsapp { get; set; }
         public string AdhaarNumber { get; set; }
+        public string CustomerPhotoPath { get; set; }
     }
 }

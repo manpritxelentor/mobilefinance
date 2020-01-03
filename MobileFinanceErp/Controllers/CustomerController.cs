@@ -3,7 +3,9 @@ using MobileFinanceErp.Service;
 using MobileFinanceErp.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 
@@ -80,6 +82,42 @@ namespace MobileFinanceErp.Controllers
         public ActionResult GetAll()
         {
             return Json(_customerService.GetAll(), JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult UploadImage()
+        {
+            string _imgname = string.Empty;
+            try
+            {
+                if (System.Web.HttpContext.Current.Request.Files.AllKeys.Any())
+                {
+                    var pic = System.Web.HttpContext.Current.Request.Files["MyImages"];
+                    if (pic.ContentLength > 0)
+                    {
+                        string fileName = Path.GetFileName(pic.FileName);
+                        string _ext = Path.GetExtension(pic.FileName);
+                        string validExtension = @"^.*\.(jpg|JPG|png|PNG|JPEG|jpeg)$";
+                        if (Regex.Match(_ext.TrimEnd('.'), validExtension).Success)
+                        {
+                            _imgname = Guid.NewGuid().ToString();
+                            string _comPath = Server.MapPath("/ProfilePicture/") + _imgname + _ext;
+
+                            // Saving Image in Original Mode
+                            pic.SaveAs(_comPath);
+                            string imagePath = "/ProfilePicture/" + _imgname + _ext;
+                            return Json(imagePath, JsonRequestBehavior.AllowGet);
+                        }
+                        else
+                            return Json("Invalid Image", JsonRequestBehavior.AllowGet);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                //Log Exception
+            }
+            return Json("Failed to save image", JsonRequestBehavior.AllowGet);
         }
     }
 }

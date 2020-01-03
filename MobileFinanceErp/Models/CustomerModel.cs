@@ -25,7 +25,7 @@ namespace MobileFinanceErp.Models
         public string WhatsappNumber { get; set; }
         public int? PictureId { get; set; }
         public string AdhaarNumber { get; set; }
-
+        public string CustomerPhotoPath { get; set; }
 
         public virtual PictureModel CustomerImage { get; set; }
         public virtual ICollection<FinanceModel> Finances { get; set; }

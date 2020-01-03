@@ -2582,9 +2582,11 @@
     <Content Include="Views\Guarantor\Index.cshtml" />
     <Content Include="Views\Guarantor\_CreateEditPartial.cshtml" />
     <Content Include="Views\Finance\ReceivePayment.cshtml" />
+    <Content Include="Views\Customer\_PictureUpload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ProfilePicture\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\GroupCode\" />
     <Folder Include="Views\Upload\" />

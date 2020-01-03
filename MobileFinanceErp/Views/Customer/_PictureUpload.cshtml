@@ -1,0 +1,65 @@
+﻿@model MobileFinanceErp.ViewModel.AddEditCustomerViewModel
+
+<div class="col-lg-6">
+    <label>Profile Picture</label>
+    <div id="visibleOnInsert" class="">
+        <input type="file" id="UploadImg" class="form-control" accept="image/x-png,image/jpeg">
+    </div>
+    <div id="visibleOnView" class="">
+        <img src="@Model.CustomerPhotoPath" id="imgPreview" style="width: 100px;height: 100px;">&nbsp;&nbsp;
+        <button id="removeImage" class="btn btn-sm btn-danger">X</button>
+    </div>
+    <input type="hidden" id="hdnCustomerPhotoPath" name="CustomerPhotoPath" value="@Model.CustomerPhotoPath" />
+</div>
+
+<script>
+    $(document).ready(function () {
+        var imageSrc = '@Model.CustomerPhotoPath';
+        if (imageSrc.length > 0) {
+            $("#visibleOnView").removeClass("invisible");
+            $("#visibleOnInsert").addClass("invisible");
+        }
+        else {
+            $("#visibleOnView").addClass("invisible");
+            $("#visibleOnInsert").removeClass("invisible");
+        }
+    });
+
+    $("#UploadImg").change(function () {
+        var data = new FormData();
+        var files = $("#UploadImg").get(0).files;
+        if (files.length > 0) {
+            data.append("MyImages", files[0]);
+            $.ajax({
+                url: "/Customer/UploadImage",
+                type: "POST",
+                processData: false,
+                contentType: false,
+                data: data,
+                success: function (response) {
+                    debugger;
+                    if (response.toLowerCase().includes("failed") || response.toLowerCase().includes("invalid")) {
+                        alert(response);
+                    }
+                    else {
+                        $("#hdnCustomerPhotoPath").val(response);
+                        $("#imgPreview").attr('src', response);
+                        $("#visibleOnView").removeClass("invisible");
+                        $("#visibleOnInsert").addClass("invisible");
+                    }
+                },
+                error: function (er) {
+                    alert(er);
+                }
+            });
+        }
+    });
+
+    $("#removeImage").on("click", function () {
+        $("#hdnCustomerPhotoPath").val("");
+        $("#imgPreview").attr('src', "");
+        $("#visibleOnView").addClass("invisible");
+        $("#visibleOnInsert").removeClass("invisible");
+        event.preventDefault();
+    });
+</script>
