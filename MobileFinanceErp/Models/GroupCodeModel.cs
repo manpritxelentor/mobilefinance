@@ -9,6 +9,7 @@ namespace MobileFinanceErp.Models
     {
         public GroupCodeModel()
         {
+            CityCustomers = new List<CustomerModel>();
             StatusFinances = new List<FinanceModel>();
         }
         public int Id { get; set; }
@@ -16,5 +17,6 @@ namespace MobileFinanceErp.Models
         public string Name { get; set; }
         public string DisplayName { get; set; }
         public virtual ICollection<FinanceModel> StatusFinances { get; set; }
+        public virtual ICollection<CustomerModel> CityCustomers { get; set; }
     }
 }

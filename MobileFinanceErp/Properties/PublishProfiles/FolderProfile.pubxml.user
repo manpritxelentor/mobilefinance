@@ -136,10 +136,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/MobileFinanceErp.dll">
-      <publishTime>12/08/2019 04:16:14</publishTime>
+      <publishTime>12/23/2019 03:33:43</publishTime>
     </File>
     <File Include="bin/MobileFinanceErp.pdb">
-      <publishTime>12/08/2019 04:16:14</publishTime>
+      <publishTime>12/23/2019 03:33:43</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>02/18/2018 09:44:54</publishTime>
@@ -2582,6 +2582,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/dataTable/images/details_open.png">
       <publishTime>11/05/2019 00:41:52</publishTime>
+    </File>
+    <File Include="Content/dataTable/images/grid-collapse.png">
+      <publishTime>12/23/2019 00:57:58</publishTime>
+    </File>
+    <File Include="Content/dataTable/images/grid-expand.png">
+      <publishTime>12/23/2019 01:00:27</publishTime>
     </File>
     <File Include="Content/dataTable/images/sort_asc.png">
       <publishTime>11/05/2019 00:41:52</publishTime>
@@ -6169,7 +6175,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2019 00:22:29</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>11/19/2019 16:18:41</publishTime>
+      <publishTime>12/23/2019 01:01:44</publishTime>
     </File>
     <File Include="Content/style.css.map">
       <publishTime>11/05/2019 00:24:09</publishTime>
@@ -6886,7 +6892,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/18/2019 11:12:40</publishTime>
     </File>
     <File Include="Scripts/main.js">
-      <publishTime>11/19/2019 15:58:52</publishTime>
+      <publishTime>12/23/2019 03:18:23</publishTime>
     </File>
     <File Include="Scripts/main.js.map">
       <publishTime>11/05/2019 00:46:58</publishTime>
@@ -6898,7 +6904,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2019 15:01:55</publishTime>
     </File>
     <File Include="Scripts/pages/customer.addedit.js">
-      <publishTime>12/08/2019 03:58:50</publishTime>
+      <publishTime>12/23/2019 03:14:25</publishTime>
+    </File>
+    <File Include="Scripts/pages/finance.addedit.js">
+      <publishTime>12/22/2019 15:03:33</publishTime>
+    </File>
+    <File Include="Scripts/pages/guarantor.addedit.js">
+      <publishTime>12/15/2019 04:25:50</publishTime>
     </File>
     <File Include="Scripts/pages/models.addedit.js">
       <publishTime>11/28/2019 02:37:55</publishTime>
@@ -7003,7 +7015,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/18/2019 11:13:12</publishTime>
     </File>
     <File Include="Views/Brand/Index.cshtml">
-      <publishTime>11/19/2019 16:17:03</publishTime>
+      <publishTime>12/22/2019 17:05:36</publishTime>
     </File>
     <File Include="Views/Brand/_CreateEditPartial.cshtml">
       <publishTime>11/19/2019 15:03:22</publishTime>
@@ -7015,10 +7027,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/08/2019 03:59:36</publishTime>
     </File>
     <File Include="Views/Customer/Index.cshtml">
-      <publishTime>12/08/2019 03:50:20</publishTime>
+      <publishTime>12/22/2019 17:05:42</publishTime>
     </File>
     <File Include="Views/Customer/_CreateEditPartial.cshtml">
-      <publishTime>12/08/2019 04:04:52</publishTime>
+      <publishTime>12/22/2019 18:37:01</publishTime>
+    </File>
+    <File Include="Views/Finance/Create.cshtml">
+      <publishTime>12/15/2019 00:06:16</publishTime>
+    </File>
+    <File Include="Views/Finance/Edit.cshtml">
+      <publishTime>12/15/2019 00:05:54</publishTime>
+    </File>
+    <File Include="Views/Finance/Index.cshtml">
+      <publishTime>12/23/2019 03:27:08</publishTime>
+    </File>
+    <File Include="Views/Finance/ReceivePayment.cshtml">
+      <publishTime>12/23/2019 03:24:20</publishTime>
+    </File>
+    <File Include="Views/Finance/_CreateEditPartial.cshtml">
+      <publishTime>12/22/2019 15:08:21</publishTime>
+    </File>
+    <File Include="Views/Guarantor/Create.cshtml">
+      <publishTime>12/15/2019 04:25:50</publishTime>
+    </File>
+    <File Include="Views/Guarantor/Edit.cshtml">
+      <publishTime>12/15/2019 04:25:50</publishTime>
+    </File>
+    <File Include="Views/Guarantor/Index.cshtml">
+      <publishTime>12/22/2019 17:05:54</publishTime>
+    </File>
+    <File Include="Views/Guarantor/_CreateEditPartial.cshtml">
+      <publishTime>12/15/2019 04:25:50</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>11/05/2019 00:22:29</publishTime>
@@ -7054,10 +7093,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2019 02:37:55</publishTime>
     </File>
     <File Include="Views/Model/Index.cshtml">
-      <publishTime>11/28/2019 02:37:55</publishTime>
+      <publishTime>12/22/2019 18:28:47</publishTime>
     </File>
     <File Include="Views/Model/_CreateEditPartial.cshtml">
-      <publishTime>11/28/2019 02:37:55</publishTime>
+      <publishTime>12/14/2019 20:45:19</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/05/2019 00:23:06</publishTime>
@@ -7069,7 +7108,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2019 00:23:06</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/08/2019 04:08:23</publishTime>
+      <publishTime>12/22/2019 22:32:58</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/05/2019 00:23:06</publishTime>
@@ -7081,7 +7120,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2019 00:22:29</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/08/2019 04:16:16</publishTime>
+      <publishTime>12/23/2019 03:34:13</publishTime>
     </File>
   </ItemGroup>
 </Project>

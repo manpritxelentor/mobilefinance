@@ -58,6 +58,7 @@ namespace MobileFinanceErp.Service
                 ;
 
                 cfg.CreateMap<CustomerModel, CustomerListViewModel>()
+                   .ForMember(src => src.City, opt => opt.MapFrom(dest => dest.CityId != null ? dest.CustomerCity.DisplayName : ""))
                     .ForMember(src => src.Address, opt => opt.MapFrom(dest => (dest.Address1 != null ? dest.Address1 : "") + (dest.Address2 != null ? " , " + dest.Address2 : "") + (dest.Address3 != null ? " ," + dest.Address3 : "")))
                 ;
                 cfg.CreateMap<AddEditCustomerViewModel, CustomerModel>();
@@ -85,7 +86,7 @@ namespace MobileFinanceErp.Service
                     .ForMember(dest => dest.Notes, opt => opt.Ignore())
                     .ForMember(dest => dest.RemainingAmount, opt => opt.Ignore())
                     .ForMember(dest => dest.CarryForwardAmount, opt => opt.Ignore())
-                    .ForMember(dest => dest.EMIAmount, opt => opt.MapFrom(src=> src.ReceivedAmount));
+                    .ForMember(dest => dest.EMIAmount, opt => opt.MapFrom(src => src.ReceivedAmount));
             });
             return config.CreateMapper();
         }

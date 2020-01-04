@@ -1736,7 +1736,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\style.css.map" />
     <Content Include="Content\style.min.css.map" />
-    <Content Include="Scripts\charts.js.map" />
     <Content Include="Scripts\colors.js.map" />
     <Content Include="Content\pace.css.map" />
     <Content Include="Content\pace.min.css.map" />
@@ -2411,7 +2410,6 @@
     <Content Include="Scripts\popovers.js" />
     <Content Include="Scripts\signin-redirect.js" />
     <Content Include="Scripts\signout-redirect.js" />
-    <Content Include="Scripts\src\charts.js" />
     <Content Include="Scripts\src\colors.js" />
     <Content Include="Scripts\src\main.js" />
     <Content Include="Scripts\src\popovers.js" />

@@ -36,6 +36,7 @@ namespace MobileFinanceErp.Controllers
         public ActionResult Create()
         {
             AddEditCustomerViewModel model = new AddEditCustomerViewModel();
+            model.CustomerIdentificationNumber = _customerService.GetNewCustomerIdentityNumber();
             return View(model);
         }
 

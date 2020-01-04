@@ -34,9 +34,9 @@ namespace MobileFinanceErp.Controllers
             //ci.NumberFormat.CurrencySymbol = "₹";
 
 
-            ViewBag.CollectedAmount = $"₹ {collectedAmount}";
-            ViewBag.PendingAmount = $"₹ {pendingAmount}";
-            ViewBag.TotalAmount = $"₹ {totalAmount}";
+            ViewBag.CollectedAmount = collectedAmount;
+            ViewBag.PendingAmount = pendingAmount;
+            ViewBag.TotalAmount =  totalAmount;
 
             return View();
         }

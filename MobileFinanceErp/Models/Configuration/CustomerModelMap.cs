@@ -14,6 +14,10 @@ namespace MobileFinanceErp.Models.Configuration
                 .WithMany(w => w.CustomerImages)
                 .HasForeignKey(w => w.PictureId);
 
+            HasOptional(w => w.CustomerCity)
+                .WithMany(w => w.CityCustomers)
+                .HasForeignKey(w => w.CityId);
+
             ToTable("tbl_Customer");
         }
     }

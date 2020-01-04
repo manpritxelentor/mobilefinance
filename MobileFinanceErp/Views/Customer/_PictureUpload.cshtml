@@ -37,7 +37,6 @@
                 contentType: false,
                 data: data,
                 success: function (response) {
-                    debugger;
                     if (response.toLowerCase().includes("failed") || response.toLowerCase().includes("invalid")) {
                         alert(response);
                     }

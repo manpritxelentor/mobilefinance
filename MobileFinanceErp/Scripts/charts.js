@@ -110,20 +110,7 @@ var radarChart = new Chart($('#canvas-4'), {
   }
 }); // eslint-disable-next-line no-unused-vars
 
-var pieChart = new Chart($('#canvas-5'), {
-  type: 'pie',
-  data: {
-    labels: ['Received', 'Pending'],
-    datasets: [{
-      data: [78, 22],
-        backgroundColor: ['#00ff00', '#B22222'],
-        hoverBackgroundColor: ['#00ff00', '#B22222']
-    }]
-  },
-  options: {
-    responsive: true
-  }
-}); // eslint-disable-next-line no-unused-vars
+
 
 var polarAreaChart = new Chart($('#canvas-6'), {
   type: 'polarArea',
