@@ -24,11 +24,7 @@
                 <div class="card-header"><strong>Manage</strong> Customer</div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-12 col-md-4 col-lg-12">
-                            <div class="form-group">
-                                @Html.Partial("_PictureUpload", Model)
-                            </div>
-                        </div>
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
                                 @Html.RequiredLabelFor(w => w.CustomerIdentificationNumber)
@@ -66,7 +62,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
                                 @Html.RequiredLabelFor(w => w.Address1)
                                 @Html.TextBoxFor(w => w.Address1, new { @class = "form-control" })
@@ -74,15 +70,15 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
                                 @Html.LabelFor(w => w.Address2)
-                                @Html.TextBoxFor(w => w.Address1, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(w => w.Address1)
+                                @Html.TextBoxFor(w => w.Address2, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(w => w.Address2)
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
                                 @Html.LabelFor(w => w.Address3)
                                 @Html.TextBoxFor(w => w.Address3, new { @class = "form-control" })
@@ -90,7 +86,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-4 col-lg-6">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
                                 @Html.RequiredLabelFor(w => w.CityId)
                                 @(Html.KendoDropdownFor(w => w.CityId, new { @class = "form-control", @style = "width:100%" })
@@ -102,7 +98,7 @@
                                 @Html.ValidationMessageFor(w => w.CityId)
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
                                 @Html.LabelFor(w => w.Pincode)
                                 @Html.TextBoxFor(w => w.Pincode, new { @class = "form-control" })
@@ -124,7 +120,11 @@
                                 @Html.ValidationMessageFor(w => w.Mobile2)
                             </div>
                         </div>
-
+                        <div class="col-sm-12 col-md-4 col-lg-12">
+                            <div class="form-group">
+                                @Html.Partial("_PictureUpload", Model)
+                            </div>
+                        </div>
                     </div>
                 </div>
 
