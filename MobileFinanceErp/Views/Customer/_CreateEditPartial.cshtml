@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.Surname)
+                                @Html.RequiredLabelFor(w => w.Surname)
                                 @Html.TextBoxFor(w => w.Surname, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.Surname)
                             </div>
@@ -68,7 +68,7 @@
 
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.Address1)
+                                @Html.RequiredLabelFor(w => w.Address1)
                                 @Html.TextBoxFor(w => w.Address1, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.Address1)
                             </div>
@@ -92,7 +92,7 @@
 
                         <div class="col-sm-12 col-md-4 col-lg-6">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.CityId)
+                                @Html.RequiredLabelFor(w => w.CityId)
                                 @(Html.KendoDropdownFor(w => w.CityId, new { @class = "form-control", @style = "width:100%" })
                                                                                 .DataTextField("Name")
                                                                                 .DataValueField("Id")
@@ -111,7 +111,7 @@
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.Mobile1)
+                                @Html.RequiredLabelFor(w => w.Mobile1)
                                 @Html.TextBoxFor(w => w.Mobile1, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.Mobile1)
                             </div>
