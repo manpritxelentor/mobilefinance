@@ -25,6 +25,7 @@ function showNotification(message, type) {
 
 function confirmDialog(message, okCallBack, cancelCallback) {
     alertify.confirm(message, okCallBack, cancelCallback)
+        .setHeader('Confirm')
 }
 
 function changeStatus(id, status) {
