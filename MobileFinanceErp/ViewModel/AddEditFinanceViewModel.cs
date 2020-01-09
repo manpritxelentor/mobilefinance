@@ -38,19 +38,19 @@ namespace MobileFinanceErp.ViewModel
         public int ModelId { get; set; }
 
         [DisplayName("Mobile Price")]
-        public decimal MobilePrice { get; set; }
+        public decimal? MobilePrice { get; set; }
 
         [DisplayName("Loan Amount")]
-        public decimal LoanAmount { get; set; }
+        public decimal? LoanAmount { get; set; }
 
         [DisplayName("Down Payment")]
-        public decimal DownPayment { get; set; }
+        public decimal? DownPayment { get; set; }
 
         [DisplayName("EMI")]
-        public decimal EMI { get; set; }
+        public decimal? EMI { get; set; }
 
         [DisplayName("Duration")]
-        public int Duration { get; set; }
+        public int? Duration { get; set; }
 
         [DisplayName("Start Date")]
         public DateTime? StartDate { get; set; }

@@ -7,6 +7,12 @@ namespace MobileFinanceErp.Models
 {
     public class GuarantorModel : BaseAuditableEntity
     {
+        public GuarantorModel()
+        {
+            FinanceGuarantorData1 = new List<FinanceModel>();
+            FinanceGuarantorData2 = new List<FinanceModel>();
+        }
+
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -20,6 +26,9 @@ namespace MobileFinanceErp.Models
         public string WhatsappNumber { get; set; }
         public string Aadhar { get; set; }
         public string PAN { get; set; }
+
+        public virtual ICollection<FinanceModel> FinanceGuarantorData1 { get; set; }
+        public virtual ICollection<FinanceModel> FinanceGuarantorData2 { get; set; }
 
     }
 }

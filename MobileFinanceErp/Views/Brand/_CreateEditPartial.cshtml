@@ -2,10 +2,12 @@
 
 @{
     string actionName = Convert.ToString(ViewBag.ActionName);
+    if (Model.IsPopup)
+    {
+        Layout = null;
+    }
 }
 
-<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
-@Scripts.Render("~/bundles/jqueryval")
 
 <div class="row">
     <div class="col-lg-12">

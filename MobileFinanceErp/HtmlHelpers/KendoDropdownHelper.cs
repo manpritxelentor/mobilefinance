@@ -34,6 +34,7 @@ namespace MobileFinanceErp.Helpers
         private string _cascadeFrom;
         private string _cascadeFromField;
         private string _changeEventHandler;
+        private string _addUrl;
         private string _dataBoundEventHandler;
 
         public KendoDropdownBuilder(string name, string createdHtml, string value)
@@ -58,6 +59,12 @@ namespace MobileFinanceErp.Helpers
         public KendoDropdownBuilder OptionLabel(string optionLabel)
         {
             _optionLabel = optionLabel;
+            return this;
+        }
+
+        public KendoDropdownBuilder AddUrl(string addUrl)
+        {
+            _addUrl = addUrl;
             return this;
         }
 
@@ -155,6 +162,12 @@ namespace MobileFinanceErp.Helpers
             {
                 controlBuilder.AppendLine($"dataBound: {_dataBoundEventHandler},");
             }
+
+            if (!string.IsNullOrEmpty(_addUrl))
+            {
+                controlBuilder.AppendLine($"footerTemplate: '#={_addUrl}()#',");
+            }
+            
 
             if (!string.IsNullOrEmpty(_readUrl))
             {

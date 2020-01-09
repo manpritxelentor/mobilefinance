@@ -9,7 +9,7 @@ using System.Web.Mvc;
 namespace MobileFinanceErp.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly IIdentityHelper _identityHelper;
         private readonly ICustomerService _customerService;

@@ -25,7 +25,7 @@ namespace MobileFinanceErp.Helpers
         private readonly string _controlHtml;
         private readonly string _controlName;
         private readonly string _controlValue;
-        private string _format = "n2";
+        private string _format = "n0";
         private int _minValue = default(int);
         private int _maxValue = int.MaxValue;
         private string _changeEventHandler;
@@ -74,6 +74,8 @@ namespace MobileFinanceErp.Helpers
 
             controlBuilder.AppendLine($"min: {_minValue},");
             controlBuilder.AppendLine($"max: {_maxValue},");
+            controlBuilder.AppendLine($"decimals: 0,");
+            controlBuilder.AppendLine($"spinners: false,");
             if (!string.IsNullOrEmpty(_changeEventHandler))
             {
                 controlBuilder.AppendLine($"change: {_changeEventHandler},");

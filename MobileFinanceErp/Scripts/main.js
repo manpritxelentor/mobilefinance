@@ -78,12 +78,19 @@ function openKendoWindow(elementId, url, title, data, closeCallback) {
     return kendoWindow;
 }
 
-function openModal(title, url, data) {
+function openModal(title, url, data, successFunction, errorFunction) {
     $("#modalLabel").html(title);
     postAjaxData(url, data, function (resp) {
         $("#globalModal .modal-body").html(resp);
         $("#globalModal").modal('show');
-    }, function () {
+
+        if (successFunction != undefined) {
+            successFunction(resp);
+        }
+    }, function (err) {
+        if (errorFunction != undefined) {
+            errorFunction(err);
+        }
     })
 }
 
@@ -113,6 +120,42 @@ $(function () {
     //        hideLoader();
     //    }
     //})
+    //if ($.validator !== undefined) {
+    //    $.validator.setDefaults({
+    //        ignore: [],
+    //        highlight: function (element, errorClass) {
+    //            element = $(element);
+    //            var highLightElement;
+    //            if (element.parent().hasClass("k-picker-wrap") ||
+    //                element.parent().hasClass("k-numeric-wrap")) {
+    //                highLightElement = element.parent().parent();
+    //            }
+    //            else if (element.parent().hasClass("k-widget")) {
+    //                highLightElement = element.parent();
+    //            } else if (element.parent().children('.k-upload-empty').length > 0) {
+    //                highLightElement = $(element.parent().children('.k-upload-empty')[0]);
+    //            } else {
+    //                highLightElement = element;
+    //            }
+    //            highLightElement.addClass('input-validation-error');
+    //        },
+    //        unhighlight: function (element, errorClass) {
+    //            element = $(element);
+    //            var highLightElement;
+    //            if (element.parent().hasClass("k-picker-wrap")
+    //                || element.parent().hasClass("k-numeric-wrap")) {
+    //                highLightElement = element.parent().parent();
+    //            }
+    //            else if (element.parent().hasClass("k-widget")) {
+    //                highLightElement = element.parent();
+    //            } else {
+    //                highLightElement = element;
+    //            }
+    //            highLightElement.removeClass('input-validation-error');
+    //        }
+    //    });
+    //}
+
 });
 
 

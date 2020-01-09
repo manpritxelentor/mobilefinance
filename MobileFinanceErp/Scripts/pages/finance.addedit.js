@@ -19,7 +19,7 @@ function setCustomerMetaData() {
     var customerAddressElement = $("#CustomerAddress");
 
     if (customerModel.Id != "") {
-        customerNameElement.val(customerModel.FirstName);
+        customerNameElement.val(customerModel.FullName);
         customerMobileElement.val(customerModel.Mobile1);
         customerAddressElement.val(customerModel.Address);
     } else {
@@ -53,4 +53,27 @@ function recalculateLoanAmount() {
     var loanAmount = mobilePrice - downPayment;
     loanAmountElement.value(loanAmount > 0 ? loanAmount : 0);
     calculateEMI();
+}
+
+
+function getBrandAddButton() {
+    return "<button class='btn btn-block btn-link' onclick='openBrandPopup()'>Add Brand</button>"
+}
+
+function openBrandPopup() {
+    openModal('Add New Brand', brandAddUrl);
+}
+
+function brandSaveSuccess(data) {
+    if (data.Status == true) {
+        closeModal();
+        $('#BrandId').data("kendoDropDownList").dataSource.read()
+        showSuccess('Brand saved successfully');
+        return;
+    }
+    showError('Failed to save brand. Please try again');
+}
+
+function brandSaveError(data) {
+    showError('Failed to save brand. Please try again');
 }

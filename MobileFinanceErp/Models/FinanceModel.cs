@@ -28,6 +28,9 @@ namespace MobileFinanceErp.Models
         public virtual CustomerModel Customer { get; set; }
         public virtual ModelsModel Model { get; set; }
         public virtual GroupCodeModel Status { get; set; }
+        public virtual GuarantorModel GuarantorData1 { get; set; }
+        public virtual GuarantorModel GuarantorData2 { get; set; }
+
         public virtual ICollection<FinanceDetailsModel> FinanceDetails { get; set; }
     }
 }

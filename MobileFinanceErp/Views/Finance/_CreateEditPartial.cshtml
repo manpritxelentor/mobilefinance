@@ -31,7 +31,7 @@
                                     <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.CustomerId)
                                         @(Html.KendoDropdownFor(w => w.CustomerId, new { @class = "form-control", @style = "width:100%" })
-                                                                .DataTextField("FirstName")
+                                                                .DataTextField("FullName")
                                                                 .DataValueField("Id")
                                                                 .Read(Url.Action("GetAll", "Customer"))
                                                                 .OnChange("setCustomerMetaData")
@@ -89,6 +89,7 @@
                                                                 .DataValueField("Id")
                                                                 .Read(Url.Action("GetAll", "Brand"))
                                                                 .OptionLabel("Select Brand..")
+                                                                .AddUrl("getBrandAddButton")
                                                                 .Render())
                                         @Html.ValidationMessageFor(w => w.BrandId)
                                     </div>
@@ -153,8 +154,7 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.StartDate)
-                                        @(Html.KendoDatePickerFor(w => w.StartDate, new { @class = "form-control", @style = "width: 100%" })
-                                            .Render())
+                                        @(Html.KendoDatePickerFor(w => w.StartDate, new { @class = "form-control",@style = "width: 100%" }).Render())
                                         @Html.ValidationMessageFor(w => w.StartDate)
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-4">
                                     <div class="form-group">
-                                        @Html.RequiredLabelFor(w => w.Guarantor1)
+                                        @Html.LabelFor(w => w.Guarantor1)
                                         @(Html.KendoDropdownFor(w => w.Guarantor1, new { @class = "form-control", @style = "width:100%" })
                                                                 .DataTextField("FirstName")
                                                                 .DataValueField("Id")
@@ -205,4 +205,6 @@
 <script>
     var financeListPageUrl = '@Url.Action("Index", "Finance")';
     var calculateEmiUrl = '@Url.Action("CalculateEMI", "Finance")';
+    var brandAddUrl = '@Url.Action("CreateBrandPopup", "Brand")'
+    $("#StartDate").attr("readonly", true);
 </script>
