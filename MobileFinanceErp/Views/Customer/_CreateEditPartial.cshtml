@@ -90,11 +90,12 @@
                             <div class="form-group">
                                 @Html.RequiredLabelFor(w => w.CityId)
                                 @(Html.KendoDropdownFor(w => w.CityId, new { @class = "form-control", @style = "width:100%" })
-                                                                                .DataTextField("Name")
-                                                                                .DataValueField("Id")
-                                                                                .Read(Url.Action("GetAll", "GroupCode", new { codeName = "City" }))
-                                                                                .OptionLabel("Select City..")
-                                                                                .Render())
+                                    .DataTextField("Name")
+                                    .DataValueField("Id")
+                                    .Read(Url.Action("GetAll", "GroupCode", new { codeName = "City" }))
+                                    .OptionLabel("Select City..")
+                                    .AddUrl("addUpdateCity")
+                                    .Render())
                                 @Html.ValidationMessageFor(w => w.CityId)
                             </div>
                         </div>
@@ -141,4 +142,5 @@
 <script>
     var customerListPageUrl = '@Url.Action("Index", "Customer")';
     var financePageUrl = '@Url.Action("Create", "Finance")';
+    var addCityUrl = '@Url.Action("CreateGroupCode", "GroupCode", new { @code = "City" })';
 </script>

@@ -277,6 +277,7 @@
     <Compile Include="ViewModel\AddEditFinanceViewModel.cs" />
     <Compile Include="ViewModel\AddEditCustomerViewModel.cs" />
     <Compile Include="ViewModel\AddEditBrandViewModel.cs" />
+    <Compile Include="ViewModel\AddEditGroupCodeViewModel.cs" />
     <Compile Include="ViewModel\AddEditGuarantorViewModel.cs" />
     <Compile Include="ViewModel\AddEditModelsViewModel.cs" />
     <Compile Include="ViewModel\FinanceListViewModel.cs" />
@@ -292,6 +293,7 @@
     <Compile Include="ViewModel\Validators\AddEditFinanceViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditBrandViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditCustomerViewModelValidator.cs" />
+    <Compile Include="ViewModel\Validators\AddEditGroupCodeViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditGuarantorViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditModelsViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\ReceiveFinanceViewModelValidator.cs" />
@@ -2582,12 +2584,12 @@
     <Content Include="Views\Guarantor\_CreateEditPartial.cshtml" />
     <Content Include="Views\Finance\ReceivePayment.cshtml" />
     <Content Include="Views\Customer\_PictureUpload.cshtml" />
+    <Content Include="Views\GroupCode\CreateGroupCode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="ProfilePicture\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\GroupCode\" />
     <Folder Include="Views\Upload\" />
   </ItemGroup>
   <ItemGroup>
