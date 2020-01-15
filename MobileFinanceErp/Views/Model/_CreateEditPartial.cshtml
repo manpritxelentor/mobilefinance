@@ -2,6 +2,10 @@
 
 @{
     string actionName = Convert.ToString(ViewBag.ActionName);
+    if (Model.IsPopup)
+    {
+        Layout = null;
+    }
 }
 
 <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
@@ -16,7 +20,7 @@
             OnFailure = "modelSaveError",
             OnComplete = "hideLoader",
             OnBegin = "showLoader"
-        }, new { @class = "form-horizontal" }))
+        }, new { @class = "form-horizontal can-popup" }))
         {
             @Html.AntiForgeryToken()
             @Html.HiddenFor(w => w.Id)
@@ -27,10 +31,11 @@
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="form-group">
                                 @Html.LabelFor(w => w.BrandId)
-                                @(Html.KendoDropdownFor(w => w.BrandId, new { @class = "form-control", @style="width:100%" })
+                                @(Html.KendoDropdownFor(w => w.BrandId, new { @class = "form-control", @style = "width:100%" })
                                         .DataTextField("Name")
                                         .DataValueField("Id")
-                                        .Read(Url.Action("GetAll","Brand"))
+                                        .OptionLabel("Select Brand..")
+                                        .Read(Url.Action("GetAll", "Brand"))
                                         .Render())
                                 @Html.ValidationMessageFor(w => w.BrandId)
                             </div>

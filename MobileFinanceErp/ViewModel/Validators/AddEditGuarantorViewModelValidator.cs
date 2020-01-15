@@ -22,11 +22,7 @@ namespace MobileFinanceErp.ViewModel.Validators
                 .NotEmpty()
                 .WithMessage("Address line 1 is required");
 
-            RuleFor(w => w.Address2)
-                .NotEmpty()
-                .WithMessage("Address line 2 is required");
-
-            RuleFor(w => w.City)
+            RuleFor(w => w.CityId)
                .NotEmpty()
                .WithMessage("City is required");
 

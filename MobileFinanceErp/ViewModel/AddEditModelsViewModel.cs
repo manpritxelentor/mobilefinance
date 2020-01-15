@@ -16,5 +16,6 @@ namespace MobileFinanceErp.ViewModel
         public string BrandName { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public bool IsPopup { get; set; }
     }
 }

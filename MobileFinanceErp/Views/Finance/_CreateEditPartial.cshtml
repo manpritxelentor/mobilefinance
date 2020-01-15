@@ -83,15 +83,15 @@
                                 </div>
                                 <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
-                                        @Html.RequiredLabelFor(w => w.BrandId)
-                                        @(Html.KendoDropdownFor(w => w.BrandId, new { @class = "form-control", @style = "width:100%" })
+                                        @Html.RequiredLabelFor(w => w.FinanceBrandId)
+                                        @(Html.KendoDropdownFor(w => w.FinanceBrandId, new { @class = "form-control", @style = "width:100%" })
                                                                 .DataTextField("Name")
                                                                 .DataValueField("Id")
                                                                 .Read(Url.Action("GetAll", "Brand"))
                                                                 .OptionLabel("Select Brand..")
                                                                 .AddUrl("getBrandAddButton")
                                                                 .Render())
-                                        @Html.ValidationMessageFor(w => w.BrandId)
+                                        @Html.ValidationMessageFor(w => w.FinanceBrandId)
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 col-lg-4">
@@ -104,6 +104,7 @@
                                                                             .CascadeFromField("BrandId")
                                                                             .Read(Url.Action("GetAll", "Model"))
                                                                             .OptionLabel("Select Model..")
+                                                                            .AddUrl("getModelAddButton")
                                                                             .Render())
                                         @Html.ValidationMessageFor(w => w.ModelId)
                                     </div>
@@ -173,6 +174,7 @@
                                                                 .DataValueField("Id")
                                                                 .Read(Url.Action("GetAll", "Guarantor"))
                                                                 .OptionLabel("Select Guarantor 1..")
+                                                                .AddUrl("getGuarantorAddButton")
                                                                 .Render())
                                         @Html.ValidationMessageFor(w => w.Guarantor1)
                                     </div>
@@ -185,6 +187,7 @@
                                                                 .DataValueField("Id")
                                                                 .Read(Url.Action("GetAll", "Guarantor"))
                                                                 .OptionLabel("Select Guarantor 2..")
+                                                                .AddUrl("getGuarantorAddButton")
                                                                 .Render())
                                     </div>
                                 </div>
@@ -206,5 +209,7 @@
     var financeListPageUrl = '@Url.Action("Index", "Finance")';
     var calculateEmiUrl = '@Url.Action("CalculateEMI", "Finance")';
     var brandAddUrl = '@Url.Action("CreateBrandPopup", "Brand")'
+    var modelAddUrl = '@Url.Action("CreateModelPopup", "Model")'
+    var guarantorAddUrl = '@Url.Action("CreateGuarantorPopup", "Guarantor")'
     $("#StartDate").attr("readonly", true);
 </script>

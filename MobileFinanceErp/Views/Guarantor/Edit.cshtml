@@ -6,6 +6,8 @@
     ViewBag.ActionName = "Edit";
 }
 <script src="~/Scripts/pages/guarantor.addedit.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+@Scripts.Render("~/bundles/jqueryval")
 
 @{
     Html.RenderPartial("_CreateEditPartial", Model);

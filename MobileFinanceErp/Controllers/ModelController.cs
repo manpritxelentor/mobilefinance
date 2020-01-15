@@ -36,6 +36,14 @@ namespace MobileFinanceErp.Controllers
         }
 
         [HttpPost]
+        public ActionResult CreateModelPopup()
+        {
+            AddEditModelsViewModel model = new AddEditModelsViewModel { IsPopup = true };
+            ViewBag.ActionName = "Create";
+            return View("_CreateEditPartial", model);
+        }
+
+        [HttpPost]
         public ActionResult Create(AddEditModelsViewModel model)
         {
             if (!ModelState.IsValid)

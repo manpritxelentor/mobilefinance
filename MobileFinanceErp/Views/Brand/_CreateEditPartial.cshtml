@@ -18,7 +18,7 @@
             OnFailure = "brandSaveError",
             OnComplete = "hideLoader",
             OnBegin = "showLoader"
-        }, new { @class = "form-horizontal" }))
+        }, new { @class = "form-horizontal can-popup" }))
         {
             @Html.AntiForgeryToken()
             @Html.HiddenFor(w => w.Id)

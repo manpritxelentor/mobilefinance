@@ -2,10 +2,13 @@
 
 @{
     string actionName = Convert.ToString(ViewBag.ActionName);
+    if (Model.IsPopup)
+    {
+        Layout = null;
+    }
 }
 
-<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
-@Scripts.Render("~/bundles/jqueryval")
+
 
 <div class="row">
     <div class="col-lg-12">
@@ -16,7 +19,7 @@
             OnFailure = "guarantorSaveError",
             OnComplete = "hideLoader",
             OnBegin = "showLoader"
-        }, new { @class = "form-horizontal" }))
+        }, new { @class = "form-horizontal can-popup" }))
         {
             @Html.AntiForgeryToken()
             @Html.HiddenFor(w => w.Id)
@@ -26,14 +29,14 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-6">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.FirstName)
+                                @Html.RequiredLabelFor(w => w.FirstName)
                                 @Html.TextBoxFor(w => w.FirstName, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.FirstName)
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-6">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.LastName)
+                                @Html.RequiredLabelFor(w => w.LastName)
                                 @Html.TextBoxFor(w => w.LastName, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.LastName)
                             </div>
@@ -50,7 +53,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-6">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.Address1)
+                                @Html.RequiredLabelFor(w => w.Address1)
                                 @Html.TextBoxFor(w => w.Address1, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.Address1)
                             </div>
@@ -65,10 +68,20 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-6">
-                            <div class="form-group">
-                                @Html.LabelFor(w => w.City)
+                            @*<div class="form-group">
+                                @Html.RequiredLabelFor(w => w.City)
                                 @Html.TextBoxFor(w => w.City, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.City)
+                            </div>*@
+                            <div>
+                                @Html.RequiredLabelFor(w => w.CityId)
+                                @(Html.KendoDropdownFor(w => w.CityId, new { @class = "form-control", @style = "width:100%" })
+                                                                                .DataTextField("Name")
+                                                                                .DataValueField("Id")
+                                                                                .Read(Url.Action("GetAll", "GroupCode", new { codeName = "City" }))
+                                                                                .OptionLabel("Select City..")
+                                                                                .Render())
+                                @Html.ValidationMessageFor(w => w.CityId)
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-6">
@@ -81,7 +94,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-6">
                             <div class="form-group">
-                                @Html.LabelFor(w => w.Mobile1)
+                                @Html.RequiredLabelFor(w => w.Mobile1)
                                 @Html.TextBoxFor(w => w.Mobile1, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.Mobile1)
                             </div>

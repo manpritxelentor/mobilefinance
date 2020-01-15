@@ -20,6 +20,7 @@ namespace MobileFinanceErp.Models
         public string Address1 { get; set; }
         public string Address2 { get; set; }
         public string City { get; set; }
+        public int? CityId { get; set; }
         public string Pincode { get; set; }
         public string Mobile1 { get; set; }
         public string Mobile2 { get; set; }

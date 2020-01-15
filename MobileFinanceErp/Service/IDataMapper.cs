@@ -79,7 +79,7 @@ namespace MobileFinanceErp.Service
                 cfg.CreateMap<AddEditGuarantorViewModel, GuarantorModel>();
                 cfg.CreateMap<GuarantorModel, AddEditGuarantorViewModel>();
                 cfg.CreateMap<FinanceModel, AddEditFinanceViewModel>()
-                    .ForMember(src => src.BrandId, opt => opt.MapFrom(dest => dest.Model.BrandId))
+                    .ForMember(src => src.FinanceBrandId, opt => opt.MapFrom(dest => dest.Model.BrandId))
                     .ForMember(src => src.CustomerName, opt => opt.MapFrom(dest => dest.Customer.FirstName))
                     .ForMember(src => src.CustomerMobile, opt => opt.MapFrom(dest => dest.Customer.Mobile1))
                     .ForMember(src => src.CustomerAddress, opt => opt.MapFrom(dest => (dest.Customer.Address1 != null ? dest.Customer.Address1 : "") + (dest.Customer.Address2 != null ? " , " + dest.Customer.Address2 : "") + (dest.Customer.Address3 != null ? " ," + dest.Customer.Address3 : "")))

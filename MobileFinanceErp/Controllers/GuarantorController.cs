@@ -37,6 +37,14 @@ namespace MobileFinanceErp.Controllers
         }
 
         [HttpPost]
+        public ActionResult CreateGuarantorPopup()
+        {
+            AddEditGuarantorViewModel model = new AddEditGuarantorViewModel { IsPopup = true };
+            ViewBag.ActionName = "Create";
+            return View("_CreateEditPartial", model);
+        }
+
+        [HttpPost]
         public ActionResult Create(AddEditGuarantorViewModel model)
         {
             if (!ModelState.IsValid)

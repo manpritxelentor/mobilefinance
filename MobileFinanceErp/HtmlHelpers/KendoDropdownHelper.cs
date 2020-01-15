@@ -167,7 +167,7 @@ namespace MobileFinanceErp.Helpers
             {
                 controlBuilder.AppendLine($"footerTemplate: '#={_addUrl}()#',");
             }
-            
+                controlBuilder.AppendLine("popup: { appendTo: $('.can-popup')}, ");
 
             if (!string.IsNullOrEmpty(_readUrl))
             {

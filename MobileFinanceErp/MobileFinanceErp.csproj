@@ -2288,8 +2288,7 @@
     <Content Include="Content\simple-line-icons\scss\simple-line-icons.scss" />
     <Content Include="Content\dataTable\dataTables.responsive.scss" />
     <Content Include="Content\kendo\Bootstrap\_variables.less" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\MobileERP.pubxml" />
+    <None Include="Properties\PublishProfiles\FinanceMobile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\charts.js" />
     <Content Include="Scripts\colors.js" />

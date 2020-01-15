@@ -55,7 +55,6 @@ function recalculateLoanAmount() {
     calculateEMI();
 }
 
-
 function getBrandAddButton() {
     return "<button class='btn btn-block btn-link' onclick='openBrandPopup()'>Add Brand</button>"
 }
@@ -76,4 +75,49 @@ function brandSaveSuccess(data) {
 
 function brandSaveError(data) {
     showError('Failed to save brand. Please try again');
+}
+
+function getModelAddButton() {
+    return "<button class='btn btn-block btn-link' onclick='openModelPopup()'>Add Model</button>"
+}
+
+function openModelPopup() {
+    openModal('Add New Model', modelAddUrl);
+}
+
+function modelSaveSuccess(data) {
+    if (data.Status == true) {
+        closeModal();
+        $('#ModelId').data("kendoDropDownList").dataSource.read()
+        showSuccess('Model saved successfully');
+        return;
+    }
+    showError('Failed to save model. Please try again');
+}
+
+function modelSaveError(data) {
+    showError('Failed to save model. Please try again');
+}
+
+function getGuarantorAddButton() {
+    return "<button class='btn btn-block btn-link' onclick='openGuarantorPopup()'>Add Guarantor</button>"
+}
+
+function openGuarantorPopup() {
+    openModal('Add New Guarantor', guarantorAddUrl);
+}
+
+function guarantorSaveSuccess(data) {
+    if (data.Status == true) {
+        closeModal();
+        $('#Guarantor1').data("kendoDropDownList").dataSource.read()
+        $('#Guarantor2').data("kendoDropDownList").dataSource.read()
+        showSuccess('Guarantor saved successfully');
+        return;
+    }
+    showError('Failed to save Guarantor. Please try again');
+}
+
+function guarantorSaveError(data) {
+    showError('Failed to save guarantor. Please try again');
 }
