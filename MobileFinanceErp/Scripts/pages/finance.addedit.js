@@ -66,7 +66,7 @@ function openBrandPopup() {
 function brandSaveSuccess(data) {
     if (data.Status == true) {
         closeModal();
-        $('#BrandId').data("kendoDropDownList").dataSource.read()
+        $('#FinanceBrandId').data("kendoDropDownList").dataSource.read()
         showSuccess('Brand saved successfully');
         return;
     }

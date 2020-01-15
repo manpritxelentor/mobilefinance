@@ -2,6 +2,10 @@
 
 @{
     string actionName = Convert.ToString(ViewBag.ActionName);
+    if (Model.IsPopup)
+    {
+        Layout = null;
+    }
 }
 
 <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
@@ -141,7 +145,7 @@
                                         @Html.ValidationMessageFor(w => w.LoanAmount)
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.Duration)
                                         @(Html.KendoNumericTextBoxFor(w => w.Duration, new { @class = "form-control", @style = "width: 100%" })
@@ -152,21 +156,21 @@
                                 </div>
 
 
-                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.StartDate)
                                         @(Html.KendoDatePickerFor(w => w.StartDate, new { @class = "form-control",@style = "width: 100%" }).Render())
                                         @Html.ValidationMessageFor(w => w.StartDate)
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="col-sm-12 col-md-4 col-lg-4">
                                     <div class="form-group">
                                         @Html.RequiredLabelFor(w => w.EMI)
                                         @Html.KendoNumericTextBoxFor(w => w.EMI, new { @readonly = true, @class = "form-control", @style = "width: 100%" }).Render()
                                         @Html.ValidationMessageFor(w => w.EMI)
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         @Html.LabelFor(w => w.Guarantor1)
                                         @(Html.KendoDropdownFor(w => w.Guarantor1, new { @class = "form-control", @style = "width:100%" })
@@ -179,7 +183,7 @@
                                         @Html.ValidationMessageFor(w => w.Guarantor1)
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         @Html.LabelFor(w => w.Guarantor2)
                                         @(Html.KendoDropdownFor(w => w.Guarantor2, new { @class = "form-control", @style = "width:100%" })

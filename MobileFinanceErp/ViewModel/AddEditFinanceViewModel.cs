@@ -63,5 +63,7 @@ namespace MobileFinanceErp.ViewModel
 
         [DisplayName("Guarantor 2")]
         public int? Guarantor2 { get; set; }
+        
+        public bool IsPopup { get; internal set; }
     }
 }

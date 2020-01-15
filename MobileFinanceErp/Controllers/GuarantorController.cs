@@ -1,4 +1,5 @@
-﻿using MobileFinanceErp.Service;
+﻿using MobileFinanceErp.Attributes;
+using MobileFinanceErp.Service;
 using MobileFinanceErp.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -45,6 +46,7 @@ namespace MobileFinanceErp.Controllers
         }
 
         [HttpPost]
+        [BindCommandParameter("Save", "isSaveContinue")]
         public ActionResult Create(AddEditGuarantorViewModel model)
         {
             if (!ModelState.IsValid)
@@ -63,6 +65,7 @@ namespace MobileFinanceErp.Controllers
         }
 
         [HttpPost]
+        [BindCommandParameter("Save", "isSaveContinue")]
         public ActionResult Edit(AddEditGuarantorViewModel model)
         {
             if (!ModelState.IsValid)

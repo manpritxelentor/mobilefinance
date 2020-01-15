@@ -3,9 +3,9 @@
         window.location = brandListPageUrl;
         return;
     }
-    showError('Failed to save brand. Please try again');
+    showError('Failed to save model. Please try again');
 }
 
 function modelSaveError(data) {
-    showError('Failed to save brand. Please try again');
+    showError('Failed to save model. Please try again');
 }
