@@ -27,6 +27,8 @@ namespace MobileFinanceErp.Helpers
         private bool _searchable = true;
         private string _detailGridTemplate;
         private List<DataGridColumnDetail> _columns;
+        private bool _scrollable = false;
+        private string _scrollHeight; 
 
         public DataTableGridBuilder<T> Name(string name)
         {
@@ -63,6 +65,13 @@ namespace MobileFinanceErp.Helpers
         public DataTableGridBuilder<T> Searchable(bool searchable)
         {
             _searchable = searchable;
+            return this;
+        }
+
+        public DataTableGridBuilder<T> Scrollable(string scrollHeight)
+        {
+            _scrollable = true;
+            _scrollHeight = scrollHeight;
             return this;
         }
 
@@ -104,6 +113,12 @@ namespace MobileFinanceErp.Helpers
             if (!_searchable)
             {
                 scriptBuilder.Append("'searching': false,");
+            }
+
+            if (_scrollable)
+            {
+                scriptBuilder.Append("'scrollCollapse': true,");
+                scriptBuilder.Append($"'scrollY': '{_scrollHeight}',");
             }
 
             scriptBuilder.Append("'responsive': true,");

@@ -66,15 +66,22 @@
       <HintPath>..\packages\FluentValidation.ValidatorAttribute.8.5.1\lib\net45\FluentValidation.ValidatorAttribute.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.8\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -212,6 +219,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ModelController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="CustomFilters\LogCustomExceptionFilter.cs" />
     <Compile Include="Dependency\DataModule.cs" />
     <Compile Include="Dependency\RepositoryModule.cs" />
     <Compile Include="Dependency\ServiceModule.cs" />
@@ -277,6 +285,7 @@
     <Compile Include="ViewModel\AddEditFinanceViewModel.cs" />
     <Compile Include="ViewModel\AddEditCustomerViewModel.cs" />
     <Compile Include="ViewModel\AddEditBrandViewModel.cs" />
+    <Compile Include="ViewModel\AddEditGroupCodeViewModel.cs" />
     <Compile Include="ViewModel\AddEditGuarantorViewModel.cs" />
     <Compile Include="ViewModel\AddEditModelsViewModel.cs" />
     <Compile Include="ViewModel\FinanceListViewModel.cs" />
@@ -292,6 +301,7 @@
     <Compile Include="ViewModel\Validators\AddEditFinanceViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditBrandViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditCustomerViewModelValidator.cs" />
+    <Compile Include="ViewModel\Validators\AddEditGroupCodeViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditGuarantorViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\AddEditModelsViewModelValidator.cs" />
     <Compile Include="ViewModel\Validators\ReceiveFinanceViewModelValidator.cs" />
@@ -2288,7 +2298,14 @@
     <Content Include="Content\simple-line-icons\scss\simple-line-icons.scss" />
     <Content Include="Content\dataTable\dataTables.responsive.scss" />
     <Content Include="Content\kendo\Bootstrap\_variables.less" />
-    <None Include="Properties\PublishProfiles\FinanceMobile.pubxml" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\MobileERP.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\charts.js" />
     <Content Include="Scripts\colors.js" />
@@ -2581,12 +2598,13 @@
     <Content Include="Views\Guarantor\_CreateEditPartial.cshtml" />
     <Content Include="Views\Finance\ReceivePayment.cshtml" />
     <Content Include="Views\Customer\_PictureUpload.cshtml" />
+    <Content Include="Views\GroupCode\CreateGroupCode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
     <Folder Include="ProfilePicture\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\GroupCode\" />
     <Folder Include="Views\Upload\" />
   </ItemGroup>
   <ItemGroup>

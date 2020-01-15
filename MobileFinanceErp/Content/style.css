@@ -1682,7 +1682,7 @@ pre {
 }
 
 .table {
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 1rem;
     color: #23282c;
 }

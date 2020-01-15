@@ -51,7 +51,8 @@ namespace MobileFinanceErp.Service
         public DataSourceResult GetAll(DataSourceRequest dataSourceRequest)
         {
             return _dataMapper.Project<CustomerModel, CustomerListViewModel>
-                (_customerRepository.GetAllNoTracking()).ToDataSourceResult(dataSourceRequest);
+                (_customerRepository.GetAllNoTracking())
+                .ToDataSourceResult(dataSourceRequest);
         }
 
         public List<CustomerListViewModel> GetAll()

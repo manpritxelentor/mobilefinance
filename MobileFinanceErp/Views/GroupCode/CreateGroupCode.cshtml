@@ -1,0 +1,102 @@
+﻿@model MobileFinanceErp.ViewModel.AddEditGroupCodeViewModel
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        @using (Ajax.BeginForm("SaveGroupCode", "GroupCode", null, new AjaxOptions
+        {
+            HttpMethod = "POST",
+            OnSuccess = "groupCodeSaveSuccess",
+            OnFailure = "groupCodeSaveError",
+            OnComplete = "hideLoader",
+            OnBegin = "showLoader"
+        }, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(w => w.Id, new { @id = "groupId" })
+            @Html.HiddenFor(w => w.Name, new { @name = "groupName" })
+            <div class="card">
+                <div class="card-header"><strong>Manage</strong> @Model.Name</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.DisplayName)
+                                @Html.TextBoxFor(w => w.DisplayName, new { @class = "form-control", @id = "groupDisplayName" })
+                                @Html.ValidationMessageFor(w => w.DisplayName)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn btn-sm btn-primary" type="submit"> Submit</button>
+                    <button class="btn btn-sm btn-danger" type="reset"> Reset</button>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="col-lg-12">
+        @(Html.DataTable<GroupCodeSelectListModel>()
+                                                    .Name("grdGroupCode")
+                                                    .Read(Url.Action("GetGroupCodeData", "GroupCode", new { @code = Model.Name }))
+                                                    .CssClass("table table-striped table-bordered no-footer")
+                                                    .Searchable(true)
+                                                    .PageLength(10)
+                                                    .Scrollable("150px")
+                                                    .Columns(column =>
+                                                    {
+                                                        column.Bound(s => s.Name);
+                                                        column.Template().Title("Actions").RenderCallback("generateGroupCodeActionLink");
+                                                    })
+                                                    .Render()
+        )
+    </div>
+</div>
+
+<script id="groupCodeActionTemplate" type="text/x-kendo-template">
+    <button class="btn btn-link text-info" onclick="editGroupCode(#:Id#)">
+        <i class="fa fa-pencil"></i>
+    </button>
+</script>
+
+<script>
+    function generateGroupCodeActionLink(data) {
+        // Get the external template definition using a jQuery selector.
+        var template = kendo.template($("#groupCodeActionTemplate").html());
+        var result = template(data); //Execute the template
+        return result
+    }
+
+    function editGroupCode(id) {
+        var dataTable = $("#grdGroupCode").DataTable()
+        var editElement = dataTable.data().filter(function (w) {
+            return w.Id == id;
+        })[0];
+        setGroupData(editElement.Id, editElement.Name);
+    }
+
+    function groupCodeSaveSuccess(response) {
+        if (response.Status == true) {
+            showSuccess('@Model.Name saved successfully.');
+            groupCodeSavedHandler('@Model.Name');
+            setGroupData("", "");
+            var dataTable = $("#grdGroupCode").DataTable();
+            dataTable.ajax.reload();
+            return;
+        }
+        showError('Failed to save @Model.Name. Please try again');
+    }
+
+    function groupCodeSaveError(response) {
+        showError('Failed to save @Model.Name. Please try again');
+    }
+
+    function setGroupData(id, displayName) {
+        $("#groupId").val(id);
+        $("#groupDisplayName").val(displayName);
+    }
+</script>

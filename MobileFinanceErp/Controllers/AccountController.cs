@@ -8,11 +8,13 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using MobileFinanceErp.CustomFilters;
 using MobileFinanceErp.Models;
 
 namespace MobileFinanceErp.Controllers
 {
     [Authorize]
+    [LogCustomExceptionFilter]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
