@@ -104,7 +104,7 @@
                                         @(Html.KendoDropdownFor(w => w.ModelId, new { @class = "form-control", @style = "width:100%" })
                                                                             .DataTextField("Name")
                                                                             .DataValueField("Id")
-                                                                            .CascadeFrom("BrandId")
+                                                                            .CascadeFrom("FinanceBrandId")
                                                                             .CascadeFromField("BrandId")
                                                                             .Read(Url.Action("GetAll", "Model"))
                                                                             .OptionLabel("Select Model..")

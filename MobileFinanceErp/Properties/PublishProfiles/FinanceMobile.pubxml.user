@@ -136,10 +136,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/MobileFinanceErp.dll">
-      <publishTime>01/16/2020 01:43:47</publishTime>
+      <publishTime>01/16/2020 23:54:49</publishTime>
     </File>
     <File Include="bin/MobileFinanceErp.pdb">
-      <publishTime>01/16/2020 01:43:47</publishTime>
+      <publishTime>01/16/2020 23:54:49</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>02/18/2018 09:44:54</publishTime>
@@ -6916,7 +6916,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/15/2020 21:32:56</publishTime>
     </File>
     <File Include="Scripts/pages/finance.addedit.js">
-      <publishTime>01/16/2020 00:34:21</publishTime>
+      <publishTime>01/16/2020 23:18:47</publishTime>
     </File>
     <File Include="Scripts/pages/guarantor.addedit.js">
       <publishTime>01/16/2020 00:30:34</publishTime>
@@ -7036,13 +7036,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/27/2019 00:21:40</publishTime>
     </File>
     <File Include="Views/Customer/Index.cshtml">
-      <publishTime>01/05/2020 17:27:51</publishTime>
+      <publishTime>01/16/2020 22:58:28</publishTime>
     </File>
     <File Include="Views/Customer/_CreateEditPartial.cshtml">
-      <publishTime>01/15/2020 21:32:56</publishTime>
+      <publishTime>01/16/2020 02:00:12</publishTime>
     </File>
     <File Include="Views/Customer/_PictureUpload.cshtml">
-      <publishTime>01/05/2020 01:22:52</publishTime>
+      <publishTime>01/16/2020 23:27:49</publishTime>
     </File>
     <File Include="Views/Finance/Create.cshtml">
       <publishTime>12/27/2019 00:21:40</publishTime>
@@ -7051,13 +7051,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/27/2019 00:21:40</publishTime>
     </File>
     <File Include="Views/Finance/Index.cshtml">
-      <publishTime>01/10/2020 01:05:01</publishTime>
+      <publishTime>01/16/2020 23:18:19</publishTime>
     </File>
     <File Include="Views/Finance/ReceivePayment.cshtml">
       <publishTime>12/27/2019 00:21:40</publishTime>
     </File>
     <File Include="Views/Finance/_CreateEditPartial.cshtml">
-      <publishTime>01/15/2020 23:53:16</publishTime>
+      <publishTime>01/16/2020 23:50:03</publishTime>
     </File>
     <File Include="Views/GroupCode/CreateGroupCode.cshtml">
       <publishTime>01/15/2020 21:32:56</publishTime>
@@ -7069,10 +7069,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/12/2020 01:45:50</publishTime>
     </File>
     <File Include="Views/Guarantor/Index.cshtml">
-      <publishTime>12/27/2019 00:21:40</publishTime>
+      <publishTime>01/16/2020 22:33:25</publishTime>
     </File>
     <File Include="Views/Guarantor/_CreateEditPartial.cshtml">
-      <publishTime>01/15/2020 22:58:47</publishTime>
+      <publishTime>01/16/2020 22:32:06</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>12/27/2019 00:21:40</publishTime>

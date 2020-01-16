@@ -27,10 +27,11 @@
                                     {
                                         column.Bound(s => s.CustomerIdentificationNumber);
                                         column.Bound(s => s.FirstName);
+                                        column.Bound(s => s.FatherName);
                                         column.Bound(s => s.Surname);
                                         column.Bound(s => s.City);
+                                        column.Bound(s => s.Address);
                                         column.Bound(s => s.Mobile1);
-                                        column.Bound(s => s.Mobile2);
                                         column.Template().Title("Actions").RenderCallback("generateActionLink");
                                     })
                                     .Render()

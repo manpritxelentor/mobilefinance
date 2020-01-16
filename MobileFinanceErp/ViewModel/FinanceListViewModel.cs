@@ -10,6 +10,9 @@ namespace MobileFinanceErp.ViewModel
         [DisplayName("Customer Name")]
         public string CustomerName { get; set; }
 
+        [DisplayName("Address")]
+        public string CustomerAddress { get; set; }
+
         [DisplayName("Book/Page")]
         public string BookNoPageNumber { get; set; }
 

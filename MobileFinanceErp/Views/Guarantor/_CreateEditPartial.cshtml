@@ -27,14 +27,20 @@
                 <div class="card-header"><strong>Manage</strong> Guarantor</div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-12 col-md-4 col-lg-6">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
                                 @Html.RequiredLabelFor(w => w.FirstName)
                                 @Html.TextBoxFor(w => w.FirstName, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(w => w.FirstName)
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-4 col-lg-6">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                @Html.LabelFor(w => w.FatherName)
+                                @Html.TextBoxFor(w => w.FatherName, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
                                 @Html.RequiredLabelFor(w => w.LastName)
                                 @Html.TextBoxFor(w => w.LastName, new { @class = "form-control" })

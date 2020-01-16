@@ -9,13 +9,12 @@ namespace MobileFinanceErp.ViewModel
     public class GuarantorListViewModel
     {
         public int Id { get; set; }
-        
         [DisplayName("First Name")]
         public string FirstName { get; set; }
-        
+        [DisplayName("Father Name")]
+        public string FatherName { get; set; }
         [DisplayName("Last Name")]
         public string LastName { get; set; }
-        
         public string Identification { get; set; }
         public string Address1 { get; set; }
         public string City { get; set; }

@@ -68,6 +68,7 @@ namespace MobileFinanceErp.Service
                 cfg.CreateMap<FinanceModel, FinanceListViewModel>()
                 .ForMember(dest => dest.CustomerMobileNumber, opt => opt.MapFrom(src => src.Customer.Mobile1))
                 .ForMember(dest => dest.CustomerName, opt => opt.MapFrom(src => src.Customer.FirstName))
+                .ForMember(src => src.CustomerAddress, opt => opt.MapFrom(dest => (dest.Customer.Address1 != null ? dest.Customer.Address1 : "") + (dest.Customer.Address2 != null ? " , " + dest.Customer.Address2 : "") + (dest.Customer.Address3 != null ? " ," + dest.Customer.Address3 : "")))
                     .ForMember(dest => dest.GuarantorName, opt => opt.MapFrom(src => src.Guarantor1 != null ? 
                         src.GuarantorData1.FirstName + " " + src.GuarantorData1.LastName :
                         src.Guarantor2 != null ?

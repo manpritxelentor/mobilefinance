@@ -10,15 +10,21 @@ namespace MobileFinanceErp.ViewModel
     {
         public int Id { get; set; }
 
-        [DisplayName("Customer Identification Number")]
+        [DisplayName("CIN")]
         public string CustomerIdentificationNumber { get; set; }
+        
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
+        
+        [DisplayName("Father Name")]
+        public string FatherName { get; set; }
+        
+        [DisplayName("Last Name")]
         public string Surname { get; set; }
+        
         public string City { get; set; }
         public string Mobile1 { get; set; }
-        public string Mobile2 { get; set; }
         public string Address { get; set; }
-        public string AdhaarNumber { get; set; }
         public string FullName { get; set; }
     }
 }
