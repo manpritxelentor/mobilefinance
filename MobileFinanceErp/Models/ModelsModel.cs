@@ -16,7 +16,6 @@ namespace MobileFinanceErp.Models
         public int BrandId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public bool IsPopup { get; set; }
 
         public virtual BrandModel Brand { get; set; }
         public virtual ICollection<FinanceModel> Finances { get; set; }
