@@ -22,6 +22,7 @@ namespace MobileFinanceErp.Service
         bool ReceiveAmount(ReceiveFinanceViewModel model, string userId);
         decimal GetMonthCollectedAmount(int month, int year);
         decimal GetMonthTotalAmount(int month, int year);
+        decimal GetTotalDownPaymentAmount();
     }
 
     public class FinanceService : IFinanceService
@@ -79,6 +80,10 @@ namespace MobileFinanceErp.Service
         public decimal GetMonthTotalAmount(int month, int year)
         {
             return _FinanceRepository.GetTotalLoanAmount();
+        }
+        public decimal GetTotalDownPaymentAmount()
+        {
+            return _FinanceRepository.GetTotalDownPaymentAmount();
         }
 
         public ReceiveFinanceViewModel GetReceiveModel(int financeId)

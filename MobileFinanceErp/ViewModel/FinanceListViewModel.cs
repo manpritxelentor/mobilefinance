@@ -19,11 +19,11 @@ namespace MobileFinanceErp.ViewModel
         //[DisplayName("Mobile Price")]
         //public decimal MobilePrice { get; set; }
 
-        [DisplayName("Loan Amount")]
+        [DisplayName("Loan")]
         public decimal LoanAmount { get; set; }
 
-        //[DisplayName("Down Payment")]
-        //public decimal DownPayment { get; set; }
+        [DisplayName("DP")]
+        public decimal DownPayment { get; set; }
 
         [DisplayName("Guarantor")]
         public string GuarantorName { get; set; }

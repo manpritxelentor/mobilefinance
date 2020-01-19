@@ -29,10 +29,10 @@ namespace MobileFinanceErp.Controllers
             ViewBag.CustomerCount = _customerService.GetCustomerCount();
             decimal collectedAmount = _financeService.GetMonthCollectedAmount(DateTime.Now.Month, DateTime.Now.Year);
             decimal totalAmount = _financeService.GetMonthTotalAmount(DateTime.Now.Month, DateTime.Now.Year);
-            decimal pendingAmount = totalAmount - collectedAmount;
-            //CultureInfo ci = new CultureInfo("en-IN");
-            //ci.NumberFormat.CurrencySymbol = "₹";
-
+            //decimal pendingAmount = totalAmount - collectedAmount;
+            
+            decimal totaldpAmount = _financeService.GetTotalDownPaymentAmount();
+            decimal pendingAmount = totalAmount - (totaldpAmount - collectedAmount);
 
             ViewBag.CollectedAmount = collectedAmount;
             ViewBag.PendingAmount = pendingAmount;

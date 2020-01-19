@@ -51,7 +51,6 @@
         </div>
         <!-- /.col-->
         <div class="col-sm-6 col-lg-3">
-            @*<div class="card text-white bg-warning">*@
             <div class="card text-white bg-warning">
                 <div class="card-body pb-0">
                     <div class="text-value">₹ @ViewBag.TotalAmount</div>
@@ -77,18 +76,6 @@
                 </div>
             </div>
         </div>
-        @*<div class="col-sm-12 col-lg-6">
-                <div class="card">
-                    <div class="card-header">
-                        Customer Reviews
-                    </div>
-                    <div class="card-body">
-                        <div class="chart-wrapper">
-                            <canvas id="canvas-3"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>*@
     </div>
 </div>
 
@@ -97,10 +84,10 @@
         var pieChart = new Chart($('#canvas-5'), {
             type: 'pie',
             data: {
-                labels: ['Received', 'Pending'],
+                labels: ['Collected Loan Amount', 'Pending Loan Amount'],
                 datasets: [{
                     data: [@ViewBag.CollectedAmount, @ViewBag.PendingAmount],
-                    backgroundColor: ['#00ff00', '#B22222'],
+                    backgroundColor: ['#4DBD74', '#B22222'],
                     hoverBackgroundColor: ['#00ff00', '#B22222']
                 }]
             },

@@ -121,6 +121,7 @@
                                                         column.Bound(s => s.CustomerMobileNumber);
                                                         column.Bound(s => s.GuarantorName);
                                                         column.Bound(s => s.LoanAmount).Searchable(false);
+                                                        column.Bound(s => s.DownPayment).Searchable(false);
                                                         column.Template().Title("Actions").RenderCallback("generateActionLink");
                                                     })
                                                     .DetailTemplate("financeDetailTemplate")
@@ -131,9 +132,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 <script id="javascriptTemplate" type="text/x-kendo-template">
     <button class="btn btn-link text-info" title="Recieve Payment" onclick="receiveFinance(#:Id#)">

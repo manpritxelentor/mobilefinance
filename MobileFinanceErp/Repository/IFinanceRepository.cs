@@ -20,6 +20,7 @@ namespace MobileFinanceErp.Repository
         decimal GetLoanAmount(int financeId);
         decimal GetMonthCollectedAmount(int month, int year);
         decimal GetTotalLoanAmount();
+        decimal GetTotalDownPaymentAmount();
     }
 
     public class FinanceRepository : BaseTenantRepository<FinanceModel>, IFinanceRepository
@@ -87,6 +88,11 @@ namespace MobileFinanceErp.Repository
         public decimal GetTotalLoanAmount()
         {
             return GetAllNoTracking().Select(w => w.LoanAmount).DefaultIfEmpty().Sum();
+        }
+
+        public decimal GetTotalDownPaymentAmount()
+        {
+            return GetAllNoTracking().Select(w => w.DownPayment).DefaultIfEmpty().Sum();
         }
 
         public bool IsPageNumberValid(string pageNo, string bookNo)
