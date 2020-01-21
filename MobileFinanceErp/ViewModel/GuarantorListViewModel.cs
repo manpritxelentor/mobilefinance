@@ -22,5 +22,7 @@ namespace MobileFinanceErp.ViewModel
         public string Mobile2 { get; set; }
         public string Aadhar { get; set; }
         public string PAN { get; set; }
+        public string FullNameWithNumber { get; set; }
+
     }
 }

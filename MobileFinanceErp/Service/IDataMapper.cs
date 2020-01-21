@@ -60,23 +60,25 @@ namespace MobileFinanceErp.Service
                 cfg.CreateMap<CustomerModel, CustomerListViewModel>()
                 .ForMember(src => src.FullName, opt => opt.MapFrom(dest => dest.FirstName + " " + dest.Surname))
                 .ForMember(src => src.City, opt => opt.MapFrom(dest => dest.CityId != null ? dest.CustomerCity.DisplayName : ""))
-                    .ForMember(src => src.Address, opt => opt.MapFrom(dest => (dest.Address1 != null ? dest.Address1 : "") + (dest.Address2 != null ? " , " + dest.Address2 : "") + (dest.Address3 != null ? " ," + dest.Address3 : "")))
+                .ForMember(src => src.Address, opt => opt.MapFrom(dest => (dest.Address1 != null ? dest.Address1 : "") + (dest.Address2 != null ? " , " + dest.Address2 : "") + (dest.Address3 != null ? " ," + dest.Address3 : "")))
                 ;
                 cfg.CreateMap<AddEditCustomerViewModel, CustomerModel>();
                 cfg.CreateMap<CustomerModel, AddEditCustomerViewModel>();
 
+                cfg.CreateMap<GuarantorModel, GuarantorListViewModel>()
+                .ForMember(src => src.FullNameWithNumber, opt => opt.MapFrom(dest => dest.FirstName + " " + dest.LastName + " " + dest.Mobile1));
+
                 cfg.CreateMap<FinanceModel, FinanceListViewModel>()
-                .ForMember(dest => dest.CustomerMobileNumber, opt => opt.MapFrom(src => src.Customer.Mobile1))
-                .ForMember(dest => dest.CustomerName, opt => opt.MapFrom(src => src.Customer.FirstName))
+                //.ForMember(dest => dest.CustomerMobileNumber, opt => opt.MapFrom(src => src.Customer.Mobile1))
+                .ForMember(dest => dest.CustomerName, opt => opt.MapFrom(src => src.Customer.FirstName + " " + (src.Customer.FatherName != null ? src.Customer.FatherName : "") + " " + src.Customer.Surname + " " + src.Customer.Mobile1))
                 .ForMember(src => src.CustomerAddress, opt => opt.MapFrom(dest => (dest.Customer.Address1 != null ? dest.Customer.Address1 : "") + (dest.Customer.Address2 != null ? " , " + dest.Customer.Address2 : "") + (dest.Customer.Address3 != null ? " ," + dest.Customer.Address3 : "")))
-                    .ForMember(dest => dest.GuarantorName, opt => opt.MapFrom(src => src.Guarantor1 != null ? 
-                        src.GuarantorData1.FirstName + " " + src.GuarantorData1.LastName :
+                .ForMember(dest => dest.GuarantorName, opt => opt.MapFrom(src => src.Guarantor1 != null ?
+                        src.GuarantorData1.FirstName + " " + src.GuarantorData1.FatherName + " " + src.GuarantorData1.LastName + " " + src.GuarantorData1.Mobile1 :
                         src.Guarantor2 != null ?
-                        src.GuarantorData2.FirstName + " " + src.GuarantorData2.LastName : "No Guarantor"
+                        src.GuarantorData2.FirstName + " " + src.GuarantorData2.FatherName + " " + src.GuarantorData2.LastName + " " + src.GuarantorData2.Mobile1 : "No Guarantor"
                     ))
-                    .ForMember(dest => dest.BookNoPageNumber, opt => opt.MapFrom(src => src.BookNo + " / " + src.PageNo));
+                .ForMember(dest => dest.BookNoPageNumber, opt => opt.MapFrom(src => src.BookNo + "/" + src.PageNo));
                 cfg.CreateMap<AddEditFinanceViewModel, FinanceModel>();
-                cfg.CreateMap<GuarantorModel, GuarantorListViewModel>();
                 cfg.CreateMap<AddEditGuarantorViewModel, GuarantorModel>();
                 cfg.CreateMap<GuarantorModel, AddEditGuarantorViewModel>();
                 cfg.CreateMap<FinanceModel, AddEditFinanceViewModel>()

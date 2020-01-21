@@ -50,12 +50,12 @@ namespace MobileFinanceErp.Controllers
             if (!ModelState.IsValid)
                 return Json(new { Status = false, Error = ModelState });
 
-            //bool isPageNumberValid = _FinanceService.IsPageNumberValid(model.PageNo, model.BookNo);
-            //if (!isPageNumberValid)
-            //{
-            //    ModelState.AddModelError("PageNo", "Page number is not valid. Please enter another page number");
-            //    return Json(new { Status = false, Error = ModelState });
-            //}
+            bool isPageNumberValid = _FinanceService.IsPageNumberValid(model.PageNo, model.BookNo);
+            if (!isPageNumberValid)
+            {
+                ModelState.AddModelError("PageNo", "Book Number & Page Number must be unique. Please enter another number.");
+                return Json(new { Status = false, Error = ModelState });
+            }
 
             model.EMI = GetEmiCalculation(model.LoanAmount, model.Duration);
 

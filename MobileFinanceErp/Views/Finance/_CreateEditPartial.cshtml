@@ -174,7 +174,7 @@
                                     <div class="form-group">
                                         @Html.LabelFor(w => w.Guarantor1)
                                         @(Html.KendoDropdownFor(w => w.Guarantor1, new { @class = "form-control", @style = "width:100%" })
-                                                                .DataTextField("FirstName")
+                                                                .DataTextField("FullNameWithNumber")
                                                                 .DataValueField("Id")
                                                                 .Read(Url.Action("GetAll", "Guarantor"))
                                                                 .OptionLabel("Select Guarantor 1..")
@@ -187,7 +187,7 @@
                                     <div class="form-group">
                                         @Html.LabelFor(w => w.Guarantor2)
                                         @(Html.KendoDropdownFor(w => w.Guarantor2, new { @class = "form-control", @style = "width:100%" })
-                                                                .DataTextField("FirstName")
+                                                                .DataTextField("FullNameWithNumber")
                                                                 .DataValueField("Id")
                                                                 .Read(Url.Action("GetAll", "Guarantor"))
                                                                 .OptionLabel("Select Guarantor 2..")

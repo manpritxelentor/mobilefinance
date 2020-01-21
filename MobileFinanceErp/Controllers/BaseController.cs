@@ -8,6 +8,7 @@ using System.Web.Mvc;
 namespace MobileFinanceErp.Controllers
 {
     [LogCustomExceptionFilter]
+    [Authorize]
     public class BaseController : Controller
     {
         public void AddMessage(string message)

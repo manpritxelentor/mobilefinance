@@ -7,7 +7,7 @@ namespace MobileFinanceErp.ViewModel
     {
         public int Id { get; set; }
 
-        [DisplayName("Customer Name")]
+        [DisplayName("Customer")]
         public string CustomerName { get; set; }
 
         [DisplayName("Address")]
@@ -19,17 +19,21 @@ namespace MobileFinanceErp.ViewModel
         //[DisplayName("Mobile Price")]
         //public decimal MobilePrice { get; set; }
 
+        //[DisplayName("Mobile")]
+        //public string CustomerMobileNumber { get; set; }
+        
+        [DisplayName("Guarantor")]
+        public string GuarantorName { get; set; }
+        
+        //[DisplayName("Guarantor Mobile")]
+        //public string GuarantorMobile { get; set; }
+
         [DisplayName("Loan")]
         public decimal LoanAmount { get; set; }
-
+        
         [DisplayName("DP")]
         public decimal DownPayment { get; set; }
 
-        [DisplayName("Guarantor")]
-        public string GuarantorName { get; set; }
-
-        [DisplayName("Mobile")]
-        public string CustomerMobileNumber { get; set; }
         //[DisplayName("Start Date")]
         //public DateTime StartDate { get; set; }
     }
