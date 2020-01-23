@@ -34,9 +34,14 @@ namespace MobileFinanceErp.ViewModel.Validators
                 .NotEmpty()
                 .WithMessage("Loan amount is required");
 
+            //RuleFor(w => w.DownPayment)
+            //    .LessThanOrEqualTo(w => w.LoanAmount)
+            //    .WithMessage("Down payment should be less than Loan amount");
+
+
             RuleFor(w => w.DownPayment)
-                .LessThanOrEqualTo(w => w.LoanAmount)
-                .WithMessage("Down payment should be less than Loan amount");
+                .LessThanOrEqualTo(w => w.MobilePrice)
+                .WithMessage("Down payment should be less than mobile price");
 
             RuleFor(w => w.EMI)
                 .NotEmpty()
