@@ -6,26 +6,16 @@ using System.Web;
 
 namespace MobileFinanceErp.ViewModel.Validators
 {
-    public class AddEditFinanceViewModelValidator : AbstractValidator<AddEditFinanceViewModel>
+    public class AddEditFinanceViewModelValidator : EditFinanceViewModelValidator<AddEditFinanceViewModel>
     {
         public AddEditFinanceViewModelValidator()
+            : base()
         {
             RuleFor(w => w.CustomerId)
                 .NotEmpty()
                 .WithMessage("Please select customer");
 
-            RuleFor(w => w.BookNo)
-                .NotEmpty()
-                .WithMessage("Book Number is required");
-
-            RuleFor(w => w.PageNo)
-                .NotEmpty()
-                .WithMessage("Page Number is required");
-
-            RuleFor(w => w.ModelId)
-                .NotEmpty()
-                .WithMessage("Plese select model");
-
+            
             RuleFor(w => w.MobilePrice)
                 .NotEmpty()
                 .WithMessage("Mobile Price is required");
@@ -55,13 +45,34 @@ namespace MobileFinanceErp.ViewModel.Validators
                 .NotEmpty()
                 .WithMessage("Loan start date is required");
 
+            
+            //RuleFor(w => w.Guarantor1)
+            //   .NotEmpty()
+            //   .WithMessage("Guarantor-1 is required");
+        }
+    }
+
+    public class EditFinanceViewModelValidator<T> : AbstractValidator<T>
+        where T : EditFinanceViewModel
+    {
+        public EditFinanceViewModelValidator()
+        {
+            RuleFor(w => w.BookNo)
+                .NotEmpty()
+                .WithMessage("Book Number is required");
+
+            RuleFor(w => w.PageNo)
+                .NotEmpty()
+                .WithMessage("Page Number is required");
+
+            RuleFor(w => w.ModelId)
+                .NotEmpty()
+                .WithMessage("Plese select model");
+
             RuleFor(w => w.IMEI)
                 .NotEmpty()
                 .WithMessage("IMEI number is required");
 
-            //RuleFor(w => w.Guarantor1)
-            //   .NotEmpty()
-            //   .WithMessage("Guarantor-1 is required");
         }
     }
 }

@@ -135,6 +135,9 @@
 </div>
 
 <script id="javascriptTemplate" type="text/x-kendo-template">
+    <a href="@Url.Action("Edit", "Finance")/#: Id #" class="text-info">
+        <i class="fa fa-pencil"></i>
+    </a>
     <button class="btn btn-link text-info" title="Recieve Payment" onclick="receiveFinance(#:Id#)">
         <i class="fa fa-money"></i>
     </button>

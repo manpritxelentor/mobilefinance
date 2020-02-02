@@ -1,18 +1,13 @@
 ﻿using FluentValidation.Attributes;
 using MobileFinanceErp.ViewModel.Validators;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Web;
 
 namespace MobileFinanceErp.ViewModel
 {
     [Validator(typeof(AddEditFinanceViewModelValidator))]
-    public class AddEditFinanceViewModel
+    public class AddEditFinanceViewModel : EditFinanceViewModel
     {
-        public int Id { get; set; }
-
         [DisplayName("Customer")]
         public int CustomerId { get; set; }
 
@@ -24,18 +19,6 @@ namespace MobileFinanceErp.ViewModel
 
         [DisplayName("Address")]
         public string CustomerAddress { get; set; }
-
-        [DisplayName("Book Number")]
-        public string BookNo { get; set; }
-
-        [DisplayName("Page Number")]
-        public string PageNo { get; set; }
-
-        [DisplayName("Brand")]
-        public int FinanceBrandId { get; set; }
-
-        [DisplayName("Model")]
-        public int ModelId { get; set; }
 
         [DisplayName("Mobile Price")]
         public decimal? MobilePrice { get; set; }
@@ -54,6 +37,28 @@ namespace MobileFinanceErp.ViewModel
 
         [DisplayName("Start Date")]
         public DateTime? StartDate { get; set; }
+        
+        public bool IsPopup { get; internal set; }
+    }
+
+    [Validator(typeof(EditFinanceViewModelValidator<EditFinanceViewModel>))]
+    public class EditFinanceViewModel
+    {
+        public int Id { get; set; }
+
+
+        [DisplayName("Book Number")]
+        public string BookNo { get; set; }
+
+        [DisplayName("Page Number")]
+        public string PageNo { get; set; }
+
+        [DisplayName("Brand")]
+        public int FinanceBrandId { get; set; }
+
+        [DisplayName("Model")]
+        public int ModelId { get; set; }
+
 
         [DisplayName("Guarantor 1")]
         public int? Guarantor1 { get; set; }
@@ -63,7 +68,6 @@ namespace MobileFinanceErp.ViewModel
 
         [DisplayName("Guarantor 2")]
         public int? Guarantor2 { get; set; }
-        
-        public bool IsPopup { get; internal set; }
+
     }
 }

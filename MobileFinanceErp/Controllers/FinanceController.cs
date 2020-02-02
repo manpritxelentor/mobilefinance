@@ -44,6 +44,31 @@ namespace MobileFinanceErp.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            EditFinanceViewModel model = _FinanceService.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(EditFinanceViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return Json(new { Status = false, Error = ModelState });
+
+            bool isPageNumberValid = _FinanceService.IsPageNumberValid(model.PageNo, model.BookNo, model.Id);
+            if (!isPageNumberValid)
+            {
+                ModelState.AddModelError("PageNo", "Book Number & Page Number must be unique. Please enter another number.");
+                return Json(new { Status = false, Error = ModelState });
+            }
+            
+            var insertResult = _FinanceService.Update(model);
+            if (insertResult)
+                AddMessage("Finance saved successfully");
+            return Json(new { Status = insertResult });
+        }
+
         [HttpPost]
         public ActionResult Create(AddEditFinanceViewModel model)
         {

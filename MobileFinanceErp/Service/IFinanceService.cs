@@ -14,9 +14,9 @@ namespace MobileFinanceErp.Service
         DataSourceResult GetAll(DataSourceRequest dataSourceRequest);
         Tuple<bool, int> Insert(AddEditFinanceViewModel model);
         AddEditFinanceViewModel GetById(int id);
-        bool Update(AddEditFinanceViewModel model);
+        bool Update(EditFinanceViewModel model);
         bool Delete(int id);
-        bool IsPageNumberValid(string pageNo, string bookNo);
+        bool IsPageNumberValid(string pageNo, string bookNo, int id = 0);
         List<ReceiveFinanceViewModel> GetFinanceDetails(int financeId);
         ReceiveFinanceViewModel GetReceiveModel(int financeId);
         bool ReceiveAmount(ReceiveFinanceViewModel model, string userId);
@@ -111,9 +111,9 @@ namespace MobileFinanceErp.Service
             return new Tuple<bool, int>(_unitOfWork.Commit() > 0, entity.Id);
         }
 
-        public bool IsPageNumberValid(string pageNo, string bookNo)
+        public bool IsPageNumberValid(string pageNo, string bookNo, int id = 0)
         {
-            return _FinanceRepository.IsPageNumberValid(pageNo, bookNo);
+            return _FinanceRepository.IsPageNumberValid(pageNo, bookNo, id);
         }
 
         public bool ReceiveAmount(ReceiveFinanceViewModel model, string userId)
@@ -130,9 +130,11 @@ namespace MobileFinanceErp.Service
             return _unitOfWork.Commit() > 0;
         }
 
-        public bool Update(AddEditFinanceViewModel model)
+        public bool Update(EditFinanceViewModel model)
         {
             var entity = _FinanceRepository.GetById(model.Id);
+            if (entity == null)
+                return false;
             _dataMapper.Map(model, entity);
             _FinanceRepository.Update(entity);
             return _unitOfWork.Commit() > 0;

@@ -79,6 +79,7 @@ namespace MobileFinanceErp.Service
                     ))
                 .ForMember(dest => dest.BookNoPageNumber, opt => opt.MapFrom(src => src.BookNo + "/" + src.PageNo));
                 cfg.CreateMap<AddEditFinanceViewModel, FinanceModel>();
+                cfg.CreateMap<EditFinanceViewModel, FinanceModel>();
                 cfg.CreateMap<AddEditGuarantorViewModel, GuarantorModel>();
                 cfg.CreateMap<GuarantorModel, AddEditGuarantorViewModel>();
                 cfg.CreateMap<FinanceModel, AddEditFinanceViewModel>()

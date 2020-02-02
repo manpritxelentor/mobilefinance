@@ -10,7 +10,7 @@ namespace MobileFinanceErp.Repository
 {
     public interface IFinanceRepository : IBaseTenantRepository<FinanceModel>
     {
-        bool IsPageNumberValid(string pageNo, string bookNo);
+        bool IsPageNumberValid(string pageNo, string bookNo, int id = 0);
         IQueryable<FinanceDetailsModel> GetFinanceDetails(int financeId);
         decimal GetActualEmiAmount(int financeId);
         decimal GetCarryForward(int financeId);
@@ -95,9 +95,9 @@ namespace MobileFinanceErp.Repository
             return GetAllNoTracking().Select(w => w.DownPayment).DefaultIfEmpty().Sum();
         }
 
-        public bool IsPageNumberValid(string pageNo, string bookNo)
+        public bool IsPageNumberValid(string pageNo, string bookNo, int id = 0)
         {
-            return GetAllNoTracking().Where(w => w.PageNo == pageNo && w.BookNo == bookNo).Count() == 0;
+            return GetAllNoTracking().Where(w => w.PageNo == pageNo && w.BookNo == bookNo && w.Id != id).Count() == 0;
         }
     }
 }

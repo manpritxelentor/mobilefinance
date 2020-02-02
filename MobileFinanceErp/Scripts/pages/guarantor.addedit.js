@@ -11,7 +11,7 @@ function guarantorSaveError(data) {
 }
 
 function addUpdateCity() {
-    return "<button class='btn btn-block btn-link' onclick='openCityPopup()'>Add / Edit City</button>"
+    return "<button type='button' class='btn btn-block btn-link' onclick='openCityPopup()'>Add / Edit City</button>"
 }
 
 function openCityPopup() {
