@@ -15,5 +15,18 @@ namespace MobileFinanceErp.Controllers
         {
             TempData["PageLevelMessage"] = message;
         }
+
+        public List<string> GetModelErrors()
+        {
+            List<string> result = new List<string>();
+            foreach (ModelState modelState in ViewData.ModelState.Values)
+            {
+                foreach (ModelError error in modelState.Errors)
+                {
+                    result.Add(error.ErrorMessage);
+                }
+            }
+            return result;
+        }
     }
 }

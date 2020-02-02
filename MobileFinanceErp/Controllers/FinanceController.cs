@@ -54,13 +54,13 @@ namespace MobileFinanceErp.Controllers
         public ActionResult Edit(EditFinanceViewModel model)
         {
             if (!ModelState.IsValid)
-                return Json(new { Status = false, Error = ModelState });
+                return Json(new { Status = false, Error = GetModelErrors() });
 
             bool isPageNumberValid = _FinanceService.IsPageNumberValid(model.PageNo, model.BookNo, model.Id);
             if (!isPageNumberValid)
             {
                 ModelState.AddModelError("PageNo", "Book Number & Page Number must be unique. Please enter another number.");
-                return Json(new { Status = false, Error = ModelState });
+                return Json(new { Status = false, Error = GetModelErrors() });
             }
             
             var insertResult = _FinanceService.Update(model);
@@ -73,13 +73,13 @@ namespace MobileFinanceErp.Controllers
         public ActionResult Create(AddEditFinanceViewModel model)
         {
             if (!ModelState.IsValid)
-                return Json(new { Status = false, Error = ModelState });
+                return Json(new { Status = false, Error = GetModelErrors() });
 
             bool isPageNumberValid = _FinanceService.IsPageNumberValid(model.PageNo, model.BookNo);
             if (!isPageNumberValid)
             {
                 ModelState.AddModelError("PageNo", "Book Number & Page Number must be unique. Please enter another number.");
-                return Json(new { Status = false, Error = ModelState });
+                return Json(new { Status = false, Error = GetModelErrors() });
             }
 
             model.EMI = GetEmiCalculation(model.LoanAmount, model.Duration);

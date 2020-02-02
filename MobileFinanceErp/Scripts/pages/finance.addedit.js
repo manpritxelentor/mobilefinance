@@ -2,6 +2,9 @@
     if (data.Status == true) {
         window.location = financeListPageUrl;
         return;
+    } else if (data.Status == false && data.Error) {
+        showError(data.Error.join("<br>"))
+        return;
     }
     showError('Failed to save finance. Please try again');
 }
